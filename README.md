@@ -1,5 +1,7 @@
 # MUSE-IDR
 
+[![DOI](https://zenodo.org/badge/1372462628.svg)](https://doi.org/10.5281/zenodo.22784470)
+
 MUSE-IDR is a residue-level predictor of classical intrinsic disorder. It
 combines frozen ESM-2 650M representations, parallel multiscale sequence
 context, learned fusion of the final four ESM-2 layers, and a locked
@@ -136,4 +138,7 @@ external evaluation.
 
 Project-authored code is released under Apache-2.0. Upstream resources retain
 their original terms. Citation metadata are provided in `CITATION.cff`. The
-version DOI will be added after the submission release is archived in Zenodo.
+submission release is archived at Zenodo under the version-specific DOI
+[`10.5281/zenodo.22784471`](https://doi.org/10.5281/zenodo.22784471). The
+concept DOI [`10.5281/zenodo.22784470`](https://doi.org/10.5281/zenodo.22784470)
+resolves to the latest archived release.

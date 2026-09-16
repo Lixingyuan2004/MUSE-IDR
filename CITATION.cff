@@ -3,14 +3,15 @@ message: "If you use MUSE-IDR, please cite the associated paper and archived sof
 title: "MUSE-IDR: Multilayer and Multiscale ESM-2 Ensemble for Intrinsic Disorder Prediction"
 type: software
 version: "1.1.0"
-date-released: "2026-09-15"
+doi: "10.5281/zenodo.22784471"
+date-released: "2026-09-16"
 authors:
   - family-names: "Li"
     given-names: "Xingyuan"
     affiliation: "Hebei University of Technology"
     orcid: "https://orcid.org/0009-0003-4533-3247"
 repository-code: "https://github.com/Lixingyuan2004/MUSE-IDR"
-url: "https://github.com/Lixingyuan2004/MUSE-IDR"
+url: "https://doi.org/10.5281/zenodo.22784471"
 license: "Apache-2.0"
 keywords:
   - intrinsic disorder

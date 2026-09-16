@@ -1,5 +1,7 @@
 # MUSE-IDR
 
+[![DOI](https://zenodo.org/badge/1372462628.svg)](https://doi.org/10.5281/zenodo.22784470)
+
 MUSE-IDR 是一个残基级经典内在无序预测模型。它以冻结的 ESM-2 650M
 为表征骨干，结合多尺度序列上下文、ESM-2 最后四层可学习融合以及跨架构
 锁定集成，为输入序列中的每个残基输出一个无序概率。
@@ -54,4 +56,7 @@ python inference/predict.py \
 
 训练数据和外部参考数据可以存在于本机目录，但默认不由 Git 上传。公开
 仓库不会重新分发 CAID 标签、第三方模型权重或第三方逐残基预测。项目自有
-代码采用 Apache-2.0 许可证；Zenodo DOI 将在投稿版本发布后补入。
+代码采用 Apache-2.0 许可证。本次投稿对应的固定版本已归档于 Zenodo，版本
+DOI 为 [`10.5281/zenodo.22784471`](https://doi.org/10.5281/zenodo.22784471)；
+项目总 DOI [`10.5281/zenodo.22784470`](https://doi.org/10.5281/zenodo.22784470)
+始终指向最新归档版本。

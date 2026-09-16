@@ -16,17 +16,17 @@ Target tag: `v1.1.0-bioinformatics-submission`
 - [x] Secret, absolute-path, and large-file audit.
 - [x] Final SHA256 manifest regenerated and verified.
 - [x] Nested B6, B7, and S1 SHA256 result locks verified from the repository root.
-- [ ] GitHub Actions pass on the clean-history submission commit.
+- [x] GitHub Actions pass on the clean-history submission commit.
 
 ## Publication
 
 - [x] Review the complete staged diff.
 - [x] Preserve the former private repository separately; do not publish its historical objects or tags.
 - [x] Start the publication repository from the verified tree with a single clean root commit.
-- [ ] Push the verified clean-history submission commit to the new repository.
-- [ ] Make the repository public only after the publication audit passes.
-- [ ] Connect `Lixingyuan2004/MUSE-IDR` to Zenodo.
-- [ ] Create and publish the annotated tag `v1.1.0-bioinformatics-submission`.
-- [ ] Confirm that Zenodo archived the exact tag and assigned a version DOI.
+- [x] Push the verified clean-history submission commit to the new repository.
+- [x] Make the repository public only after the publication audit passes.
+- [x] Connect `Lixingyuan2004/MUSE-IDR` to Zenodo.
+- [x] Create and publish the annotated tag `v1.1.0-bioinformatics-submission`.
+- [x] Confirm that Zenodo archived the exact tag and assigned a version DOI.
 - [ ] Add the version DOI to the manuscript and repository landing page.
 - [ ] Archive the manuscript Supplementary Material and record its stable link.

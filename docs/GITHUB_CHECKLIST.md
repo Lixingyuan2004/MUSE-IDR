@@ -19,9 +19,9 @@ software release:
 - [x] machine-readable training/split/leakage manifests
 - [x] nested B6, B7, and S1 SHA256 result locks
 - [x] single-root-commit publication history without historical third-party prediction exports
-- [ ] assign the Zenodo software DOI and add it to the release metadata
+- [x] assign the Zenodo software DOI and add it to the release metadata
 - [ ] independently decide whether a results-archive DOI is needed
-- [ ] make the repository public only after the data/third-party review
+- [x] make the repository public only after the data/third-party review
 
 Before every push, run:
 

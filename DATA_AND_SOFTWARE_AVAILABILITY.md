@@ -2,11 +2,12 @@
 
 The project-authored MUSE-IDR source code, locked inference configuration, 30
 formal prediction-head checkpoints, example input, tests, and compact analysis
-outputs will be released under Apache-2.0 at
+outputs are released under Apache-2.0 at
 `https://github.com/Lixingyuan2004/MUSE-IDR`. The version corresponding to the
-Bioinformatics submission will be identified by the immutable tag
-`v1.1.0-bioinformatics-submission` and archived in Zenodo. The version DOI will
-be inserted here after the archive is published.
+Bioinformatics submission is identified by the immutable tag
+`v1.1.0-bioinformatics-submission` and archived in Zenodo under the
+version-specific DOI `10.5281/zenodo.22784471`. The concept DOI
+`10.5281/zenodo.22784470` resolves to the latest archived release.
 
 The repository includes complete A1–A10, B1–B7, S1, and S2 analysis code. It
 also includes public provenance manifests, fixed split definitions, hashes,
