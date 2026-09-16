@@ -1,0 +1,82 @@
+{
+  "schema_version": 1,
+  "experiment_id": "20260821_lightcnn_classicidr_5fold_s17_formal",
+  "stage": "formal_internal_fivefold_single_seed",
+  "model_comparison_eligible": true,
+  "final_external_claim_eligible": false,
+  "final_external_claim_blocker": "PUNCH2/LoRA-DR-Suite comparisons and the frozen final model are not complete",
+  "task": "single_output_classic_idr",
+  "output_heads": 1,
+  "seed": 17,
+  "device": "NVIDIA GeForce RTX 3060 Laptop GPU",
+  "environment": "configs/environment/local_torch_windows.json",
+  "data_manifest": "data/manifests/training/classic_idr_2018_homology_5fold.json",
+  "summary": {
+    "proteins": 1133,
+    "labeled_residues": 202662,
+    "unknown_residues_masked": 370759,
+    "positive_residues": 105036,
+    "negative_residues": 97626,
+    "fold_residue_micro_roc_auc": [
+      0.900144137596781,
+      0.9186062295489792,
+      0.9250734416724401,
+      0.905135125670434,
+      0.915382844611179
+    ],
+    "fold_auc_mean": 0.9128683558199626,
+    "fold_auc_sample_standard_deviation": 0.010123222651586338,
+    "pooled_oof_residue_micro_roc_auc": 0.9059386655336927,
+    "pooled_oof_auc_protein_bootstrap_95_ci": [
+      0.891563877996835,
+      0.9177342628546412
+    ],
+    "pooled_oof_average_precision": 0.9249569758232743,
+    "pooled_oof_protein_macro_roc_auc": 0.8169016031286845,
+    "proteins_in_macro_auc": 218,
+    "fixed_threshold_f1": 0.8308648931460537,
+    "best_epochs": [4, 9, 9, 6, 6],
+    "epochs_executed": [9, 14, 14, 11, 11],
+    "total_epoch_time_seconds": 287.788,
+    "maximum_peak_gpu_memory_mib": 119.985
+  },
+  "strict_oof_checks": {
+    "status": "pass",
+    "expected_proteins": 1133,
+    "observed_once_each": 1133,
+    "missing_proteins": 0,
+    "duplicate_proteins": 0,
+    "wrong_fold_predictions": 0,
+    "frozen_protocol_equal_across_folds": true
+  },
+  "independent_recalculation": {
+    "status": "pass",
+    "auc_exact_match": true,
+    "counts_exact_match": true,
+    "bootstrap_interval_exact_match": true,
+    "bootstrap_replicates": 2000,
+    "bootstrap_seed": 1729
+  },
+  "configs": [
+    {"path": "configs/train/formal_light_cnn_fold0_seed17.json", "sha256": "e1368f5b9fe097b95575bc5267d65e0e96259194d0d99e79bdaa118fedaaaf1a"},
+    {"path": "configs/train/formal_light_cnn_fold1_seed17.json", "sha256": "79c76fe47e5d5f97c28ae5a8e4b1f0b758d1e26d9b89b63c4d134f9c533f75bb"},
+    {"path": "configs/train/formal_light_cnn_fold2_seed17.json", "sha256": "dbbbced1b0ac200cab3325367b957ea3b16acf13fec64da6319c8fa14f40f7e2"},
+    {"path": "configs/train/formal_light_cnn_fold3_seed17.json", "sha256": "ca6dd30d5395b910a6d36bf02e905daea6e7ec987e3f349ba5045c71e27e541c"},
+    {"path": "configs/train/formal_light_cnn_fold4_seed17.json", "sha256": "7b8b69014d6a85a2484cede594beeca40e5643ece0880af35600a0fd16c91836"}
+  ],
+  "fold_run_manifests": [
+    {"path": "outputs/formal_light_cnn_fold0_seed17/run_manifest.json", "sha256": "7158ca71bc463a84a4c1ff8fbf278a2da19af7dc5bff7262034994d34387240d"},
+    {"path": "outputs/formal_light_cnn_fold1_seed17/run_manifest.json", "sha256": "4dcda55115de683305821dde3de6798928bbebc73eae03b4772fc68f21d4f7bd"},
+    {"path": "outputs/formal_light_cnn_fold2_seed17/run_manifest.json", "sha256": "de31d31acb92958591a2c27bcb9f34b11c0abed45397166e56cddee35d773b25"},
+    {"path": "outputs/formal_light_cnn_fold3_seed17/run_manifest.json", "sha256": "038322512447a8c905a44578d6ae5850edee562075a979f16da9bd1c7400cbe6"},
+    {"path": "outputs/formal_light_cnn_fold4_seed17/run_manifest.json", "sha256": "efaa8f223ca0b866f6e6e415e15ea40d24fff3d1e044c6adda6156550e30f50c"}
+  ],
+  "artifacts": {
+    "oof_metrics": {"path": "outputs/formal_light_cnn_5fold_seed17_oof_verified/oof_metrics.json", "sha256": "54cf58e54c60b51965b0169f05b6d7700908809b9c0de8bd72d7f3f9b82da89b"},
+    "independent_oof_metrics": {"path": "outputs/formal_light_cnn_5fold_seed17_oof_verified/independent_oof_metrics.json", "sha256": "1f27b5ba1354773f58e7e40c0a4a27c22cbc269cb2260b67389233d21e2fcbf2"},
+    "oof_predictions": {"path": "outputs/formal_light_cnn_5fold_seed17_oof_verified/oof_predictions.jsonl", "sha256": "771c58a52a3d4486af48dd57422e619a28abd71ad3601050c5f815c3c1401b08"},
+    "oof_reference": {"path": "outputs/formal_light_cnn_5fold_seed17_oof_verified/oof_reference.jsonl", "sha256": "e25cdc7c62a7e024db1cb0e430b9b83e78dd6508be402f0d647c8004b00cf1cb"},
+    "oof_manifest": {"path": "outputs/formal_light_cnn_5fold_seed17_oof_verified/oof_manifest.json", "sha256": "78a0e853a875b6f2ba70942245439c8d1da259d19c1e760fe976e278aa70179f"}
+  },
+  "caid2_caid3_labels_accessed": false
+}

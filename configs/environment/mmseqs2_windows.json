@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "tool": "MMseqs2",
+  "release": "18-8cc5c",
+  "commit": "8cc5ce367b5638c4306c2d7cfc652dd099a4643f",
+  "platform": "Windows x86_64 preview build",
+  "source_url": "https://github.com/soedinglab/MMseqs2/releases/download/18-8cc5c/mmseqs-win64.zip",
+  "archive_sha256": "9752087ca4e25e93b830775832a75044dc94ae348d66d4681f9ff0355eecfcbf",
+  "archive_sha256_verified": true,
+  "local_wrapper": "tools/mmseqs2-windows-18-8cc5c/mmseqs/mmseqs.bat",
+  "installed_on": "2026-08-21",
+  "smoke_test": {
+    "command": "mmseqs.bat version",
+    "exit_code": 0,
+    "stdout": "8cc5ce367b5638c4306c2d7cfc652dd099a4643f"
+  }
+}

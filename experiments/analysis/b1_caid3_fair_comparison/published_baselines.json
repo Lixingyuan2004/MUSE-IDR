@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "accessed_on": "2026-08-25",
+  "sources": {
+    "caid3_official_paper": {
+      "title": "Critical Assessment of Protein Intrinsic Disorder Round 3 - Predicting Disorder in the Era of Protein Language Models",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12750029/",
+      "usage": "Official CAID3 Table 1 (Disorder-NOX) and Table 2 (Disorder-PDB)."
+    },
+    "caid3_official_predictions": {
+      "url": "https://caid.idpcentral.org/assets/sections/challenge/static/predictions/3/predictions.zip",
+      "sha256": "188868f53646d8395ef46d8d5e022c400e4234b21d38cfcf3ee91d719f19d84a",
+      "usage": "Raw per-residue predictions recomputed on the locked CAID3 references."
+    },
+    "punch2_paper": {
+      "title": "PUNCH2: Explore the strategy for intrinsically disordered protein predictor",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11940444/",
+      "usage": "Architecture and secondary published PUNCH2 benchmark values."
+    },
+    "lora_dr_suite_paper": {
+      "title": "LoRA-DR-suite: adapted embeddings predict intrinsic and soft disorder from protein sequences",
+      "url": "https://academic.oup.com/bioinformatics/article/41/Supplement_1/i439/8199360",
+      "usage": "Table 2 values on the paper's 148-sequence CAID3_NOX set. These are not directly rank-comparable with the locked 204-sequence CAID3 NOX reference."
+    }
+  },
+  "official_caid3_tables": {
+    "disorder_nox": [
+      {"method": "ESMDisPred-2PDB", "roc_auc": 0.885, "aps": 0.754, "coverage": 0.887},
+      {"method": "ESMDisPred-1", "roc_auc": 0.876, "aps": 0.745, "coverage": 0.882},
+      {"method": "ESMDisPred-2", "roc_auc": 0.872, "aps": 0.743, "coverage": 0.887},
+      {"method": "DisoFLAG-IDR", "roc_auc": 0.868, "aps": 0.714, "coverage": 0.975},
+      {"method": "DisorderUnetLM", "roc_auc": 0.862, "aps": 0.700, "coverage": 0.995},
+      {"method": "flDPnn3a", "roc_auc": 0.860, "aps": 0.700, "coverage": 1.000},
+      {"method": "UdonPred-combined", "roc_auc": 0.854, "aps": 0.654, "coverage": 0.985},
+      {"method": "DisPredict3", "roc_auc": 0.854, "aps": 0.633, "coverage": 0.950},
+      {"method": "rawMSA", "roc_auc": 0.850, "aps": 0.671, "coverage": 1.000},
+      {"method": "rawMSA-disorder", "roc_auc": 0.847, "aps": 0.640, "coverage": 0.990}
+    ],
+    "disorder_pdb": [
+      {"method": "PUNCH2", "roc_auc": 0.955, "aps": 0.928, "coverage": 1.000},
+      {"method": "PUNCH2-Light", "roc_auc": 0.953, "aps": 0.925, "coverage": 1.000},
+      {"method": "AlphaFold-rsa", "roc_auc": 0.950, "aps": 0.921, "coverage": 1.000},
+      {"method": "SPOT-Disorder2", "roc_auc": 0.949, "aps": 0.920, "coverage": 0.934},
+      {"method": "AlphaFold3-rsa", "roc_auc": 0.947, "aps": 0.912, "coverage": 1.000},
+      {"method": "PredIDR2-Seq-Art", "roc_auc": 0.939, "aps": 0.809, "coverage": 1.000},
+      {"method": "LMDisorder", "roc_auc": 0.937, "aps": 0.621, "coverage": 1.000},
+      {"method": "ESMDisPred-2PDB", "roc_auc": 0.937, "aps": 0.893, "coverage": 0.890},
+      {"method": "PredIDR2-Prof-Art", "roc_auc": 0.936, "aps": 0.884, "coverage": 1.000},
+      {"method": "PredIDR2-Prof-Rnd", "roc_auc": 0.934, "aps": 0.829, "coverage": 1.000}
+    ]
+  },
+  "lora_dr_suite_reference_only": {
+    "track": "paper_specific_caid3_nox_148_sequences",
+    "same_reference_as_locked_a10": false,
+    "training_note": "ID models include CAID1 and CAID2 in training; they do not use CAID3 labels.",
+    "rows": [
+      {"method": "ESM2_650M-LoRA-ID", "roc_auc": 0.880, "f1": 0.649, "mcc": 0.523, "pr_auc": 0.721, "fmax": 0.656},
+      {"method": "ESM2_35M-LoRA-ID", "roc_auc": 0.868, "f1": 0.645, "mcc": 0.518, "pr_auc": 0.689, "fmax": 0.659},
+      {"method": "Ankh-LoRA-ID", "roc_auc": 0.861, "f1": 0.637, "mcc": 0.507, "pr_auc": 0.684, "fmax": 0.638},
+      {"method": "ProtT5-LoRA-ID", "roc_auc": 0.862, "f1": 0.628, "mcc": 0.494, "pr_auc": 0.698, "fmax": 0.633}
+    ]
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "experiment_id": "20260821_lightcnn_classicidr_fold0_s17_formal",
+  "stage": "formal_internal_single_fold",
+  "screening_eligible": true,
+  "paper_table_eligible": false,
+  "paper_table_blocker": "The same frozen protocol must be completed on folds 1-4 and aggregated",
+  "task": "single_output_classic_idr",
+  "output_heads": 1,
+  "validation_fold": 0,
+  "seed": 17,
+  "device": "NVIDIA GeForce RTX 3060 Laptop GPU",
+  "environment": "configs/environment/local_torch_windows.json",
+  "config": "configs/train/formal_light_cnn_fold0_seed17.json",
+  "data_manifest": "data/manifests/training/classic_idr_2018_homology_5fold.json",
+  "summary": {
+    "model_parameters": 125249,
+    "training_proteins": 906,
+    "training_labeled_residues_per_full_epoch": 162144,
+    "validation_proteins": 227,
+    "validation_labeled_residues": 40518,
+    "validation_unknown_residues_masked": 74606,
+    "epochs_planned": 30,
+    "epochs_executed": 9,
+    "best_epoch": 4,
+    "stopped_early": true,
+    "residue_micro_roc_auc": 0.900144137596781,
+    "residue_micro_roc_auc_protein_bootstrap_95_ci": [
+      0.8612749671406738,
+      0.9282577935036305
+    ],
+    "residue_average_precision": 0.9199442224932477,
+    "protein_macro_roc_auc": 0.7673900276193403,
+    "fixed_threshold_f1": 0.8159947325769854,
+    "peak_gpu_memory_mib": 74.91,
+    "total_epoch_time_seconds": 45.013
+  },
+  "independent_recalculation": {
+    "status": "pass",
+    "auc_matches_training_record": true,
+    "bootstrap_replicates": 2000,
+    "bootstrap_seed": 1729
+  },
+  "artifacts": {
+    "checkpoint": {
+      "path": "outputs/formal_light_cnn_fold0_seed17/best_checkpoint.pt",
+      "sha256": "3dba48b78f60925ab72bf7fb51e883272682fe915bbba14a8860a7a11b047324"
+    },
+    "metrics": {
+      "path": "outputs/formal_light_cnn_fold0_seed17/best_metrics.json",
+      "sha256": "0d69604698f0e309509594de68023e592360f24adf23ae4ff1d77ec7226f267d"
+    },
+    "independent_metrics": {
+      "path": "outputs/formal_light_cnn_fold0_seed17/independent_metrics_bootstrap.json",
+      "sha256": "7e49ed0e50a6b5f9132753fd7a51073714c899d0c174279d339912b45d36785d"
+    },
+    "predictions": {
+      "path": "outputs/formal_light_cnn_fold0_seed17/validation_predictions.jsonl",
+      "sha256": "c1a9d9c8d2b679e3adbdd83c1b79ddfcb5e5a95a5a632ba538bc216b56aaa76d"
+    },
+    "reference": {
+      "path": "outputs/formal_light_cnn_fold0_seed17/validation_reference.jsonl",
+      "sha256": "4fbf4a88cc63f61988506b521edd30e802910213013f5babaf88b96866400485"
+    },
+    "run_manifest": {
+      "path": "outputs/formal_light_cnn_fold0_seed17/run_manifest.json",
+      "sha256": "7158ca71bc463a84a4c1ff8fbf278a2da19af7dc5bff7262034994d34387240d"
+    }
+  },
+  "caid2_caid3_labels_accessed": false
+}

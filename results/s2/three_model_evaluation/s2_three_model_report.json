@@ -1,0 +1,623 @@
+{
+  "schema_version": 1,
+  "experiment": "s2_locked_three_model_comparison",
+  "status": "pass",
+  "protocol_status": "frozen_before_s2_baseline_prediction",
+  "verification": {
+    "protocol": {
+      "path": "experiments\\supplementary\\s2_independent_holdout\\s2_baseline_comparison_protocol_20260907.json",
+      "sha256": "a231176522a0bd1bd5a0566c74d9006ab9ea6a65100d58b371b617d3533413e2",
+      "match": true
+    },
+    "protocol_erratum": {
+      "path": "experiments\\supplementary\\s2_independent_holdout\\s2_protocol_erratum_20260907.json",
+      "sha256": "57a53fae2f8fce476cb694a39919bad553b4202dfcf91b81a5650cb4c13cfecc",
+      "match": true
+    },
+    "protocol_erratum_scope": "malformed_62_character_provenance_hash_only",
+    "reference_lock": {
+      "lock_path": "outputs\\supplementary\\s2_independent_holdout\\final_database_curated_20260906\\s2_final_lock.sha256",
+      "lock_sha256": "a87a0b6252e9ee45c9a957cdea8e174d163d8e41f4434819135c57d1fe1d156b",
+      "verified_files": 14,
+      "all_match": true
+    },
+    "a10_prediction_lock": {
+      "lock_path": "outputs\\supplementary\\s2_independent_holdout\\a10_prediction_20260907\\s2_a10_prediction_lock.sha256",
+      "lock_sha256": "a752a7a1d7ac319d55936852ca6e7a00dcc40235524d223bc7a899dc6a3cc0bb",
+      "verified_files": 12,
+      "all_match": true
+    },
+    "prediction_files": {
+      "MUSE-IDR A10": {
+        "path": "outputs\\supplementary\\s2_independent_holdout\\a10_prediction_20260907\\muse_idr_a10_s2_predictions.tsv.gz",
+        "sha256": "70555772455afb707200036cf93266236013d18accdce1c0289a3a8236ab541b",
+        "match": true
+      },
+      "PUNCH2-Light Released-13": {
+        "path": "outputs\\supplementary\\s2_independent_holdout\\punch2_light_released13_prediction_20260907\\predictions\\punch2_light_released13_predictions.tsv.gz",
+        "sha256": "c041c1d4d43ca9cf0dd5a0d0f67388f9cfcf7e0bdc59cea52fcf2495f955b6c3",
+        "match": true
+      },
+      "LoRA-DR-Suite ESM2-650M DisProt7": {
+        "path": "outputs\\supplementary\\s2_independent_holdout\\lora_dr_suite_650m_disprot7_offline_prediction_20260907\\lora_dr_suite_650m_disprot7_predictions.tsv.gz",
+        "sha256": "77365cf86829299674c82494879e01736be50b4b14190710278a1e11639a334f",
+        "match": true
+      }
+    },
+    "baseline_result_locks": {
+      "PUNCH2-Light Released-13": {
+        "path": "outputs\\supplementary\\s2_independent_holdout\\punch2_light_released13_prediction_20260907\\s2_baseline_prediction_lock.sha256",
+        "sha256": "55285b50e421237f21766df6cebd63d62d6f86ebbbdd1718588007ff91f5e0db",
+        "verified_selected_members": [
+          {
+            "relative_path": "outputs/supplementary/s2_independent_holdout/punch2_light_released13_prediction_20260907/predictions/punch2_light_released13_predictions.tsv.gz",
+            "path": "outputs\\supplementary\\s2_independent_holdout\\punch2_light_released13_prediction_20260907\\predictions\\punch2_light_released13_predictions.tsv.gz",
+            "sha256": "c041c1d4d43ca9cf0dd5a0d0f67388f9cfcf7e0bdc59cea52fcf2495f955b6c3",
+            "match": true
+          },
+          {
+            "relative_path": "outputs/supplementary/s2_independent_holdout/punch2_light_released13_prediction_20260907/feature_report_fp32.json",
+            "path": "outputs\\supplementary\\s2_independent_holdout\\punch2_light_released13_prediction_20260907\\feature_report_fp32.json",
+            "sha256": "03e74b1fe01c184a75312037b2b0d7981b5d6c8d7358fcf8ab52a44e501f82ec",
+            "match": true
+          },
+          {
+            "relative_path": "outputs/supplementary/s2_independent_holdout/punch2_light_released13_prediction_20260907/inference_report.json",
+            "path": "outputs\\supplementary\\s2_independent_holdout\\punch2_light_released13_prediction_20260907\\inference_report.json",
+            "sha256": "0b938ee63e2cc05b788146b548cffc8ee7764e8e8f9e3440b3b03becd9777832",
+            "match": true
+          },
+          {
+            "relative_path": "outputs/supplementary/s2_independent_holdout/punch2_light_released13_prediction_20260907/s2_baseline_prediction_report.json",
+            "path": "outputs\\supplementary\\s2_independent_holdout\\punch2_light_released13_prediction_20260907\\s2_baseline_prediction_report.json",
+            "sha256": "6118b11d890e99f9c13bdf81d2a6d1ae34f6b8f288e5ceca1753a99b6591c232",
+            "match": true
+          }
+        ]
+      },
+      "LoRA-DR-Suite ESM2-650M DisProt7": {
+        "path": "outputs\\supplementary\\s2_independent_holdout\\lora_dr_suite_650m_disprot7_offline_prediction_20260907\\s2_baseline_prediction_lock.sha256",
+        "sha256": "cebca1195196f431635635b6d10b5d7a4ff9bea6eb8e9cd8b3970baff040675c",
+        "verified_selected_members": [
+          {
+            "relative_path": "experiments/supplementary/s2_independent_holdout/predict_lora_official_offline.py",
+            "path": "experiments\\supplementary\\s2_independent_holdout\\predict_lora_official_offline.py",
+            "sha256": "57653fdd66be807849ebdbe4a4e552118fa5585e1f24d6226798c0fd40951817",
+            "match": true
+          },
+          {
+            "relative_path": "experiments/supplementary/s2_independent_holdout/run_s2_baseline_predictions.py",
+            "path": "experiments\\supplementary\\s2_independent_holdout\\run_s2_baseline_predictions.py",
+            "sha256": "ae8545161e7237b128bd9061b27cb11af53c82ab4fc83e979f54926af9aeb502",
+            "match": true
+          },
+          {
+            "relative_path": "outputs/supplementary/s2_independent_holdout/lora_dr_suite_650m_disprot7_offline_prediction_20260907/lora_dr_suite_650m_disprot7_predictions.tsv.gz",
+            "path": "outputs\\supplementary\\s2_independent_holdout\\lora_dr_suite_650m_disprot7_offline_prediction_20260907\\lora_dr_suite_650m_disprot7_predictions.tsv.gz",
+            "sha256": "77365cf86829299674c82494879e01736be50b4b14190710278a1e11639a334f",
+            "match": true
+          },
+          {
+            "relative_path": "outputs/supplementary/s2_independent_holdout/lora_dr_suite_650m_disprot7_offline_prediction_20260907/inference_report.json",
+            "path": "outputs\\supplementary\\s2_independent_holdout\\lora_dr_suite_650m_disprot7_offline_prediction_20260907\\inference_report.json",
+            "sha256": "8a8695ce83e1273d671b7c5e535ad107fe2ae70444a1867cb40e1beb47c207db",
+            "match": true
+          },
+          {
+            "relative_path": "outputs/supplementary/s2_independent_holdout/lora_dr_suite_650m_disprot7_offline_prediction_20260907/s2_baseline_prediction_report.json",
+            "path": "outputs\\supplementary\\s2_independent_holdout\\lora_dr_suite_650m_disprot7_offline_prediction_20260907\\s2_baseline_prediction_report.json",
+            "sha256": "4a04603d5ffc9b46f71e5c6b935ae45521c2afb90a96c7c00d6c8ca6d10710bb",
+            "match": true
+          }
+        ]
+      }
+    },
+    "hashes_verified_before_semantic_label_access": true
+  },
+  "cohort": {
+    "proteins": 87,
+    "residues": 56394,
+    "known_residues": 30728,
+    "positive_residues": 2999,
+    "negative_residues": 27729,
+    "unknown_residues": 25666
+  },
+  "two_class_proteins": 22,
+  "positive_prevalence_among_known": 0.09759828169747461,
+  "model_order": [
+    "MUSE-IDR A10",
+    "PUNCH2-Light Released-13",
+    "LoRA-DR-Suite ESM2-650M DisProt7"
+  ],
+  "point_metrics": [
+    {
+      "model": "MUSE-IDR A10",
+      "proteins": 87,
+      "residues": 56394,
+      "known_residues": 30728,
+      "positive_residues": 2999,
+      "negative_residues": 27729,
+      "roc_auc_caid_compatible": 0.978,
+      "roc_auc_full_precision": 0.9778267957639984,
+      "aucpr_trapezoid": 0.848,
+      "aps": 0.841,
+      "f1_at_0_5": 0.747,
+      "mcc_at_0_5": 0.733,
+      "fmax": 0.818,
+      "mcc_at_fmax": 0.798,
+      "fmax_threshold": 0.878,
+      "aucpr_trapezoid_full_precision": 0.8479503964779987,
+      "aps_full_precision": 0.8479859005511463,
+      "f1_at_0_5_full_precision": 0.747267395361237,
+      "mcc_at_0_5_full_precision": 0.7328727719870782,
+      "fmax_full_precision": 0.8176656151419558,
+      "mcc_at_fmax_full_precision": 0.798203917707776,
+      "fmax_threshold_full_precision": 0.877703488,
+      "brier_score": 0.05036215516713715,
+      "log_loss": 0.1998687359322179,
+      "precision_at_0_5_full_precision": 0.6224739062846991,
+      "recall_at_0_5_full_precision": 0.934644881627209,
+      "specificity_at_0_5_full_precision": 0.9386923437556349,
+      "accuracy_at_0_5_full_precision": 0.938297318406665,
+      "confusion_at_0_5": {
+        "tp": 2803,
+        "tn": 26029,
+        "fp": 1700,
+        "fn": 196
+      },
+      "macro_roc_auc": 0.8959515000618105,
+      "macro_roc_auc_proteins": 22,
+      "official_threshold": null,
+      "f1_at_official_threshold": null,
+      "mcc_at_official_threshold": null
+    },
+    {
+      "model": "PUNCH2-Light Released-13",
+      "proteins": 87,
+      "residues": 56394,
+      "known_residues": 30728,
+      "positive_residues": 2999,
+      "negative_residues": 27729,
+      "roc_auc_caid_compatible": 0.962,
+      "roc_auc_full_precision": 0.9621355747575036,
+      "aucpr_trapezoid": 0.806,
+      "aps": 0.806,
+      "f1_at_0_5": 0.722,
+      "mcc_at_0_5": 0.692,
+      "fmax": 0.732,
+      "mcc_at_fmax": 0.71,
+      "fmax_threshold": 0.634,
+      "aucpr_trapezoid_full_precision": 0.8062410563659996,
+      "aps_full_precision": 0.8062720653996319,
+      "f1_at_0_5_full_precision": 0.7216599190283401,
+      "mcc_at_0_5_full_precision": 0.692008863954123,
+      "fmax_full_precision": 0.7321624588364435,
+      "mcc_at_fmax_full_precision": 0.7103441605081272,
+      "fmax_threshold_full_precision": 0.6274182361,
+      "brier_score": 0.04015965721008011,
+      "log_loss": 0.14047871949479337,
+      "precision_at_0_5_full_precision": 0.7302833731649027,
+      "recall_at_0_5_full_precision": 0.7132377459153051,
+      "specificity_at_0_5_full_precision": 0.9715099715099715,
+      "accuracy_at_0_5_full_precision": 0.9463030460817495,
+      "confusion_at_0_5": {
+        "tp": 2139,
+        "tn": 26939,
+        "fp": 790,
+        "fn": 860
+      },
+      "macro_roc_auc": 0.893297807813192,
+      "macro_roc_auc_proteins": 22,
+      "official_threshold": 0.35,
+      "f1_at_official_threshold": 0.6918560891163631,
+      "mcc_at_official_threshold": 0.6588116598259215
+    },
+    {
+      "model": "LoRA-DR-Suite ESM2-650M DisProt7",
+      "proteins": 87,
+      "residues": 56394,
+      "known_residues": 30728,
+      "positive_residues": 2999,
+      "negative_residues": 27729,
+      "roc_auc_caid_compatible": 0.943,
+      "roc_auc_full_precision": 0.9428914786903315,
+      "aucpr_trapezoid": 0.602,
+      "aps": 0.603,
+      "f1_at_0_5": 0.646,
+      "mcc_at_0_5": 0.613,
+      "fmax": 0.647,
+      "mcc_at_fmax": 0.611,
+      "fmax_threshold": 0.518,
+      "aucpr_trapezoid_full_precision": 0.6025597107828379,
+      "aps_full_precision": 0.6027893814158422,
+      "f1_at_0_5_full_precision": 0.646297825488577,
+      "mcc_at_0_5_full_precision": 0.6125196762758564,
+      "fmax_full_precision": 0.6472767183427082,
+      "mcc_at_fmax_full_precision": 0.6139113327634158,
+      "fmax_threshold_full_precision": 0.497070342,
+      "brier_score": 0.06317237890119838,
+      "log_loss": 0.2170080576224131,
+      "precision_at_0_5_full_precision": 0.5502695101945161,
+      "recall_at_0_5_full_precision": 0.7829276425475158,
+      "specificity_at_0_5_full_precision": 0.9307944750982725,
+      "accuracy_at_0_5_full_precision": 0.9163629263212705,
+      "confusion_at_0_5": {
+        "tp": 2348,
+        "tn": 25810,
+        "fp": 1919,
+        "fn": 651
+      },
+      "macro_roc_auc": 0.8940215016475435,
+      "macro_roc_auc_proteins": 22,
+      "official_threshold": null,
+      "f1_at_official_threshold": null,
+      "mcc_at_official_threshold": null
+    }
+  ],
+  "bootstrap": {
+    "unit": "whole_protein_cluster",
+    "paired_across_all_three_models": true,
+    "replicates": 2000,
+    "seed": 20260907,
+    "workers": 8,
+    "intervals": [
+      {
+        "model": "MUSE-IDR A10",
+        "metric": "roc_auc_full_precision",
+        "point_estimate": 0.9778267957639984,
+        "bootstrap_mean": 0.9780971937330312,
+        "bootstrap_sample_sd": 0.006410358175608682,
+        "ci_95_percentile_low": 0.9643046151176313,
+        "ci_95_percentile_high": 0.9894845738302782,
+        "bootstrap_unit": "whole_protein_cluster",
+        "bootstrap_replicates": 2000
+      },
+      {
+        "model": "MUSE-IDR A10",
+        "metric": "aucpr_trapezoid_full_precision",
+        "point_estimate": 0.8479503964779987,
+        "bootstrap_mean": 0.8388198457481365,
+        "bootstrap_sample_sd": 0.07345461320689654,
+        "ci_95_percentile_low": 0.6542015870652688,
+        "ci_95_percentile_high": 0.9391617488060675,
+        "bootstrap_unit": "whole_protein_cluster",
+        "bootstrap_replicates": 2000
+      },
+      {
+        "model": "MUSE-IDR A10",
+        "metric": "aps_full_precision",
+        "point_estimate": 0.8479859005511463,
+        "bootstrap_mean": 0.8389333768737238,
+        "bootstrap_sample_sd": 0.07334698890474747,
+        "ci_95_percentile_low": 0.6546437194634162,
+        "ci_95_percentile_high": 0.9391819606045351,
+        "bootstrap_unit": "whole_protein_cluster",
+        "bootstrap_replicates": 2000
+      },
+      {
+        "model": "MUSE-IDR A10",
+        "metric": "f1_at_0_5_full_precision",
+        "point_estimate": 0.747267395361237,
+        "bootstrap_mean": 0.7442432884344816,
+        "bootstrap_sample_sd": 0.07186526657344681,
+        "ci_95_percentile_low": 0.5800875845343605,
+        "ci_95_percentile_high": 0.8561306508962123,
+        "bootstrap_unit": "whole_protein_cluster",
+        "bootstrap_replicates": 2000
+      },
+      {
+        "model": "MUSE-IDR A10",
+        "metric": "mcc_at_0_5_full_precision",
+        "point_estimate": 0.7328727719870782,
+        "bootstrap_mean": 0.7318963555058308,
+        "bootstrap_sample_sd": 0.06222651725410832,
+        "ci_95_percentile_low": 0.5912983185632128,
+        "ci_95_percentile_high": 0.8363522807626699,
+        "bootstrap_unit": "whole_protein_cluster",
+        "bootstrap_replicates": 2000
+      },
+      {
+        "model": "MUSE-IDR A10",
+        "metric": "fmax_full_precision",
+        "point_estimate": 0.8176656151419558,
+        "bootstrap_mean": 0.8201684865989114,
+        "bootstrap_sample_sd": 0.05172861997553459,
+        "ci_95_percentile_low": 0.6991054251635245,
+        "ci_95_percentile_high": 0.8973362497540666,
+        "bootstrap_unit": "whole_protein_cluster",
+        "bootstrap_replicates": 2000
+      },
+      {
+        "model": "MUSE-IDR A10",
+        "metric": "brier_score",
+        "point_estimate": 0.05036215516713715,
+        "bootstrap_mean": 0.04992032892914497,
+        "bootstrap_sample_sd": 0.009784974488990463,
+        "ci_95_percentile_low": 0.030800333427175124,
+        "ci_95_percentile_high": 0.06959772008213805,
+        "bootstrap_unit": "whole_protein_cluster",
+        "bootstrap_replicates": 2000
+      },
+      {
+        "model": "MUSE-IDR A10",
+        "metric": "macro_roc_auc",
+        "point_estimate": 0.8959515000618105,
+        "bootstrap_mean": 0.8969883995620349,
+        "bootstrap_sample_sd": 0.032249019941520456,
+        "ci_95_percentile_low": 0.8283025725420018,
+        "ci_95_percentile_high": 0.9532535421775642,
+        "bootstrap_unit": "whole_protein_cluster",
+        "bootstrap_replicates": 2000
+      },
+      {
+        "model": "PUNCH2-Light Released-13",
+        "metric": "roc_auc_full_precision",
+        "point_estimate": 0.9621355747575036,
+        "bootstrap_mean": 0.962443518046516,
+        "bootstrap_sample_sd": 0.011986863894326908,
+        "ci_95_percentile_low": 0.9368040311019605,
+        "ci_95_percentile_high": 0.9827342031304642,
+        "bootstrap_unit": "whole_protein_cluster",
+        "bootstrap_replicates": 2000
+      },
+      {
+        "model": "PUNCH2-Light Released-13",
+        "metric": "aucpr_trapezoid_full_precision",
+        "point_estimate": 0.8062410563659996,
+        "bootstrap_mean": 0.8012077673166301,
+        "bootstrap_sample_sd": 0.07329630633363109,
+        "ci_95_percentile_low": 0.6221333224399987,
+        "ci_95_percentile_high": 0.9076824997133308,
+        "bootstrap_unit": "whole_protein_cluster",
+        "bootstrap_replicates": 2000
+      },
+      {
+        "model": "PUNCH2-Light Released-13",
+        "metric": "aps_full_precision",
+        "point_estimate": 0.8062720653996319,
+        "bootstrap_mean": 0.8012840937059441,
+        "bootstrap_sample_sd": 0.07324754472977699,
+        "ci_95_percentile_low": 0.6222829068087408,
+        "ci_95_percentile_high": 0.907712644875932,
+        "bootstrap_unit": "whole_protein_cluster",
+        "bootstrap_replicates": 2000
+      },
+      {
+        "model": "PUNCH2-Light Released-13",
+        "metric": "f1_at_0_5_full_precision",
+        "point_estimate": 0.7216599190283401,
+        "bootstrap_mean": 0.7142046022541366,
+        "bootstrap_sample_sd": 0.06843929208912068,
+        "ci_95_percentile_low": 0.5611321283379885,
+        "ci_95_percentile_high": 0.8259793562694978,
+        "bootstrap_unit": "whole_protein_cluster",
+        "bootstrap_replicates": 2000
+      },
+      {
+        "model": "PUNCH2-Light Released-13",
+        "metric": "mcc_at_0_5_full_precision",
+        "point_estimate": 0.692008863954123,
+        "bootstrap_mean": 0.6862382393533469,
+        "bootstrap_sample_sd": 0.06967639985533786,
+        "ci_95_percentile_low": 0.5290989565346795,
+        "ci_95_percentile_high": 0.8020884576439425,
+        "bootstrap_unit": "whole_protein_cluster",
+        "bootstrap_replicates": 2000
+      },
+      {
+        "model": "PUNCH2-Light Released-13",
+        "metric": "fmax_full_precision",
+        "point_estimate": 0.7321624588364435,
+        "bootstrap_mean": 0.7325375047702586,
+        "bootstrap_sample_sd": 0.06621118769848505,
+        "ci_95_percentile_low": 0.5820202923344463,
+        "ci_95_percentile_high": 0.8411191736378808,
+        "bootstrap_unit": "whole_protein_cluster",
+        "bootstrap_replicates": 2000
+      },
+      {
+        "model": "PUNCH2-Light Released-13",
+        "metric": "brier_score",
+        "point_estimate": 0.04015965721008011,
+        "bootstrap_mean": 0.040636472409835526,
+        "bootstrap_sample_sd": 0.008333757189945109,
+        "ci_95_percentile_low": 0.02592100347901316,
+        "ci_95_percentile_high": 0.05834209889785345,
+        "bootstrap_unit": "whole_protein_cluster",
+        "bootstrap_replicates": 2000
+      },
+      {
+        "model": "PUNCH2-Light Released-13",
+        "metric": "macro_roc_auc",
+        "point_estimate": 0.893297807813192,
+        "bootstrap_mean": 0.8938821885422782,
+        "bootstrap_sample_sd": 0.028289103616585307,
+        "ci_95_percentile_low": 0.833842763831149,
+        "ci_95_percentile_high": 0.945976605795666,
+        "bootstrap_unit": "whole_protein_cluster",
+        "bootstrap_replicates": 2000
+      },
+      {
+        "model": "LoRA-DR-Suite ESM2-650M DisProt7",
+        "metric": "roc_auc_full_precision",
+        "point_estimate": 0.9428914786903315,
+        "bootstrap_mean": 0.943218727790598,
+        "bootstrap_sample_sd": 0.01035087387951651,
+        "ci_95_percentile_low": 0.9209633127208784,
+        "ci_95_percentile_high": 0.9614005996951785,
+        "bootstrap_unit": "whole_protein_cluster",
+        "bootstrap_replicates": 2000
+      },
+      {
+        "model": "LoRA-DR-Suite ESM2-650M DisProt7",
+        "metric": "aucpr_trapezoid_full_precision",
+        "point_estimate": 0.6025597107828379,
+        "bootstrap_mean": 0.6052607412520279,
+        "bootstrap_sample_sd": 0.08468911233959299,
+        "ci_95_percentile_low": 0.43291435016049934,
+        "ci_95_percentile_high": 0.7599590120086881,
+        "bootstrap_unit": "whole_protein_cluster",
+        "bootstrap_replicates": 2000
+      },
+      {
+        "model": "LoRA-DR-Suite ESM2-650M DisProt7",
+        "metric": "aps_full_precision",
+        "point_estimate": 0.6027893814158422,
+        "bootstrap_mean": 0.6056536598450207,
+        "bootstrap_sample_sd": 0.08460829961590062,
+        "ci_95_percentile_low": 0.43341334850698565,
+        "ci_95_percentile_high": 0.7600963838919313,
+        "bootstrap_unit": "whole_protein_cluster",
+        "bootstrap_replicates": 2000
+      },
+      {
+        "model": "LoRA-DR-Suite ESM2-650M DisProt7",
+        "metric": "f1_at_0_5_full_precision",
+        "point_estimate": 0.646297825488577,
+        "bootstrap_mean": 0.6391606867340732,
+        "bootstrap_sample_sd": 0.07358471028777225,
+        "ci_95_percentile_low": 0.47710948715099283,
+        "ci_95_percentile_high": 0.765335601993822,
+        "bootstrap_unit": "whole_protein_cluster",
+        "bootstrap_replicates": 2000
+      },
+      {
+        "model": "LoRA-DR-Suite ESM2-650M DisProt7",
+        "metric": "mcc_at_0_5_full_precision",
+        "point_estimate": 0.6125196762758564,
+        "bootstrap_mean": 0.6076552430876075,
+        "bootstrap_sample_sd": 0.06865389376232725,
+        "ci_95_percentile_low": 0.46052177802015304,
+        "ci_95_percentile_high": 0.7263732539622715,
+        "bootstrap_unit": "whole_protein_cluster",
+        "bootstrap_replicates": 2000
+      },
+      {
+        "model": "LoRA-DR-Suite ESM2-650M DisProt7",
+        "metric": "fmax_full_precision",
+        "point_estimate": 0.6472767183427082,
+        "bootstrap_mean": 0.654041356784699,
+        "bootstrap_sample_sd": 0.07080283315105873,
+        "ci_95_percentile_low": 0.5023020558008727,
+        "ci_95_percentile_high": 0.7763531932504352,
+        "bootstrap_unit": "whole_protein_cluster",
+        "bootstrap_replicates": 2000
+      },
+      {
+        "model": "LoRA-DR-Suite ESM2-650M DisProt7",
+        "metric": "brier_score",
+        "point_estimate": 0.06317237890119838,
+        "bootstrap_mean": 0.06381314649923911,
+        "bootstrap_sample_sd": 0.008102960584035155,
+        "ci_95_percentile_low": 0.04869881698205879,
+        "ci_95_percentile_high": 0.08063018650911842,
+        "bootstrap_unit": "whole_protein_cluster",
+        "bootstrap_replicates": 2000
+      },
+      {
+        "model": "LoRA-DR-Suite ESM2-650M DisProt7",
+        "metric": "macro_roc_auc",
+        "point_estimate": 0.8940215016475435,
+        "bootstrap_mean": 0.8945936041228201,
+        "bootstrap_sample_sd": 0.028177302662365865,
+        "ci_95_percentile_low": 0.833186829906451,
+        "ci_95_percentile_high": 0.9438705627202736,
+        "bootstrap_unit": "whole_protein_cluster",
+        "bootstrap_replicates": 2000
+      }
+    ]
+  },
+  "comparisons": [
+    {
+      "first_model": "MUSE-IDR A10",
+      "second_model": "PUNCH2-Light Released-13",
+      "delta_definition": "first_minus_second",
+      "metric": "roc_auc_full_precision",
+      "analysis_role": "primary",
+      "point_delta": 0.015691221006494893,
+      "bootstrap_mean_delta": 0.015653675686515312,
+      "bootstrap_sample_sd": 0.008951239961658402,
+      "ci_95_percentile_low": -0.00022599927531319892,
+      "ci_95_percentile_high": 0.035732434968084086,
+      "probability_delta_positive": 0.9725,
+      "one_sided_p_delta_le_zero": 0.02798600699650175,
+      "two_sided_empirical_p": 0.0559720139930035,
+      "holm_family": "two_predeclared_primary_roc_auc_contrasts",
+      "holm_two_sided_p": 0.0559720139930035,
+      "bootstrap_unit": "whole_protein_cluster",
+      "bootstrap_replicates": 2000,
+      "inferential_status": "predeclared_primary_contrast"
+    },
+    {
+      "first_model": "MUSE-IDR A10",
+      "second_model": "PUNCH2-Light Released-13",
+      "delta_definition": "first_minus_second",
+      "metric": "aucpr_trapezoid_full_precision",
+      "analysis_role": "key_secondary",
+      "point_delta": 0.041709340111999116,
+      "bootstrap_mean_delta": 0.03761207843150641,
+      "bootstrap_sample_sd": 0.034855274125785714,
+      "ci_95_percentile_low": -0.0313516807993822,
+      "ci_95_percentile_high": 0.10709486408118367,
+      "probability_delta_positive": 0.8785,
+      "one_sided_p_delta_le_zero": null,
+      "two_sided_empirical_p": null,
+      "holm_family": null,
+      "holm_two_sided_p": null,
+      "bootstrap_unit": "whole_protein_cluster",
+      "bootstrap_replicates": 2000,
+      "inferential_status": "descriptive_key_secondary_no_extra_test_family"
+    },
+    {
+      "first_model": "MUSE-IDR A10",
+      "second_model": "LoRA-DR-Suite ESM2-650M DisProt7",
+      "delta_definition": "first_minus_second",
+      "metric": "roc_auc_full_precision",
+      "analysis_role": "primary",
+      "point_delta": 0.03493531707366693,
+      "bootstrap_mean_delta": 0.03487846594243325,
+      "bootstrap_sample_sd": 0.010796267163443752,
+      "ci_95_percentile_low": 0.01578341161528465,
+      "ci_95_percentile_high": 0.05956812498963194,
+      "probability_delta_positive": 1.0,
+      "one_sided_p_delta_le_zero": 0.0004997501249375312,
+      "two_sided_empirical_p": 0.0009995002498750624,
+      "holm_family": "two_predeclared_primary_roc_auc_contrasts",
+      "holm_two_sided_p": 0.001999000499750125,
+      "bootstrap_unit": "whole_protein_cluster",
+      "bootstrap_replicates": 2000,
+      "inferential_status": "predeclared_primary_contrast"
+    },
+    {
+      "first_model": "MUSE-IDR A10",
+      "second_model": "LoRA-DR-Suite ESM2-650M DisProt7",
+      "delta_definition": "first_minus_second",
+      "metric": "aucpr_trapezoid_full_precision",
+      "analysis_role": "key_secondary",
+      "point_delta": 0.24539068569516087,
+      "bootstrap_mean_delta": 0.23355910449610862,
+      "bootstrap_sample_sd": 0.07715775968372134,
+      "ci_95_percentile_low": 0.09809757138420626,
+      "ci_95_percentile_high": 0.3902679063232728,
+      "probability_delta_positive": 0.9995,
+      "one_sided_p_delta_le_zero": null,
+      "two_sided_empirical_p": null,
+      "holm_family": null,
+      "holm_two_sided_p": null,
+      "bootstrap_unit": "whole_protein_cluster",
+      "bootstrap_replicates": 2000,
+      "inferential_status": "descriptive_key_secondary_no_extra_test_family"
+    }
+  ],
+  "primary_metric": "roc_auc_full_precision",
+  "primary_contrasts": 2,
+  "primary_multiple_testing": "Holm across exactly two ROC-AUC contrasts",
+  "key_secondary_metric": "aucpr_trapezoid_full_precision",
+  "unknown_labels_excluded": true,
+  "common_threshold": 0.5,
+  "punch_official_threshold_reported_separately": 0.35,
+  "s2_labels_used_for_training_fine_tuning_or_calibration": false,
+  "s2_used_for_threshold_tuning_or_ensemble_reweighting": false,
+  "locked_a10_modified_or_reselected": false,
+  "additional_baselines_run": false
+}

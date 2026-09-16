@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "policy_id": "s2_database_curated_reference_20260906",
+  "decision_date": "2026-09-06",
+  "decision_owner": "Xingyuan Li",
+  "purpose": "post-lock supplementary temporal and database-version validation",
+  "positive_labels": {
+    "source": "DisProt public snapshot 2026_06",
+    "rule": "Retain non-obsolete, coordinate-valid structural-state disorder annotations with a permitted direct experimental ECO term, curator information, validator information, and no unresolved construct alteration.",
+    "manual_article_review_required": false,
+    "manual_review_pilot_applied_to_labels": false
+  },
+  "negative_labels": {
+    "source": "PDBe and SIFTS mapped experimentally observed PDB residues",
+    "pdb_release_cutoff": "2026-06-30",
+    "xray_max_resolution_angstrom": 3.0,
+    "em_max_resolution_angstrom": 4.0,
+    "nmr_resolution_filter": null
+  },
+  "unknown_label": -1,
+  "selection": {
+    "exclude_training_caid2_caid3_similarity_flags": true,
+    "candidate_internal_deduplication": true,
+    "model_scores_used": false,
+    "test_metrics_used": false
+  },
+  "reporting_constraint": "S2 must be described as a database-curated supplementary validation set without exhaustive article-by-article re-curation; CAID2 and CAID3 remain the primary external benchmarks.",
+  "caid_labels_accessed_for_s2_selection": false,
+  "model_predictions_accessed_before_freeze": false,
+  "locked_a10_modified": false
+}

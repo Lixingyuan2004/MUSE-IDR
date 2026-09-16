@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "experiment": "a10_locked_external_inference",
+  "status": "pass",
+  "locked_members": 30,
+  "a2_members": 15,
+  "a8_members": 15,
+  "seeds": [
+    17,
+    29,
+    43
+  ],
+  "folds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "uniform_logit_weight": 0.03333333333333333,
+  "all_checkpoint_hashes_match": true,
+  "development_checkpoint_excluded": true,
+  "output_heads": 1,
+  "soft_disorder_output": false,
+  "caid1_caid2_caid3_labels_accessed": false,
+  "ensemble_method": "thirty_model_uniform_logit_mean",
+  "model_id": "facebook/esm2_t33_650M_UR50D",
+  "model_revision": "08e4846e537177426273712802403f7ba8261b6c",
+  "layer_indices": [
+    30,
+    31,
+    32,
+    33
+  ],
+  "backbone_extractions_shared_by_all_members": true,
+  "input_fasta": "data/external/s2_database_curated_20260906/sequences_only/s2_sequences.fasta",
+  "input_fasta_sha256": "d777bfeb9cd8cf82af003c10bcef8b5b3e09dbee276e7e16164f408e336d67df",
+  "input_contains_labels": false,
+  "proteins": 87,
+  "residues": 56394,
+  "cached_representations": 0,
+  "generated_representations": 87,
+  "output": "outputs/supplementary/s2_independent_holdout/a10_prediction_20260907/muse_idr_a10_s2_predictions.tsv.gz",
+  "output_sha256": "70555772455afb707200036cf93266236013d18accdce1c0289a3a8236ab541b",
+  "device": "cuda",
+  "device_name": "NVIDIA GeForce RTX 4090",
+  "precision": "bf16",
+  "elapsed_seconds": 12.646725464612246,
+  "peak_cuda_memory_bytes": 1613172736,
+  "scores_used_for_training_or_tuning": false
+}

@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "captured_at": "2026-08-23",
+  "status": "unlocked",
+  "note": "Do not claim reproducibility until every mutable reference has an immutable revision and artifact hash.",
+  "sources": [
+    {
+      "name": "punch2",
+      "kind": "git",
+      "url": "https://github.com/deemeng/punch2.git",
+      "requested_ref": "main",
+      "resolved_commit": null,
+      "verification": "pending_local_clone"
+    },
+    {
+      "name": "punch2_light",
+      "kind": "git",
+      "url": "https://github.com/deemeng/punch2_light.git",
+      "requested_ref": "main",
+      "resolved_commit": null,
+      "verification": "pending_local_clone"
+    },
+    {
+      "name": "lora_dr_suite",
+      "kind": "git",
+      "url": "https://gitlab.lcqb.upmc.fr/lombardi/LoRA-DR-suite.git",
+      "requested_ref": "main",
+      "resolved_commit": null,
+      "verification": "pending_local_clone"
+    },
+    {
+      "name": "esm2_650m_lora_id",
+      "kind": "huggingface_model",
+      "url": "https://huggingface.co/CQSB/esm2_650M-LoRA-ID",
+      "requested_ref": "main",
+      "resolved_commit": null,
+      "verification": "pending_snapshot_download",
+      "allowed_use": "as_released_caid3_only_and_noncaid_smoke_tests",
+      "prohibited_use": "independent_caid2_claim_or_fair_retraining_baseline"
+    },
+    {
+      "name": "esm2_650m_lora_disprot7",
+      "kind": "huggingface_model",
+      "url": "https://huggingface.co/CQSB/esm2_650M-LoRA-DisProt7",
+      "requested_ref": "main",
+      "resolved_commit": null,
+      "verification": "pending_availability_check",
+      "allowed_use": "as_released_caid1_caid2_comparison_if_available"
+    }
+  ]
+}

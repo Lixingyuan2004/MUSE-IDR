@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "experiment": "s2_final_database_curated_reference",
+  "status": "pass",
+  "policy_id": "s2_database_curated_reference_20260906",
+  "policy_sha256": "c964c989de394ec0e5d401d33501cfb377584c5b683f8a594295d17c947800b2",
+  "input_pins": {
+    "outputs/supplementary/s2_independent_holdout/prefreeze_20260906/prefreeze_reference.jsonl": "db155d088547397337f3bbe7a065ff36016e4a50a9aa5483cd6c756fe02ffca8",
+    "outputs/supplementary/s2_independent_holdout/prefreeze_20260906/prefreeze_sequences.fasta": "d777bfeb9cd8cf82af003c10bcef8b5b3e09dbee276e7e16164f408e336d67df",
+    "outputs/supplementary/s2_independent_holdout/prefreeze_20260906/candidate_decisions.tsv": "f94ff8dab35d29075e80ef7bf0c348c56a062eb28f28ebfb14124d2664def768",
+    "outputs/supplementary/s2_independent_holdout/prefreeze_20260906/prefreeze_report.json": "2eb8ee11cb69e72d92483206b08357e3e968894522f5413dd178fbfde8dd1046",
+    "outputs/supplementary/s2_independent_holdout/prefreeze_20260906/prefreeze_lock.sha256": "7d519bb46dbbacf2b442a963d8f855eeeb4e79a0614837b5ec667d17aad00073",
+    "experiments/supplementary/s2_independent_holdout/database_curated_policy_20260906.json": "c964c989de394ec0e5d401d33501cfb377584c5b683f8a594295d17c947800b2"
+  },
+  "statistics": {
+    "proteins": 87,
+    "residues": 56394,
+    "positive_residues": 2999,
+    "negative_residues": 27729,
+    "unknown_residues": 25666,
+    "proteins_with_positive": 33,
+    "proteins_with_negative": 76,
+    "proteins_with_both": 22
+  },
+  "source_entry_release_counts": {
+    "2023_12": 6,
+    "2024_06": 1,
+    "2025_06": 4,
+    "2026_06": 76
+  },
+  "manual_article_review_required": false,
+  "manual_review_pilot_applied_to_labels": false,
+  "database_annotation_limit_recorded": true,
+  "sequence_fasta_contains_labels": false,
+  "unknown_label": -1,
+  "model_scores_used_for_selection": false,
+  "caid_labels_accessed": false,
+  "model_predictions_accessed_before_freeze": false,
+  "locked_a10_modified": false,
+  "ready_for_prediction": true,
+  "outputs": {
+    "s2_reference.jsonl": "8a3529199d8f8a018a13a4dc0118770a54293053e3319f3d04a3a9a15063184a",
+    "s2_sequences.fasta": "d777bfeb9cd8cf82af003c10bcef8b5b3e09dbee276e7e16164f408e336d67df",
+    "s2_labels.tsv.gz": "bbd50461f040f2375c44939d7be5d9c6cdec881ea426baa5caa16de221d2848f",
+    "s2_cohort.tsv": "46cac7c0513947dd1bdea9a24f18734c0bd0180f5e98ab50026a91be9e63b884"
+  }
+}

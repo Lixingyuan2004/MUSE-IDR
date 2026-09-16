@@ -1,0 +1,90 @@
+{
+  "schema_version": 1,
+  "status": "locked",
+  "purpose": "post_lock_descriptive_error_robustness_and_complementarity",
+  "models": [
+    "A10-locked",
+    "LoRA-DR-Suite 650M",
+    "PUNCH2-Light Paper-8",
+    "PUNCH2-Light Released-13"
+  ],
+  "comparators": [
+    "LoRA-DR-Suite 650M",
+    "PUNCH2-Light Paper-8",
+    "PUNCH2-Light Released-13"
+  ],
+  "datasets": {
+    "CAID2": {
+      "references": {
+        "disorder_nox": {
+          "path": "data/caid_holdout/references/caid2/disorder_nox.fasta",
+          "sha256": "4e7cf7e2aca696dd0c16f7626574ba667770589d634178c603b36b382eadb99d"
+        },
+        "disorder_pdb": {
+          "path": "data/caid_holdout/references/caid2/disorder_pdb.fasta",
+          "sha256": "559a70179aecaee5a7178acd2e16de4e5adbcca951d41ec5543a4270452d896f"
+        }
+      },
+      "predictions": {
+        "A10-locked": {
+          "path": "outputs/final/a10/caid2_union_predictions.tsv.gz",
+          "sha256": "e63551c73cd41ae8dc2ba8071d5a3bc4559036b5156411fa7880eca0a2ddd5cd"
+        },
+        "LoRA-DR-Suite 650M": {
+          "path": "outputs/analysis/b4_baseline_reproduction/caid2/lora_650m_disprot7_predictions.tsv.gz",
+          "sha256": "2ef8fc3718a6719de75b404c78868669384782a2ca2f6adc01ede90bdde1ddb4"
+        },
+        "PUNCH2-Light Paper-8": {
+          "path": "outputs/analysis/b4_baseline_reproduction/punch2_light/caid2/predictions/punch2_light_paper8_predictions.tsv.gz",
+          "sha256": "1c45095d0efdd31decdf95fc90c1c98523485f65909affcc9b3b86931a569f9b"
+        },
+        "PUNCH2-Light Released-13": {
+          "path": "outputs/analysis/b4_baseline_reproduction/punch2_light/caid2/predictions/punch2_light_released13_predictions.tsv.gz",
+          "sha256": "6ab6032502c59c807f379ede2ec4acabf5516946fd7510a93859cdfc19ce7c2e"
+        }
+      }
+    },
+    "CAID3": {
+      "references": {
+        "disorder_nox": {
+          "path": "data/external/caid3_locked/reference_quarantine/caid3_disorder_nox_reference.fasta",
+          "sha256": "78a43f01b26387236ceb363f368b87f1bdf3ec7502a80ec5c86df63ef3487d41"
+        },
+        "disorder_pdb": {
+          "path": "data/external/caid3_locked/reference_quarantine/caid3_disorder_pdb_reference.fasta",
+          "sha256": "b65848395557c751a818dc38049c89d95534c05fbe6f14651e9f5bfd2bb60469"
+        }
+      },
+      "predictions": {
+        "A10-locked": {
+          "path": "outputs/final/a10/caid3_union_predictions.tsv.gz",
+          "sha256": "fa7d15440ea71758f1b2712d1d6cf3d4d1e4d94fe85b6f417d7c4c5ce4425665"
+        },
+        "LoRA-DR-Suite 650M": {
+          "path": "outputs/analysis/b4_baseline_reproduction/caid3/lora_650m_disprot7_predictions.tsv.gz",
+          "sha256": "f0833791d681c9d03c433384e417e7bbff70ca550b74076b72bef9e311ba03bc"
+        },
+        "PUNCH2-Light Paper-8": {
+          "path": "outputs/analysis/b4_baseline_reproduction/punch2_light/caid3/predictions/punch2_light_paper8_predictions.tsv.gz",
+          "sha256": "631ca06bf52d4149c1006d09f6d4f01eacaf20983599a55b1299f18c7372722c"
+        },
+        "PUNCH2-Light Released-13": {
+          "path": "outputs/analysis/b4_baseline_reproduction/punch2_light/caid3/predictions/punch2_light_released13_predictions.tsv.gz",
+          "sha256": "c67052389772846d41c7123b0d771bb8bf2659a3731cb62e6d9bd14b86776dc7"
+        }
+      }
+    }
+  },
+  "protocol": {
+    "analysis_type": "descriptive_post_lock",
+    "decision_threshold": 0.5,
+    "protein_length_bins": [200, 500, 1000],
+    "known_label_disorder_fraction_bins": [0.1, 0.3, 0.6],
+    "transition_distance_bins": [2, 5, 15],
+    "true_segment_length_bins": [15, 30, 100],
+    "confirmatory_inference_source": "B6",
+    "new_hypothesis_tests": false
+  },
+  "model_selection_completed_before_caid_label_access": true,
+  "caid_labels_used_for_training_or_tuning": false
+}

@@ -1,0 +1,128 @@
+{
+  "schema_version": 1,
+  "generated_utc": "2026-08-21T02:47:49.663607+00:00",
+  "task": "single_output_classic_idr",
+  "training_readiness": "ready_for_baseline_training",
+  "sources": {
+    "training_jsonl": {
+      "path": "data/processed/classic_idr_2018/trainable_caid23_filtered.jsonl",
+      "bytes": 3715239,
+      "sha256": "124d05084015d659b4e0a0ff4d5a7d32ab1a8394ab4b51bf79d954c770f58be2"
+    },
+    "training_fasta": {
+      "path": "data/processed/classic_idr_2018/trainable_caid23_filtered.fasta",
+      "bytes": 599506,
+      "sha256": "482bf49a731f4c179f817c316b16c26c3d64e1c0ac7a515c5303a5292085c263"
+    },
+    "all_vs_all_tsv": {
+      "path": "data/interim/homology/train_internal_mmseqs18/train_filtered_all_vs_all.tsv",
+      "bytes": 69767,
+      "sha256": "23679c5d981fb77e0735780d0c71cc395137167303b9a7a377a0ab32290d0e8d"
+    },
+    "external_test_audit": {
+      "path": "data/manifests/training/classic_idr_2018_caid23_homology_after_filter.json",
+      "bytes": 132,
+      "sha256": "3d0905b79aa2981c640a75a6337f1d5a247082a40880a20dd106cd6dff55dcf1"
+    }
+  },
+  "homology_rule": {
+    "identity_strictly_greater_than": 0.3,
+    "query_coverage_at_least": 0.8,
+    "target_coverage_at_least": 0.8,
+    "graph": "undirected",
+    "cluster_definition": "connected_component"
+  },
+  "split": {
+    "folds": 5,
+    "assignment_seed": 17,
+    "model_training_seeds": [
+      17,
+      29,
+      43
+    ],
+    "balance_targets": [
+      "positive_residues",
+      "negative_residues",
+      "sequence_count",
+      "total_residues"
+    ],
+    "prohibit_cluster_splitting": true
+  },
+  "summary": {
+    "input_sequences": 1133,
+    "mmseqs_rows": 1517,
+    "strict_rule_rows": 1513,
+    "self_rows": 1133,
+    "unique_undirected_nonself_edges": 190,
+    "clusters": 984,
+    "non_singleton_clusters": 105,
+    "largest_cluster_sequences": 6,
+    "cross_fold_homology_edges": 0
+  },
+  "fold_summaries": [
+    {
+      "fold": 0,
+      "clusters": 197,
+      "sequences": 227,
+      "positive_residues": 21020,
+      "negative_residues": 19498,
+      "unknown_residues": 74606,
+      "total_residues": 115124
+    },
+    {
+      "fold": 1,
+      "clusters": 198,
+      "sequences": 226,
+      "positive_residues": 21001,
+      "negative_residues": 19538,
+      "unknown_residues": 75209,
+      "total_residues": 115748
+    },
+    {
+      "fold": 2,
+      "clusters": 196,
+      "sequences": 227,
+      "positive_residues": 21015,
+      "negative_residues": 19541,
+      "unknown_residues": 73512,
+      "total_residues": 114068
+    },
+    {
+      "fold": 3,
+      "clusters": 200,
+      "sequences": 226,
+      "positive_residues": 21004,
+      "negative_residues": 19512,
+      "unknown_residues": 74725,
+      "total_residues": 115241
+    },
+    {
+      "fold": 4,
+      "clusters": 193,
+      "sequences": 227,
+      "positive_residues": 20996,
+      "negative_residues": 19537,
+      "unknown_residues": 72707,
+      "total_residues": 113240
+    }
+  ],
+  "audit": {
+    "all_training_proteins_assigned_once": true,
+    "homology_clusters_split_across_folds": 0,
+    "folds_with_both_residue_classes": 5,
+    "external_test_audit": "data/manifests/training/classic_idr_2018_caid23_homology_after_filter.json",
+    "external_test_audit_status": "pass"
+  },
+  "outputs": {
+    "clusters_jsonl": {
+      "path": "data/processed/classic_idr_2018/homology_clusters.jsonl",
+      "bytes": 136656,
+      "sha256": "a6858ff50ac4957e2d3133c8081852f9426570cb3ae5e831b648fa54c092ff01"
+    },
+    "assignments_jsonl": {
+      "path": "data/processed/classic_idr_2018/homology_5fold_assignments.jsonl",
+      "bytes": 165655,
+      "sha256": "bdbe2233be0a8ddc51ccc2b8eb791ec57aa5837d25e66f1cb8b6eb32388d8a45"
+    }
+  }
+}

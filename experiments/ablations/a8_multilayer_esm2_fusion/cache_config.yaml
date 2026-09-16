@@ -1,0 +1,9 @@
+model_id: facebook/esm2_t33_650M_UR50D
+revision: 08e4846e537177426273712802403f7ba8261b6c
+layer_indices: [30, 31, 32, 33]
+precision: bf16
+storage_dtype: float16
+max_residues: 1022
+window_stride: 511
+window_batch_size: 1
+resume: true

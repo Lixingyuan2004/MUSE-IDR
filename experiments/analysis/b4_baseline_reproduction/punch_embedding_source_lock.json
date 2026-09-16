@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "repository": "https://github.com/deemeng/embedding",
+  "commit": "28fe5c371999d27e67563b6cddad4e669653f22d",
+  "local_path": "third_party/baselines/embedding",
+  "prottrans_model_id": "Rostlab/prot_t5_xl_uniref50",
+  "onehot_shape": "1 x residues x 21",
+  "prottrans_shape": "1 x residues x 1024",
+  "ambiguous_mapping": "U/Z/O/B to X",
+  "author_truncation": false,
+  "purpose": "PUNCH2 and PUNCH2-Light official feature reproduction"
+}

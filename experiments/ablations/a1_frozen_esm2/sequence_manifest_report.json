@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "source": "data/processed/classic_idr_2018/a1_frozen_esm2_manifest.jsonl",
+  "source_sha256": "df6a4deee4a65d009f4faf41c6b8930f9db8600fa28b6711da7ff48ad2c70bf4",
+  "output": "data/processed/classic_idr_2018/a1_sequences.jsonl",
+  "output_sha256": "7399337d4888e2831a1ec17c807fe9fda85de091a630bf8e7b53fef4b97f5cd9",
+  "proteins": 1133,
+  "fields": [
+    "id",
+    "sequence",
+    "fold"
+  ],
+  "contains_residue_labels": false,
+  "caid2_caid3_labels_accessed": false
+}

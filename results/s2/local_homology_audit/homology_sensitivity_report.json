@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "experiment": "s2_local_homology_sensitivity_audit",
+  "status": "pass_descriptive_not_automatic_exclusion",
+  "inputs": {
+    "outputs/supplementary/s2_independent_holdout/source_audit_20260906/after_2023_06_sequence_candidates.fasta": "5d1a1a3d06d2ccbcf0121d70249462050dfa3a41fb66dcd85df359cb0ed1dba8",
+    "outputs/supplementary/s2_independent_holdout/source_audit_20260906/training_and_caid23_sequences.fasta": "05a3b1efa6ed013505fb1b0943d4e21be3b2f5a1423f697aa647c90cde6fc8ef"
+  },
+  "mmseqs_version": "8cc5ce367b5638c4306c2d7cfc652dd099a4643f",
+  "mmseqs_executable_sha256": "ad319fc9fc67500ca2da9b9247d9611d2113e66cb800c15b603949f5652e2a0b",
+  "search_prefilter": {
+    "minimum_identity": 0.2,
+    "minimum_both_sequence_coverage": 0.1,
+    "maximum_evalue": 0.001,
+    "low_complexity_masking": true,
+    "composition_bias_correction": true
+  },
+  "criteria_are_sensitivity_flags_not_automatic_exclusions": true,
+  "forbidden_reference": {
+    "reported_alignments": 396,
+    "criterion_alignment_counts": {
+      "candidate_half_30id": 29,
+      "local_40id_50aa": 16,
+      "local_50id_30aa": 2,
+      "reciprocal_half_30id": 18
+    },
+    "criterion_query_counts": {
+      "candidate_half_30id": 11,
+      "local_40id_50aa": 14,
+      "local_50id_30aa": 2,
+      "reciprocal_half_30id": 9
+    },
+    "queries_flagged_by_any_sensitivity_rule": 21
+  },
+  "candidate_internal": {
+    "reported_alignments": 86,
+    "criterion_alignment_counts": {
+      "candidate_half_30id": 25,
+      "global_30id_both80": 18,
+      "local_40id_50aa": 24,
+      "local_50id_30aa": 10,
+      "reciprocal_half_30id": 24
+    },
+    "criterion_query_counts": {
+      "candidate_half_30id": 20,
+      "global_30id_both80": 15,
+      "local_40id_50aa": 20,
+      "local_50id_30aa": 10,
+      "reciprocal_half_30id": 20
+    },
+    "queries_flagged_by_any_sensitivity_rule": 23
+  },
+  "caid_labels_accessed": false,
+  "model_predictions_accessed": false,
+  "locked_a10_modified": false
+}

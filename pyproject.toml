@@ -1,0 +1,54 @@
+[build-system]
+requires = ["setuptools>=75", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "muse-idr"
+version = "1.1.0"
+description = "Multilayer and multiscale ESM-2 ensemble for residue-level intrinsic disorder prediction"
+readme = "README.md"
+requires-python = ">=3.11,<3.13"
+license = "Apache-2.0"
+authors = [
+  {name = "Xingyuan Li"},
+]
+dependencies = [
+  "accelerate==1.14.0",
+  "biopython==1.88",
+  "numpy==2.3.5",
+  "pandas==2.3.3",
+  "peft==0.20.0",
+  "PyYAML==6.0.3",
+  "scikit-learn==1.9.0",
+  "sentencepiece==0.2.1",
+  "torch==2.12.1",
+  "tqdm==4.70.0",
+  "transformers==5.15.1",
+]
+
+[project.urls]
+Repository = "https://github.com/Lixingyuan2004/MUSE-IDR"
+Issues = "https://github.com/Lixingyuan2004/MUSE-IDR/issues"
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.3,<10",
+  "pytest-cov>=6,<8",
+  "ruff>=0.9,<1",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["muse_idr*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "-ra"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]

@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "purpose": "exclude_homologs_of_label_free_caid2_caid3_test_targets",
+  "tool_environment": "configs/environment/mmseqs2_windows.json",
+  "inputs": {
+    "query_fasta": "data/processed/classic_idr_2018/trainable_pre_homology.fasta",
+    "query_sequences": 1183,
+    "query_sha256": "71c013f5bef9036448440cd19827cfb0ce604e90d6cabff2b5cfc4ca75cdd1bb",
+    "target_fasta": "data/caid_holdout/derived/caid23/targets.fasta",
+    "target_sequences": 666,
+    "target_sha256": "bd8c40e75d1ce4ffd0c9d3950f351dad888d8418e648550355cb13bf06e75744",
+    "target_labels_read": false
+  },
+  "search": {
+    "workflow": "easy-search",
+    "prefilter_mode": 2,
+    "prefilter_mode_name": "nofilter",
+    "max_seqs": 1000,
+    "alignment_mode": 3,
+    "min_seq_id": 0.3,
+    "identity_filter_note": "MMseqs may emit the 0.30 boundary; the auditor applies the preregistered strict >0.30 rule",
+    "coverage": 0.8,
+    "coverage_mode": 0,
+    "coverage_mode_name": "query_and_target",
+    "evalue": 1000000.0,
+    "mask": 0,
+    "comp_bias_corr": 0,
+    "threads": 20,
+    "format_output": "query,target,fident,alnlen,qlen,tlen,qcov,tcov"
+  },
+  "results": {
+    "alignment_pairs_calculated": 105478,
+    "threshold_passing_rows": 65,
+    "unique_training_queries": 50,
+    "unique_holdout_targets": 44,
+    "canonical_tsv": "data/interim/homology/caid23_exclusion_mmseqs18/train_vs_caid23.tsv",
+    "canonical_tsv_sha256": "638d4500181ce5b723a633c41dbc0efd34672e82e40f4296ba64aa47bc6968a6",
+    "before_filter_audit": "data/manifests/training/classic_idr_2018_caid23_homology_before_filter.json",
+    "before_filter_status": "fail_expected"
+  }
+}

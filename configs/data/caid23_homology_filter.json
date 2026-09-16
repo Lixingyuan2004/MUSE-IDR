@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "filter_policy": {
+    "identity_strictly_greater_than": 0.3,
+    "query_coverage_at_least": 0.8,
+    "target_coverage_at_least": 0.8,
+    "remove_entire_candidate_protein_on_any_forbidden_hit": true,
+    "holdout_labels_read": false
+  },
+  "sources": {
+    "candidate_jsonl": {
+      "path": "data/processed/classic_idr_2018/trainable_pre_homology.jsonl",
+      "bytes": 3863802,
+      "sha256": "2649ec923051d2c756cb052f96d6f9817480d9d780006e89fa07a608b46895dc"
+    },
+    "candidate_fasta": {
+      "path": "data/processed/classic_idr_2018/trainable_pre_homology.fasta",
+      "bytes": 625889,
+      "sha256": "71c013f5bef9036448440cd19827cfb0ce604e90d6cabff2b5cfc4ca75cdd1bb"
+    },
+    "homology_tsv": {
+      "path": "data/interim/homology/caid23_exclusion_mmseqs18/train_vs_caid23.tsv",
+      "bytes": 2997,
+      "sha256": "638d4500181ce5b723a633c41dbc0efd34672e82e40f4296ba64aa47bc6968a6"
+    },
+    "holdout_sentinel": {
+      "path": "data/manifests/holdouts/caid23_test_sentinel.json",
+      "bytes": 209719,
+      "sha256": "e149d1dea349953480d6d4944dd68c34075ccf9a8fc58abb9d8db52a1e3b066c"
+    },
+    "post_filter_homology_tsv": {
+      "path": "data/interim/homology/caid23_exclusion_filtered_mmseqs18/train_filtered_vs_caid23.tsv",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "post_filter_formal_audit": {
+      "path": "data/manifests/training/classic_idr_2018_caid23_homology_after_filter.json",
+      "bytes": 132,
+      "sha256": "3d0905b79aa2981c640a75a6337f1d5a247082a40880a20dd106cd6dff55dcf1"
+    }
+  },
+  "expected": {
+    "input_sequences": 1183,
+    "forbidden_hit_rows": 65,
+    "removed_sequences": 50,
+    "kept_sequences": 1133,
+    "post_filter_forbidden_hit_rows": 0
+  },
+  "post_filter_search": {
+    "parameters_same_as": "configs/data/caid23_homology_search.json",
+    "query_fasta": "data/processed/classic_idr_2018/trainable_caid23_filtered.fasta",
+    "query_sha256": "482bf49a731f4c179f817c316b16c26c3d64e1c0ac7a515c5303a5292085c263",
+    "alignment_pairs_calculated": 101049,
+    "threshold_passing_rows": 0
+  },
+  "outputs": {
+    "jsonl": "data/processed/classic_idr_2018/trainable_caid23_filtered.jsonl",
+    "fasta": "data/processed/classic_idr_2018/trainable_caid23_filtered.fasta",
+    "manifest": "data/manifests/training/classic_idr_2018_caid23_homology_filtered.json"
+  }
+}

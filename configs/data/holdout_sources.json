@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "caid1": {
+    "mode": "reconstructed_targets",
+    "expected_targets": 652,
+    "current_release_fasta": {
+      "local_path": "data/caid_holdout/references/caid1/rebuild_sources/disprot-2018-11-disorder.fasta",
+      "url": "https://disprot.org/api/search?release=2018_11&show_ambiguous=false&show_obsolete=false&format=fasta&namespace=structural_state&get_consensus=true"
+    },
+    "exclude_release_fasta": {
+      "local_path": "data/caid_holdout/references/caid1/rebuild_sources/disprot-2016-10-disorder.fasta",
+      "url": "https://disprot.org/api/search?release=2016_10&show_ambiguous=false&show_obsolete=false&format=fasta&namespace=structural_state&get_consensus=true"
+    },
+    "release_json": {
+      "local_path": "data/caid_holdout/references/caid1/rebuild_sources/disprot-2018-11.json",
+      "url": "https://disprot.org/api/search?release=2018_11&show_ambiguous=false&show_obsolete=false&format=json"
+    }
+  },
+  "identifier_mappings": [
+    {
+      "release": "2023_06",
+      "local_path": "data/raw/disprot/2023_06/disprot.json",
+      "url": "https://disprot.org/api/search?release=2023_06&show_ambiguous=true&show_obsolete=true&format=json"
+    },
+    {
+      "release": "2025_06",
+      "local_path": "data/raw/disprot/2025_06/disprot.json",
+      "url": "https://disprot.org/api/search?release=2025_06&show_ambiguous=true&show_obsolete=true&format=json"
+    },
+    {
+      "release": "2026_06",
+      "local_path": "data/raw/disprot/2026_06/disprot.json",
+      "url": "https://disprot.org/api/search?release=2026_06&show_ambiguous=true&show_obsolete=true&format=json"
+    }
+  ],
+  "reference_files": [
+    {
+      "edition": "caid2",
+      "track": "disorder_nox",
+      "expected_records": 210,
+      "local_path": "data/caid_holdout/references/caid2/disorder_nox.fasta",
+      "url": "https://caid.idpcentral.org/assets/sections/challenge/static/references/2/disorder_nox.fasta"
+    },
+    {
+      "edition": "caid2",
+      "track": "disorder_pdb",
+      "expected_records": 348,
+      "local_path": "data/caid_holdout/references/caid2/disorder_pdb.fasta",
+      "url": "https://caid.idpcentral.org/assets/sections/challenge/static/references/2/disorder_pdb.fasta"
+    },
+    {
+      "edition": "caid3",
+      "track": "disorder_nox",
+      "expected_records": 204,
+      "local_path": "data/caid_holdout/references/caid3/disorder_nox.fasta",
+      "url": "https://caid.idpcentral.org/assets/sections/challenge/static/references/3/disorder_nox.fasta"
+    },
+    {
+      "edition": "caid3",
+      "track": "disorder_pdb",
+      "expected_records": 319,
+      "local_path": "data/caid_holdout/references/caid3/disorder_pdb.fasta",
+      "url": "https://caid.idpcentral.org/assets/sections/challenge/static/references/3/disorder_pdb.fasta"
+    }
+  ]
+}

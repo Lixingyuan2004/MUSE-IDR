@@ -1,0 +1,36 @@
+name: Bug or reproducibility report
+description: Report an inference, installation, or reproducibility problem.
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: Please do not attach restricted datasets, CAID labels, or credentials.
+  - type: textarea
+    id: description
+    attributes:
+      label: Problem
+      description: What happened, and what did you expect?
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Reproduction command
+      render: shell
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Commit or release
+      placeholder: v1.1.0-bioinformatics-submission or full commit hash
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: OS, Python, PyTorch, GPU, CUDA, and dependency versions.
+    validations:
+      required: true

@@ -1,0 +1,297 @@
+{
+  "schema_version": 1,
+  "generated_utc": "2026-08-21T01:43:25.133227+00:00",
+  "dataset_name": "historical_disprot_2018_classic_idr",
+  "release": "2018_11",
+  "task": "single_output_classic_idr",
+  "label_semantics": {
+    "positive": 1,
+    "negative": 0,
+    "unknown": -1
+  },
+  "training_readiness": "blocked_pending_pdb_negatives_and_caid23_homology_audit",
+  "evidence_policy": {
+    "unknown_evidence": "error",
+    "allowed_positive_evidence": [
+      "Analytical ultracentrifugation",
+      "Atomic force microscopy",
+      "Circular dichroism spectroscopy far-UV",
+      "Circular dichroism spectroscopy near-UV",
+      "Differential scanning calorimetry",
+      "Differential scanning fluorimetry thermal shift assay",
+      "Dynamic light scattering",
+      "Electron cryomicroscopy",
+      "Electrospray ionization fourier transform ion cyclotron resonance mass spectrometry",
+      "Fluorescence intrinsic",
+      "Fluorescence polarization/anisotropy",
+      "Fluorescence resonance energy transfer",
+      "Fluorescent dynamic quenching",
+      "Fluorescent probes extrinsic fluorescence",
+      "Fourier transform infrared spectroscopy",
+      "Immunochemistry",
+      "Mass spectrometry-based high resolution hydrogen-deuterium exchange",
+      "NMR-based hydrogen-deuterium exchange",
+      "Nuclear magnetic resonance",
+      "Proton-based nuclear magnetic resonance",
+      "Raman optical activity",
+      "Raman spectroscopy",
+      "Rotary shadowing electron microscopy",
+      "Sensitivity to proteolysis",
+      "Site-directed spin-labelling electron paramagnetic resonance spectroscopy",
+      "Size exclusion/gel filtration chromatography",
+      "Small-angle X-ray scattering",
+      "Small-angle neutron scattering",
+      "Sodium dodecyl sulfate polyacrylamide gel electrophoresis",
+      "Stability at pH extremes",
+      "Stability at thermal extremes",
+      "Static light scattering",
+      "Synchrotron radiation circular dichroism",
+      "Vibrational spectroscopy of cyanylated cysteines",
+      "Viscometry"
+    ],
+    "excluded_nonpositive_evidence": [
+      "High relative B-factor",
+      "Missing electron density"
+    ]
+  },
+  "name_exclusion_substrings": [
+    "polyprotein"
+  ],
+  "sources": {
+    "release_json": {
+      "local_path": "data/caid_holdout/references/caid1/rebuild_sources/disprot-2018-11.json",
+      "url": "https://disprot.org/api/search?release=2018_11&show_ambiguous=false&show_obsolete=false&format=json",
+      "bytes": 6690809,
+      "sha256": "2062da33ae925e64daa2a0bb899ad6e911020d8caa55121fcf1cbed9e18db0e0"
+    },
+    "current_structural_state_fasta": {
+      "local_path": "data/caid_holdout/references/caid1/rebuild_sources/disprot-2018-11-disorder.fasta",
+      "url": "https://disprot.org/api/search?release=2018_11&show_ambiguous=false&show_obsolete=false&format=fasta&namespace=structural_state&get_consensus=true",
+      "bytes": 832505,
+      "sha256": "e330b011ddb6f1574ae79c779b3ade8bb6d91d1524c6fdee00d28d6d0beb6a21"
+    },
+    "previous_structural_state_fasta": {
+      "local_path": "data/caid_holdout/references/caid1/rebuild_sources/disprot-2016-10-disorder.fasta",
+      "url": "https://disprot.org/api/search?release=2016_10&show_ambiguous=false&show_obsolete=false&format=fasta&namespace=structural_state&get_consensus=true",
+      "bytes": 432601,
+      "sha256": "b07ecc18dcb26d6ecd1bd5b14c22ea4132d201b8fa4d64a6f5983208116009d3"
+    }
+  },
+  "summary": {
+    "release_json_records": 1391,
+    "current_structural_state_ids": 1391,
+    "previous_structural_state_ids": 756,
+    "caid1_delta_before_name_filter": 664,
+    "caid1_delta_after_name_filter": 652,
+    "polyprotein_records_excluded": 25,
+    "polyprotein_disprot_ids": [
+      "DP00066",
+      "DP00101",
+      "DP00148",
+      "DP00410",
+      "DP00573",
+      "DP00588",
+      "DP00615",
+      "DP00673",
+      "DP00674",
+      "DP00675",
+      "DP00876",
+      "DP00999",
+      "DP01031",
+      "DP01129",
+      "DP01142",
+      "DP01188",
+      "DP01245",
+      "DP01256",
+      "DP01929",
+      "DP01930",
+      "DP01931",
+      "DP02051",
+      "DP02203",
+      "DP02204",
+      "DP02212"
+    ],
+    "records_after_filter": 1366,
+    "unique_sequences_after_merge": 1353,
+    "sequences_with_positive_labels": 906,
+    "sequences_without_positive_labels": 447,
+    "positive_residues_after_merge": 110002,
+    "unknown_residues_after_merge": 576245,
+    "negative_residues": 0,
+    "allowed_evidence_region_counts": {
+      "Analytical ultracentrifugation": 23,
+      "Atomic force microscopy": 7,
+      "Circular dichroism spectroscopy far-UV": 466,
+      "Circular dichroism spectroscopy near-UV": 39,
+      "Differential scanning calorimetry": 9,
+      "Differential scanning fluorimetry thermal shift assay": 2,
+      "Dynamic light scattering": 27,
+      "Electron cryomicroscopy": 62,
+      "Electrospray ionization fourier transform ion cyclotron resonance mass spectrometry": 5,
+      "Fluorescence intrinsic": 21,
+      "Fluorescence polarization/anisotropy": 6,
+      "Fluorescence resonance energy transfer": 7,
+      "Fluorescent dynamic quenching": 1,
+      "Fluorescent probes extrinsic fluorescence": 3,
+      "Fourier transform infrared spectroscopy": 25,
+      "Immunochemistry": 10,
+      "Mass spectrometry-based high resolution hydrogen-deuterium exchange": 8,
+      "NMR-based hydrogen-deuterium exchange": 21,
+      "Nuclear magnetic resonance": 825,
+      "Proton-based nuclear magnetic resonance": 67,
+      "Raman optical activity": 1,
+      "Raman spectroscopy": 1,
+      "Rotary shadowing electron microscopy": 6,
+      "Sensitivity to proteolysis": 130,
+      "Site-directed spin-labelling electron paramagnetic resonance spectroscopy": 7,
+      "Size exclusion/gel filtration chromatography": 81,
+      "Small-angle X-ray scattering": 63,
+      "Small-angle neutron scattering": 6,
+      "Sodium dodecyl sulfate polyacrylamide gel electrophoresis": 48,
+      "Stability at pH extremes": 1,
+      "Stability at thermal extremes": 18,
+      "Static light scattering": 2,
+      "Synchrotron radiation circular dichroism": 9,
+      "Vibrational spectroscopy of cyanylated cysteines": 1,
+      "Viscometry": 3
+    },
+    "allowed_evidence_residue_spans_before_merge": {
+      "Analytical ultracentrifugation": 4393,
+      "Atomic force microscopy": 2827,
+      "Circular dichroism spectroscopy far-UV": 66987,
+      "Circular dichroism spectroscopy near-UV": 4664,
+      "Differential scanning calorimetry": 841,
+      "Differential scanning fluorimetry thermal shift assay": 274,
+      "Dynamic light scattering": 4718,
+      "Electron cryomicroscopy": 4348,
+      "Electrospray ionization fourier transform ion cyclotron resonance mass spectrometry": 457,
+      "Fluorescence intrinsic": 4393,
+      "Fluorescence polarization/anisotropy": 1137,
+      "Fluorescence resonance energy transfer": 507,
+      "Fluorescent dynamic quenching": 78,
+      "Fluorescent probes extrinsic fluorescence": 728,
+      "Fourier transform infrared spectroscopy": 5574,
+      "Immunochemistry": 607,
+      "Mass spectrometry-based high resolution hydrogen-deuterium exchange": 1386,
+      "NMR-based hydrogen-deuterium exchange": 1862,
+      "Nuclear magnetic resonance": 53406,
+      "Proton-based nuclear magnetic resonance": 8084,
+      "Raman optical activity": 280,
+      "Raman spectroscopy": 153,
+      "Rotary shadowing electron microscopy": 701,
+      "Sensitivity to proteolysis": 19276,
+      "Site-directed spin-labelling electron paramagnetic resonance spectroscopy": 672,
+      "Size exclusion/gel filtration chromatography": 15106,
+      "Small-angle X-ray scattering": 7825,
+      "Small-angle neutron scattering": 520,
+      "Sodium dodecyl sulfate polyacrylamide gel electrophoresis": 7634,
+      "Stability at pH extremes": 265,
+      "Stability at thermal extremes": 3422,
+      "Static light scattering": 387,
+      "Synchrotron radiation circular dichroism": 1374,
+      "Vibrational spectroscopy of cyanylated cysteines": 124,
+      "Viscometry": 281
+    },
+    "excluded_evidence_region_counts": {
+      "High relative B-factor": 5,
+      "Missing electron density": 906
+    },
+    "excluded_evidence_residue_spans": {
+      "High relative B-factor": 145,
+      "Missing electron density": 33695
+    },
+    "direct_leakage_findings": 7,
+    "sequences_after_direct_filter": 1346,
+    "sequences_with_positive_labels_after_direct_filter": 901,
+    "positive_residues_after_direct_filter": 109364,
+    "unknown_residues_after_direct_filter": 573074,
+    "negative_residues_after_direct_filter": 0
+  },
+  "external_test_direct_filter": {
+    "sentinel_path": "data/manifests/holdouts/caid23_test_sentinel.json",
+    "sentinel_sha256": "e149d1dea349953480d6d4944dd68c34075ccf9a8fc58abb9d8db52a1e3b066c",
+    "findings": [
+      {
+        "candidate_id": "DP01434",
+        "sequence_sha256": "3549023de66bb61261499b189b08ed6ce1a60059c4c28ce23d86e15db7ee8840",
+        "reasons": [
+          "identifier_or_isoform"
+        ],
+        "matched_identifier_aliases": [
+          "P31431"
+        ]
+      },
+      {
+        "candidate_id": "DP00518",
+        "sequence_sha256": "6c4009e6971eeab95aeb910d80dc4d4b969856366c00b281468f3f00eaf55c6c",
+        "reasons": [
+          "identifier_or_isoform"
+        ],
+        "matched_identifier_aliases": [
+          "O54918"
+        ]
+      },
+      {
+        "candidate_id": "DP00122",
+        "sequence_sha256": "7c5a0d1c577542e4a1f0f47555dee940d7da12da1aacd272e558af3641d3b26c",
+        "reasons": [
+          "identifier_or_isoform"
+        ],
+        "matched_identifier_aliases": [
+          "P15146"
+        ]
+      },
+      {
+        "candidate_id": "DP00080",
+        "sequence_sha256": "be6417b321c5d197117d6144082b019d8e563e1a8cc975c01865b78bddf86a25",
+        "reasons": [
+          "exact_sequence_sha256"
+        ],
+        "matched_identifier_aliases": []
+      },
+      {
+        "candidate_id": "DP00154",
+        "sequence_sha256": "cd702150f493f2321a7dc5581223dc7875fb28231a79e3698845d224e838f537",
+        "reasons": [
+          "identifier_or_isoform"
+        ],
+        "matched_identifier_aliases": [
+          "P29353"
+        ]
+      },
+      {
+        "candidate_id": "DP02263",
+        "sequence_sha256": "d03d5cb6bddeac53a8fe671655c2bf38d796070b71a9d78648533341d59ae75f",
+        "reasons": [
+          "identifier_or_isoform"
+        ],
+        "matched_identifier_aliases": [
+          "P32120"
+        ]
+      },
+      {
+        "candidate_id": "DP01477",
+        "sequence_sha256": "fd7c1a0c74961467bee949074973d4dd43443f2f7d75d1cca3c480467a863b3b",
+        "reasons": [
+          "identifier_or_isoform"
+        ],
+        "matched_identifier_aliases": [
+          "P63277"
+        ]
+      }
+    ],
+    "post_filter_findings": []
+  },
+  "outputs": {
+    "records_jsonl": {
+      "path": "data/interim/historical_disprot_2018/classic_idr_candidates.jsonl",
+      "bytes": 3639395,
+      "sha256": "c66ded792b2cba816592cd370c988620fc6b98bf4247e815e48501ccea8fbfa8"
+    },
+    "candidate_fasta": {
+      "path": "data/interim/historical_disprot_2018/candidates.fasta",
+      "bytes": 713464,
+      "sha256": "fd58663658249b74dc8093a06837c294ac44ac07f3103218ef3ee0de64af2be1"
+    }
+  }
+}

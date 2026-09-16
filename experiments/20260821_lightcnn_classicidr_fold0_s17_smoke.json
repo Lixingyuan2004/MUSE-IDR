@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "experiment_id": "20260821_lightcnn_classicidr_fold0_s17_smoke",
+  "stage": "non_final_smoke",
+  "paper_eligible": false,
+  "model_selection_eligible": false,
+  "warning": "Only 25 training batches were used; metrics validate the pipeline and are not a baseline result",
+  "task": "single_output_classic_idr",
+  "output_heads": 1,
+  "validation_fold": 0,
+  "seed": 17,
+  "device": "NVIDIA GeForce RTX 3060 Laptop GPU",
+  "environment": "configs/environment/local_torch_windows.json",
+  "config": "configs/train/smoke_light_cnn.json",
+  "data_manifest": "data/manifests/training/classic_idr_2018_homology_5fold.json",
+  "summary": {
+    "model_parameters": 125249,
+    "training_proteins_available": 906,
+    "training_batches_used": 25,
+    "training_labeled_residues_used": 44247,
+    "training_loss": 0.6079653780492742,
+    "validation_proteins": 227,
+    "validation_labeled_residues": 40518,
+    "validation_unknown_residues_masked": 74606,
+    "residue_micro_roc_auc": 0.7606655465602415,
+    "residue_average_precision": 0.7858140763157582,
+    "peak_gpu_memory_mib": 56.3
+  },
+  "artifacts": {
+    "checkpoint": {
+      "path": "outputs/smoke_light_cnn_fold0_seed17/best_checkpoint.pt",
+      "sha256": "028d595f848918842abdbfa4124840a65c265a1caa92132bd73a3ec585fda150"
+    },
+    "metrics": {
+      "path": "outputs/smoke_light_cnn_fold0_seed17/best_metrics.json",
+      "sha256": "c9ba999ec1f0e91a8dbba375e8aeb971a6b1f889bd744f96c6c8612112fc3e3a"
+    },
+    "predictions": {
+      "path": "outputs/smoke_light_cnn_fold0_seed17/validation_predictions.jsonl",
+      "sha256": "2ad977d316d3d4a7c7320e06b6706f1aba43e6ff077828d9ba032287b8a1ca72"
+    },
+    "run_manifest": {
+      "path": "outputs/smoke_light_cnn_fold0_seed17/run_manifest.json",
+      "sha256": "ea949fec1544fff95bef81886db27dda9bef8e944b6e4074187bc37e2695a275"
+    }
+  },
+  "caid2_caid3_labels_accessed": false
+}

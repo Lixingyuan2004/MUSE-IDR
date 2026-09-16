@@ -1,0 +1,1364 @@
+[
+  {
+    "protein_id": "DP03208"
+  },
+  {
+    "protein_id": "DP03245"
+  },
+  {
+    "protein_id": "DP03747"
+  },
+  {
+    "protein_id": "DP03751"
+  },
+  {
+    "protein_id": "DP03991",
+    "local_40id_50aa": [
+      {
+        "target": "DP04574",
+        "fident": 0.402,
+        "alnlen": 80,
+        "qcov": 0.16,
+        "tcov": 0.113,
+        "evalue": 1.043e-07
+      }
+    ]
+  },
+  {
+    "protein_id": "DP04003"
+  },
+  {
+    "protein_id": "DP04061"
+  },
+  {
+    "protein_id": "DP04088"
+  },
+  {
+    "protein_id": "DP04124"
+  },
+  {
+    "protein_id": "DP04129"
+  },
+  {
+    "protein_id": "DP04138"
+  },
+  {
+    "protein_id": "DP04272"
+  },
+  {
+    "protein_id": "DP04304",
+    "global_30id_both80": [
+      {
+        "target": "DP04305",
+        "fident": 0.581,
+        "alnlen": 662,
+        "qcov": 0.962,
+        "tcov": 0.962,
+        "evalue": 4.25e-225
+      }
+    ],
+    "candidate_half_30id": [
+      {
+        "target": "DP04305",
+        "fident": 0.581,
+        "alnlen": 662,
+        "qcov": 0.962,
+        "tcov": 0.962,
+        "evalue": 4.25e-225
+      }
+    ],
+    "reciprocal_half_30id": [
+      {
+        "target": "DP04305",
+        "fident": 0.581,
+        "alnlen": 662,
+        "qcov": 0.962,
+        "tcov": 0.962,
+        "evalue": 4.25e-225
+      }
+    ],
+    "local_40id_50aa": [
+      {
+        "target": "DP04305",
+        "fident": 0.581,
+        "alnlen": 662,
+        "qcov": 0.962,
+        "tcov": 0.962,
+        "evalue": 4.25e-225
+      }
+    ],
+    "local_50id_30aa": [
+      {
+        "target": "DP04305",
+        "fident": 0.581,
+        "alnlen": 662,
+        "qcov": 0.962,
+        "tcov": 0.962,
+        "evalue": 4.25e-225
+      }
+    ]
+  },
+  {
+    "protein_id": "DP04305",
+    "global_30id_both80": [
+      {
+        "target": "DP04304",
+        "fident": 0.581,
+        "alnlen": 662,
+        "qcov": 0.962,
+        "tcov": 0.962,
+        "evalue": 8.219e-236
+      }
+    ],
+    "candidate_half_30id": [
+      {
+        "target": "DP04304",
+        "fident": 0.581,
+        "alnlen": 662,
+        "qcov": 0.962,
+        "tcov": 0.962,
+        "evalue": 8.219e-236
+      }
+    ],
+    "reciprocal_half_30id": [
+      {
+        "target": "DP04304",
+        "fident": 0.581,
+        "alnlen": 662,
+        "qcov": 0.962,
+        "tcov": 0.962,
+        "evalue": 8.219e-236
+      }
+    ],
+    "local_40id_50aa": [
+      {
+        "target": "DP04304",
+        "fident": 0.581,
+        "alnlen": 662,
+        "qcov": 0.962,
+        "tcov": 0.962,
+        "evalue": 8.219e-236
+      }
+    ],
+    "local_50id_30aa": [
+      {
+        "target": "DP04304",
+        "fident": 0.581,
+        "alnlen": 662,
+        "qcov": 0.962,
+        "tcov": 0.962,
+        "evalue": 8.219e-236
+      }
+    ]
+  },
+  {
+    "protein_id": "DP04307"
+  },
+  {
+    "protein_id": "DP04310"
+  },
+  {
+    "protein_id": "DP04312"
+  },
+  {
+    "protein_id": "DP04313"
+  },
+  {
+    "protein_id": "DP04315"
+  },
+  {
+    "protein_id": "DP04316"
+  },
+  {
+    "protein_id": "DP04317"
+  },
+  {
+    "protein_id": "DP04318"
+  },
+  {
+    "protein_id": "DP04319"
+  },
+  {
+    "protein_id": "DP04320"
+  },
+  {
+    "protein_id": "DP04325"
+  },
+  {
+    "protein_id": "DP04327"
+  },
+  {
+    "protein_id": "DP04332"
+  },
+  {
+    "protein_id": "DP04339"
+  },
+  {
+    "protein_id": "DP04359"
+  },
+  {
+    "protein_id": "DP04361"
+  },
+  {
+    "protein_id": "DP04362",
+    "candidate_half_30id": [
+      {
+        "target": "DP04363",
+        "fident": 0.47,
+        "alnlen": 321,
+        "qcov": 0.743,
+        "tcov": 0.681,
+        "evalue": 7.143e-87
+      }
+    ],
+    "reciprocal_half_30id": [
+      {
+        "target": "DP04363",
+        "fident": 0.47,
+        "alnlen": 321,
+        "qcov": 0.743,
+        "tcov": 0.681,
+        "evalue": 7.143e-87
+      }
+    ],
+    "local_40id_50aa": [
+      {
+        "target": "DP04363",
+        "fident": 0.47,
+        "alnlen": 321,
+        "qcov": 0.743,
+        "tcov": 0.681,
+        "evalue": 7.143e-87
+      }
+    ]
+  },
+  {
+    "protein_id": "DP04363",
+    "candidate_half_30id": [
+      {
+        "target": "DP04362",
+        "fident": 0.471,
+        "alnlen": 320,
+        "qcov": 0.679,
+        "tcov": 0.741,
+        "evalue": 6.151e-85
+      },
+      {
+        "target": "DP04364",
+        "fident": 0.315,
+        "alnlen": 285,
+        "qcov": 0.683,
+        "tcov": 0.943,
+        "evalue": 1.018e-23
+      }
+    ],
+    "reciprocal_half_30id": [
+      {
+        "target": "DP04362",
+        "fident": 0.471,
+        "alnlen": 320,
+        "qcov": 0.679,
+        "tcov": 0.741,
+        "evalue": 6.151e-85
+      },
+      {
+        "target": "DP04364",
+        "fident": 0.315,
+        "alnlen": 285,
+        "qcov": 0.683,
+        "tcov": 0.943,
+        "evalue": 1.018e-23
+      }
+    ],
+    "local_40id_50aa": [
+      {
+        "target": "DP04362",
+        "fident": 0.471,
+        "alnlen": 320,
+        "qcov": 0.679,
+        "tcov": 0.741,
+        "evalue": 6.151e-85
+      }
+    ]
+  },
+  {
+    "protein_id": "DP04364",
+    "candidate_half_30id": [
+      {
+        "target": "DP04363",
+        "fident": 0.315,
+        "alnlen": 285,
+        "qcov": 0.943,
+        "tcov": 0.683,
+        "evalue": 2.685e-27
+      }
+    ],
+    "reciprocal_half_30id": [
+      {
+        "target": "DP04363",
+        "fident": 0.315,
+        "alnlen": 285,
+        "qcov": 0.943,
+        "tcov": 0.683,
+        "evalue": 2.685e-27
+      }
+    ]
+  },
+  {
+    "protein_id": "DP04382"
+  },
+  {
+    "protein_id": "DP04406",
+    "global_30id_both80": [
+      {
+        "target": "DP04561",
+        "fident": 0.813,
+        "alnlen": 522,
+        "qcov": 1.0,
+        "tcov": 1.0,
+        "evalue": 1.792e-263
+      }
+    ],
+    "candidate_half_30id": [
+      {
+        "target": "DP04561",
+        "fident": 0.813,
+        "alnlen": 522,
+        "qcov": 1.0,
+        "tcov": 1.0,
+        "evalue": 1.792e-263
+      }
+    ],
+    "reciprocal_half_30id": [
+      {
+        "target": "DP04561",
+        "fident": 0.813,
+        "alnlen": 522,
+        "qcov": 1.0,
+        "tcov": 1.0,
+        "evalue": 1.792e-263
+      }
+    ],
+    "local_40id_50aa": [
+      {
+        "target": "DP04561",
+        "fident": 0.813,
+        "alnlen": 522,
+        "qcov": 1.0,
+        "tcov": 1.0,
+        "evalue": 1.792e-263
+      }
+    ],
+    "local_50id_30aa": [
+      {
+        "target": "DP04561",
+        "fident": 0.813,
+        "alnlen": 522,
+        "qcov": 1.0,
+        "tcov": 1.0,
+        "evalue": 1.792e-263
+      }
+    ]
+  },
+  {
+    "protein_id": "DP04408"
+  },
+  {
+    "protein_id": "DP04409",
+    "global_30id_both80": [
+      {
+        "target": "DP04410",
+        "fident": 0.592,
+        "alnlen": 103,
+        "qcov": 0.963,
+        "tcov": 0.963,
+        "evalue": 5.294e-33
+      }
+    ],
+    "candidate_half_30id": [
+      {
+        "target": "DP04410",
+        "fident": 0.592,
+        "alnlen": 103,
+        "qcov": 0.963,
+        "tcov": 0.963,
+        "evalue": 5.294e-33
+      }
+    ],
+    "reciprocal_half_30id": [
+      {
+        "target": "DP04410",
+        "fident": 0.592,
+        "alnlen": 103,
+        "qcov": 0.963,
+        "tcov": 0.963,
+        "evalue": 5.294e-33
+      }
+    ],
+    "local_40id_50aa": [
+      {
+        "target": "DP04410",
+        "fident": 0.592,
+        "alnlen": 103,
+        "qcov": 0.963,
+        "tcov": 0.963,
+        "evalue": 5.294e-33
+      }
+    ],
+    "local_50id_30aa": [
+      {
+        "target": "DP04410",
+        "fident": 0.592,
+        "alnlen": 103,
+        "qcov": 0.963,
+        "tcov": 0.963,
+        "evalue": 5.294e-33
+      }
+    ]
+  },
+  {
+    "protein_id": "DP04410",
+    "global_30id_both80": [
+      {
+        "target": "DP04409",
+        "fident": 0.592,
+        "alnlen": 103,
+        "qcov": 0.963,
+        "tcov": 0.963,
+        "evalue": 2.358e-31
+      }
+    ],
+    "candidate_half_30id": [
+      {
+        "target": "DP04409",
+        "fident": 0.592,
+        "alnlen": 103,
+        "qcov": 0.963,
+        "tcov": 0.963,
+        "evalue": 2.358e-31
+      }
+    ],
+    "reciprocal_half_30id": [
+      {
+        "target": "DP04409",
+        "fident": 0.592,
+        "alnlen": 103,
+        "qcov": 0.963,
+        "tcov": 0.963,
+        "evalue": 2.358e-31
+      }
+    ],
+    "local_40id_50aa": [
+      {
+        "target": "DP04409",
+        "fident": 0.592,
+        "alnlen": 103,
+        "qcov": 0.963,
+        "tcov": 0.963,
+        "evalue": 2.358e-31
+      }
+    ],
+    "local_50id_30aa": [
+      {
+        "target": "DP04409",
+        "fident": 0.592,
+        "alnlen": 103,
+        "qcov": 0.963,
+        "tcov": 0.963,
+        "evalue": 2.358e-31
+      }
+    ]
+  },
+  {
+    "protein_id": "DP04411"
+  },
+  {
+    "protein_id": "DP04412",
+    "candidate_half_30id": [
+      {
+        "target": "DP04457",
+        "fident": 0.393,
+        "alnlen": 309,
+        "qcov": 0.759,
+        "tcov": 0.811,
+        "evalue": 1.569e-67
+      }
+    ],
+    "reciprocal_half_30id": [
+      {
+        "target": "DP04457",
+        "fident": 0.393,
+        "alnlen": 309,
+        "qcov": 0.759,
+        "tcov": 0.811,
+        "evalue": 1.569e-67
+      }
+    ]
+  },
+  {
+    "protein_id": "DP04419"
+  },
+  {
+    "protein_id": "DP04433"
+  },
+  {
+    "protein_id": "DP04434"
+  },
+  {
+    "protein_id": "DP04435"
+  },
+  {
+    "protein_id": "DP04437"
+  },
+  {
+    "protein_id": "DP04438"
+  },
+  {
+    "protein_id": "DP04442"
+  },
+  {
+    "protein_id": "DP04447",
+    "global_30id_both80": [
+      {
+        "target": "DP04455",
+        "fident": 0.374,
+        "alnlen": 343,
+        "qcov": 0.974,
+        "tcov": 0.974,
+        "evalue": 6.857e-62
+      }
+    ],
+    "candidate_half_30id": [
+      {
+        "target": "DP04455",
+        "fident": 0.374,
+        "alnlen": 343,
+        "qcov": 0.974,
+        "tcov": 0.974,
+        "evalue": 6.857e-62
+      }
+    ],
+    "reciprocal_half_30id": [
+      {
+        "target": "DP04455",
+        "fident": 0.374,
+        "alnlen": 343,
+        "qcov": 0.974,
+        "tcov": 0.974,
+        "evalue": 6.857e-62
+      }
+    ],
+    "local_40id_50aa": [
+      {
+        "target": "DP04449",
+        "fident": 0.452,
+        "alnlen": 83,
+        "qcov": 0.235,
+        "tcov": 0.165,
+        "evalue": 2.863e-12
+      }
+    ]
+  },
+  {
+    "protein_id": "DP04448"
+  },
+  {
+    "protein_id": "DP04449",
+    "local_40id_50aa": [
+      {
+        "target": "DP04447",
+        "fident": 0.476,
+        "alnlen": 83,
+        "qcov": 0.165,
+        "tcov": 0.235,
+        "evalue": 2.807e-12
+      },
+      {
+        "target": "DP04455",
+        "fident": 0.421,
+        "alnlen": 64,
+        "qcov": 0.127,
+        "tcov": 0.165,
+        "evalue": 2.097e-08
+      }
+    ]
+  },
+  {
+    "protein_id": "DP04450"
+  },
+  {
+    "protein_id": "DP04453"
+  },
+  {
+    "protein_id": "DP04455",
+    "global_30id_both80": [
+      {
+        "target": "DP04447",
+        "fident": 0.353,
+        "alnlen": 343,
+        "qcov": 0.974,
+        "tcov": 0.974,
+        "evalue": 5.448e-57
+      }
+    ],
+    "candidate_half_30id": [
+      {
+        "target": "DP04447",
+        "fident": 0.353,
+        "alnlen": 343,
+        "qcov": 0.974,
+        "tcov": 0.974,
+        "evalue": 5.448e-57
+      }
+    ],
+    "reciprocal_half_30id": [
+      {
+        "target": "DP04447",
+        "fident": 0.353,
+        "alnlen": 343,
+        "qcov": 0.974,
+        "tcov": 0.974,
+        "evalue": 5.448e-57
+      }
+    ],
+    "local_40id_50aa": [
+      {
+        "target": "DP04449",
+        "fident": 0.421,
+        "alnlen": 64,
+        "qcov": 0.165,
+        "tcov": 0.127,
+        "evalue": 3.741e-09
+      }
+    ]
+  },
+  {
+    "protein_id": "DP04457",
+    "candidate_half_30id": [
+      {
+        "target": "DP04412",
+        "fident": 0.394,
+        "alnlen": 308,
+        "qcov": 0.808,
+        "tcov": 0.757,
+        "evalue": 1.181e-66
+      },
+      {
+        "target": "DP04510",
+        "fident": 0.316,
+        "alnlen": 196,
+        "qcov": 0.529,
+        "tcov": 0.143,
+        "evalue": 4.088e-23
+      }
+    ],
+    "reciprocal_half_30id": [
+      {
+        "target": "DP04412",
+        "fident": 0.394,
+        "alnlen": 308,
+        "qcov": 0.808,
+        "tcov": 0.757,
+        "evalue": 1.181e-66
+      }
+    ]
+  },
+  {
+    "protein_id": "DP04458"
+  },
+  {
+    "protein_id": "DP04459"
+  },
+  {
+    "protein_id": "DP04460",
+    "global_30id_both80": [
+      {
+        "target": "DP04462",
+        "fident": 0.469,
+        "alnlen": 601,
+        "qcov": 0.955,
+        "tcov": 0.968,
+        "evalue": 1.152e-161
+      },
+      {
+        "target": "DP04470",
+        "fident": 0.402,
+        "alnlen": 623,
+        "qcov": 0.954,
+        "tcov": 0.869,
+        "evalue": 2.486e-136
+      }
+    ],
+    "candidate_half_30id": [
+      {
+        "target": "DP04462",
+        "fident": 0.469,
+        "alnlen": 601,
+        "qcov": 0.955,
+        "tcov": 0.968,
+        "evalue": 1.152e-161
+      },
+      {
+        "target": "DP04470",
+        "fident": 0.402,
+        "alnlen": 623,
+        "qcov": 0.954,
+        "tcov": 0.869,
+        "evalue": 2.486e-136
+      }
+    ],
+    "reciprocal_half_30id": [
+      {
+        "target": "DP04462",
+        "fident": 0.469,
+        "alnlen": 601,
+        "qcov": 0.955,
+        "tcov": 0.968,
+        "evalue": 1.152e-161
+      },
+      {
+        "target": "DP04470",
+        "fident": 0.402,
+        "alnlen": 623,
+        "qcov": 0.954,
+        "tcov": 0.869,
+        "evalue": 2.486e-136
+      }
+    ],
+    "local_40id_50aa": [
+      {
+        "target": "DP04462",
+        "fident": 0.469,
+        "alnlen": 601,
+        "qcov": 0.955,
+        "tcov": 0.968,
+        "evalue": 1.152e-161
+      },
+      {
+        "target": "DP04470",
+        "fident": 0.402,
+        "alnlen": 623,
+        "qcov": 0.954,
+        "tcov": 0.869,
+        "evalue": 2.486e-136
+      }
+    ]
+  },
+  {
+    "protein_id": "DP04461"
+  },
+  {
+    "protein_id": "DP04462",
+    "global_30id_both80": [
+      {
+        "target": "DP04470",
+        "fident": 0.479,
+        "alnlen": 622,
+        "qcov": 0.965,
+        "tcov": 0.868,
+        "evalue": 4.002e-175
+      },
+      {
+        "target": "DP04460",
+        "fident": 0.464,
+        "alnlen": 608,
+        "qcov": 0.979,
+        "tcov": 0.967,
+        "evalue": 1.579e-164
+      }
+    ],
+    "candidate_half_30id": [
+      {
+        "target": "DP04470",
+        "fident": 0.479,
+        "alnlen": 622,
+        "qcov": 0.965,
+        "tcov": 0.868,
+        "evalue": 4.002e-175
+      },
+      {
+        "target": "DP04460",
+        "fident": 0.464,
+        "alnlen": 608,
+        "qcov": 0.979,
+        "tcov": 0.967,
+        "evalue": 1.579e-164
+      }
+    ],
+    "reciprocal_half_30id": [
+      {
+        "target": "DP04470",
+        "fident": 0.479,
+        "alnlen": 622,
+        "qcov": 0.965,
+        "tcov": 0.868,
+        "evalue": 4.002e-175
+      },
+      {
+        "target": "DP04460",
+        "fident": 0.464,
+        "alnlen": 608,
+        "qcov": 0.979,
+        "tcov": 0.967,
+        "evalue": 1.579e-164
+      }
+    ],
+    "local_40id_50aa": [
+      {
+        "target": "DP04470",
+        "fident": 0.479,
+        "alnlen": 622,
+        "qcov": 0.965,
+        "tcov": 0.868,
+        "evalue": 4.002e-175
+      },
+      {
+        "target": "DP04460",
+        "fident": 0.464,
+        "alnlen": 608,
+        "qcov": 0.979,
+        "tcov": 0.967,
+        "evalue": 1.579e-164
+      }
+    ]
+  },
+  {
+    "protein_id": "DP04464"
+  },
+  {
+    "protein_id": "DP04465"
+  },
+  {
+    "protein_id": "DP04466"
+  },
+  {
+    "protein_id": "DP04467"
+  },
+  {
+    "protein_id": "DP04470",
+    "global_30id_both80": [
+      {
+        "target": "DP04462",
+        "fident": 0.479,
+        "alnlen": 622,
+        "qcov": 0.868,
+        "tcov": 0.965,
+        "evalue": 3.158e-171
+      },
+      {
+        "target": "DP04460",
+        "fident": 0.402,
+        "alnlen": 623,
+        "qcov": 0.869,
+        "tcov": 0.954,
+        "evalue": 1.966e-135
+      }
+    ],
+    "candidate_half_30id": [
+      {
+        "target": "DP04462",
+        "fident": 0.479,
+        "alnlen": 622,
+        "qcov": 0.868,
+        "tcov": 0.965,
+        "evalue": 3.158e-171
+      },
+      {
+        "target": "DP04460",
+        "fident": 0.402,
+        "alnlen": 623,
+        "qcov": 0.869,
+        "tcov": 0.954,
+        "evalue": 1.966e-135
+      }
+    ],
+    "reciprocal_half_30id": [
+      {
+        "target": "DP04462",
+        "fident": 0.479,
+        "alnlen": 622,
+        "qcov": 0.868,
+        "tcov": 0.965,
+        "evalue": 3.158e-171
+      },
+      {
+        "target": "DP04460",
+        "fident": 0.402,
+        "alnlen": 623,
+        "qcov": 0.869,
+        "tcov": 0.954,
+        "evalue": 1.966e-135
+      }
+    ],
+    "local_40id_50aa": [
+      {
+        "target": "DP04462",
+        "fident": 0.479,
+        "alnlen": 622,
+        "qcov": 0.868,
+        "tcov": 0.965,
+        "evalue": 3.158e-171
+      },
+      {
+        "target": "DP04460",
+        "fident": 0.402,
+        "alnlen": 623,
+        "qcov": 0.869,
+        "tcov": 0.954,
+        "evalue": 1.966e-135
+      }
+    ]
+  },
+  {
+    "protein_id": "DP04472"
+  },
+  {
+    "protein_id": "DP04473"
+  },
+  {
+    "protein_id": "DP04474"
+  },
+  {
+    "protein_id": "DP04475"
+  },
+  {
+    "protein_id": "DP04476"
+  },
+  {
+    "protein_id": "DP04478",
+    "global_30id_both80": [
+      {
+        "target": "DP04609",
+        "fident": 0.851,
+        "alnlen": 1115,
+        "qcov": 1.0,
+        "tcov": 1.0,
+        "evalue": 0.0
+      }
+    ],
+    "candidate_half_30id": [
+      {
+        "target": "DP04609",
+        "fident": 0.851,
+        "alnlen": 1115,
+        "qcov": 1.0,
+        "tcov": 1.0,
+        "evalue": 0.0
+      }
+    ],
+    "reciprocal_half_30id": [
+      {
+        "target": "DP04609",
+        "fident": 0.851,
+        "alnlen": 1115,
+        "qcov": 1.0,
+        "tcov": 1.0,
+        "evalue": 0.0
+      }
+    ],
+    "local_40id_50aa": [
+      {
+        "target": "DP04609",
+        "fident": 0.851,
+        "alnlen": 1115,
+        "qcov": 1.0,
+        "tcov": 1.0,
+        "evalue": 0.0
+      }
+    ],
+    "local_50id_30aa": [
+      {
+        "target": "DP04609",
+        "fident": 0.851,
+        "alnlen": 1115,
+        "qcov": 1.0,
+        "tcov": 1.0,
+        "evalue": 0.0
+      }
+    ]
+  },
+  {
+    "protein_id": "DP04481"
+  },
+  {
+    "protein_id": "DP04482"
+  },
+  {
+    "protein_id": "DP04486"
+  },
+  {
+    "protein_id": "DP04487",
+    "global_30id_both80": [
+      {
+        "target": "DP04488",
+        "fident": 0.554,
+        "alnlen": 669,
+        "qcov": 0.974,
+        "tcov": 0.976,
+        "evalue": 9.378e-224
+      }
+    ],
+    "candidate_half_30id": [
+      {
+        "target": "DP04488",
+        "fident": 0.554,
+        "alnlen": 669,
+        "qcov": 0.974,
+        "tcov": 0.976,
+        "evalue": 9.378e-224
+      }
+    ],
+    "reciprocal_half_30id": [
+      {
+        "target": "DP04488",
+        "fident": 0.554,
+        "alnlen": 669,
+        "qcov": 0.974,
+        "tcov": 0.976,
+        "evalue": 9.378e-224
+      }
+    ],
+    "local_40id_50aa": [
+      {
+        "target": "DP04488",
+        "fident": 0.554,
+        "alnlen": 669,
+        "qcov": 0.974,
+        "tcov": 0.976,
+        "evalue": 9.378e-224
+      }
+    ],
+    "local_50id_30aa": [
+      {
+        "target": "DP04488",
+        "fident": 0.554,
+        "alnlen": 669,
+        "qcov": 0.974,
+        "tcov": 0.976,
+        "evalue": 9.378e-224
+      }
+    ]
+  },
+  {
+    "protein_id": "DP04488",
+    "global_30id_both80": [
+      {
+        "target": "DP04487",
+        "fident": 0.554,
+        "alnlen": 669,
+        "qcov": 0.976,
+        "tcov": 0.974,
+        "evalue": 1.696e-223
+      }
+    ],
+    "candidate_half_30id": [
+      {
+        "target": "DP04487",
+        "fident": 0.554,
+        "alnlen": 669,
+        "qcov": 0.976,
+        "tcov": 0.974,
+        "evalue": 1.696e-223
+      }
+    ],
+    "reciprocal_half_30id": [
+      {
+        "target": "DP04487",
+        "fident": 0.554,
+        "alnlen": 669,
+        "qcov": 0.976,
+        "tcov": 0.974,
+        "evalue": 1.696e-223
+      }
+    ],
+    "local_40id_50aa": [
+      {
+        "target": "DP04487",
+        "fident": 0.554,
+        "alnlen": 669,
+        "qcov": 0.976,
+        "tcov": 0.974,
+        "evalue": 1.696e-223
+      }
+    ],
+    "local_50id_30aa": [
+      {
+        "target": "DP04487",
+        "fident": 0.554,
+        "alnlen": 669,
+        "qcov": 0.976,
+        "tcov": 0.974,
+        "evalue": 1.696e-223
+      }
+    ]
+  },
+  {
+    "protein_id": "DP04489"
+  },
+  {
+    "protein_id": "DP04491"
+  },
+  {
+    "protein_id": "DP04492"
+  },
+  {
+    "protein_id": "DP04493"
+  },
+  {
+    "protein_id": "DP04494"
+  },
+  {
+    "protein_id": "DP04501"
+  },
+  {
+    "protein_id": "DP04508"
+  },
+  {
+    "protein_id": "DP04509"
+  },
+  {
+    "protein_id": "DP04510"
+  },
+  {
+    "protein_id": "DP04516"
+  },
+  {
+    "protein_id": "DP04518"
+  },
+  {
+    "protein_id": "DP04521"
+  },
+  {
+    "protein_id": "DP04522"
+  },
+  {
+    "protein_id": "DP04523"
+  },
+  {
+    "protein_id": "DP04524"
+  },
+  {
+    "protein_id": "DP04525"
+  },
+  {
+    "protein_id": "DP04526"
+  },
+  {
+    "protein_id": "DP04527"
+  },
+  {
+    "protein_id": "DP04528"
+  },
+  {
+    "protein_id": "DP04530"
+  },
+  {
+    "protein_id": "DP04531"
+  },
+  {
+    "protein_id": "DP04533"
+  },
+  {
+    "protein_id": "DP04534"
+  },
+  {
+    "protein_id": "DP04535"
+  },
+  {
+    "protein_id": "DP04536"
+  },
+  {
+    "protein_id": "DP04537"
+  },
+  {
+    "protein_id": "DP04539"
+  },
+  {
+    "protein_id": "DP04540"
+  },
+  {
+    "protein_id": "DP04542"
+  },
+  {
+    "protein_id": "DP04560"
+  },
+  {
+    "protein_id": "DP04561",
+    "global_30id_both80": [
+      {
+        "target": "DP04406",
+        "fident": 0.813,
+        "alnlen": 522,
+        "qcov": 1.0,
+        "tcov": 1.0,
+        "evalue": 5.211e-262
+      }
+    ],
+    "candidate_half_30id": [
+      {
+        "target": "DP04406",
+        "fident": 0.813,
+        "alnlen": 522,
+        "qcov": 1.0,
+        "tcov": 1.0,
+        "evalue": 5.211e-262
+      }
+    ],
+    "reciprocal_half_30id": [
+      {
+        "target": "DP04406",
+        "fident": 0.813,
+        "alnlen": 522,
+        "qcov": 1.0,
+        "tcov": 1.0,
+        "evalue": 5.211e-262
+      }
+    ],
+    "local_40id_50aa": [
+      {
+        "target": "DP04406",
+        "fident": 0.813,
+        "alnlen": 522,
+        "qcov": 1.0,
+        "tcov": 1.0,
+        "evalue": 5.211e-262
+      }
+    ],
+    "local_50id_30aa": [
+      {
+        "target": "DP04406",
+        "fident": 0.813,
+        "alnlen": 522,
+        "qcov": 1.0,
+        "tcov": 1.0,
+        "evalue": 5.211e-262
+      }
+    ]
+  },
+  {
+    "protein_id": "DP04563"
+  },
+  {
+    "protein_id": "DP04564"
+  },
+  {
+    "protein_id": "DP04565"
+  },
+  {
+    "protein_id": "DP04566"
+  },
+  {
+    "protein_id": "DP04567"
+  },
+  {
+    "protein_id": "DP04568"
+  },
+  {
+    "protein_id": "DP04572"
+  },
+  {
+    "protein_id": "DP04574",
+    "local_40id_50aa": [
+      {
+        "target": "DP03991",
+        "fident": 0.4,
+        "alnlen": 78,
+        "qcov": 0.11,
+        "tcov": 0.156,
+        "evalue": 2.323e-07
+      }
+    ]
+  },
+  {
+    "protein_id": "DP04578"
+  },
+  {
+    "protein_id": "DP04582"
+  },
+  {
+    "protein_id": "DP04587"
+  },
+  {
+    "protein_id": "DP04588"
+  },
+  {
+    "protein_id": "DP04593"
+  },
+  {
+    "protein_id": "DP04604"
+  },
+  {
+    "protein_id": "DP04609",
+    "global_30id_both80": [
+      {
+        "target": "DP04478",
+        "fident": 0.851,
+        "alnlen": 1115,
+        "qcov": 1.0,
+        "tcov": 1.0,
+        "evalue": 0.0
+      }
+    ],
+    "candidate_half_30id": [
+      {
+        "target": "DP04478",
+        "fident": 0.851,
+        "alnlen": 1115,
+        "qcov": 1.0,
+        "tcov": 1.0,
+        "evalue": 0.0
+      }
+    ],
+    "reciprocal_half_30id": [
+      {
+        "target": "DP04478",
+        "fident": 0.851,
+        "alnlen": 1115,
+        "qcov": 1.0,
+        "tcov": 1.0,
+        "evalue": 0.0
+      }
+    ],
+    "local_40id_50aa": [
+      {
+        "target": "DP04478",
+        "fident": 0.851,
+        "alnlen": 1115,
+        "qcov": 1.0,
+        "tcov": 1.0,
+        "evalue": 0.0
+      }
+    ],
+    "local_50id_30aa": [
+      {
+        "target": "DP04478",
+        "fident": 0.851,
+        "alnlen": 1115,
+        "qcov": 1.0,
+        "tcov": 1.0,
+        "evalue": 0.0
+      }
+    ]
+  },
+  {
+    "protein_id": "DP04615"
+  },
+  {
+    "protein_id": "DP04619"
+  },
+  {
+    "protein_id": "DP04643"
+  },
+  {
+    "protein_id": "DP04659"
+  },
+  {
+    "protein_id": "DP04750"
+  },
+  {
+    "protein_id": "DP04817"
+  },
+  {
+    "protein_id": "DP04818"
+  }
+]

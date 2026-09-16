@@ -1,0 +1,25 @@
+experiment:
+  name: a1_frozen_esm2
+  seed: 42
+  output_dir: outputs/ablations/a1_frozen_esm2
+
+model:
+  pretrained_model: facebook/esm2_t33_650M_UR50D
+  dropout: 0.2
+  precision: bf16
+  max_residues: 1022
+  window_stride: 511
+
+training:
+  epochs: 10
+  patience: 2
+  batch_size: 1
+  learning_rate: 0.001
+  weight_decay: 0.01
+  num_workers: 0
+  class_balance: true
+
+evaluation:
+  primary_metric: micro_roc_auc
+  merge_in_logit_space: true
+  unknown_label: -1

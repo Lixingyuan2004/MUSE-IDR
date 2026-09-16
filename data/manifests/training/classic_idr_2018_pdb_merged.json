@@ -1,0 +1,122 @@
+{
+  "schema_version": 1,
+  "generated_utc": "2026-08-21T02:03:16.733538+00:00",
+  "dataset_name": "classic_idr_2018_with_pdb_observed_negatives",
+  "task": "single_output_classic_idr",
+  "training_readiness": "blocked_pending_caid23_homology_audit_and_cluster_split",
+  "historical_cutoff_date": "20181130",
+  "quality_policy": {
+    "x-ray": {
+      "maximum_resolution_angstrom": 3.0
+    },
+    "em": {
+      "maximum_resolution_angstrom": 4.0
+    },
+    "nmr": {
+      "resolution_required": false
+    },
+    "other_methods": "exclude"
+  },
+  "mapping_policy": {
+    "require_exact_uniprot_accession": true,
+    "require_exact_candidate_sequence_match": true,
+    "canonicalize_isoform_to_parent": false,
+    "use_only_sifts_observed_segments": true
+  },
+  "conflict_policy": {
+    "protected_structural_states": [
+      "Disorder",
+      "Molten globule",
+      "Pre-molten globule"
+    ],
+    "protected_boundary_margin_residues": 5,
+    "positive_overrides_negative": true,
+    "protected_positions_remain_unknown": true
+  },
+  "sequence_verification_only_prohibition": "No labels or regions may be read from this source",
+  "sources": {
+    "positive_candidates": {
+      "local_path": "data/interim/historical_disprot_2018/classic_idr_candidates.jsonl",
+      "bytes": 3639395,
+      "sha256": "c66ded792b2cba816592cd370c988620fc6b98bf4247e815e48501ccea8fbfa8"
+    },
+    "historical_disprot": {
+      "local_path": "data/caid_holdout/references/caid1/rebuild_sources/disprot-2018-11.json",
+      "bytes": 6690809,
+      "sha256": "2062da33ae925e64daa2a0bb899ad6e911020d8caa55121fcf1cbed9e18db0e0"
+    },
+    "sequence_verification_only": {
+      "local_path": "data/raw/disprot/2026_06/disprot.json",
+      "bytes": 33385719,
+      "sha256": "afed1664507df330c22ad5ddd59796af49851e1f9df3f88a7ec0fb87f37d0d9b",
+      "prohibition": "No labels or regions may be read from this source"
+    },
+    "sifts_observed_segments": {
+      "local_path": "data/raw/sifts/2026-08-21/uniprot_segments_observed.csv.gz",
+      "url": "https://ftp.ebi.ac.uk/pub/databases/msd/sifts/flatfiles/csv/uniprot_segments_observed.csv.gz",
+      "embedded_release": "2026/08/17 - 18:30",
+      "bytes": 10683205,
+      "sha256": "4f08d0fb3b793f8aecef3ca1add79bf1f926fef415473afaa7f74ee2b463ea21"
+    },
+    "pdbe_metadata": {
+      "local_path": "data/raw/pdbe/2026-08-21/historical_disprot_pdb_metadata.json",
+      "api": "https://www.ebi.ac.uk/pdbe/api/v2",
+      "bytes": 4326113,
+      "sha256": "d78734812ee6f01a5dd1fbeedee0e1d9d92e3a2d353cffaa0ebfe4a290721e10"
+    }
+  },
+  "summary": {
+    "input_sequences": 1346,
+    "qualified_pdb_entries": 756,
+    "missing_summary": 8,
+    "qualified": 756,
+    "quality_or_method_excluded": 86,
+    "requested": 850,
+    "candidate_accession_values": 1359,
+    "verified_exact_accessions": 1268,
+    "records_with_verified_accession": 1259,
+    "protected_state_region_counts": {
+      "Disorder": 2905,
+      "Molten globule": 28,
+      "Pre-molten globule": 35
+    },
+    "protected_residues": 151397,
+    "sifts_segments_used": 2264,
+    "sifts_pdb_entries_used": 703,
+    "sifts_accessions_used": 603,
+    "sequences_with_positive_labels": 901,
+    "sequences_with_negative_labels": 509,
+    "sequences_with_both_labels": 227,
+    "trainable_sequences": 1183,
+    "all_unknown_sequences": 163,
+    "positive_residues": 109364,
+    "negative_residues": 100114,
+    "unknown_residues": 472960,
+    "more_than_five_structures": 7162,
+    "one_structure": 49396,
+    "two_to_five_structures": 43556,
+    "post_merge_direct_leakage_findings": 0
+  },
+  "external_test_direct_audit": {
+    "sentinel_path": "data/manifests/holdouts/caid23_test_sentinel.json",
+    "sentinel_sha256": "e149d1dea349953480d6d4944dd68c34075ccf9a8fc58abb9d8db52a1e3b066c",
+    "findings": []
+  },
+  "outputs": {
+    "all_merged_jsonl": {
+      "path": "data/processed/classic_idr_2018/pdb_merged_all.jsonl",
+      "bytes": 4303132,
+      "sha256": "b47fbc4cd28117b60158f716cb28a0181be221ca6a4dab7ebe5d1f0d2925379f"
+    },
+    "trainable_jsonl": {
+      "path": "data/processed/classic_idr_2018/trainable_pre_homology.jsonl",
+      "bytes": 3863802,
+      "sha256": "2649ec923051d2c756cb052f96d6f9817480d9d780006e89fa07a608b46895dc"
+    },
+    "trainable_fasta": {
+      "path": "data/processed/classic_idr_2018/trainable_pre_homology.fasta",
+      "bytes": 625889,
+      "sha256": "71c013f5bef9036448440cd19827cfb0ce604e90d6cabff2b5cfc4ca75cdd1bb"
+    }
+  }
+}

@@ -1,0 +1,51 @@
+project:
+  name: muse-idr
+  contract_version: "0.2"
+
+task:
+  unit: residue
+  label_semantics: experimentally_supported_classic_idr
+  output_heads: 1
+  output_name: idr_probability
+  output_range: [0.0, 1.0]
+  unknown_label: -1
+  soft_disorder_supervision: false
+  dataset_specific_heads: false
+
+holdout:
+  datasets: [caid2, caid3]
+  allow_training: false
+  allow_validation: false
+  allow_early_stopping: false
+  allow_hyperparameter_selection: false
+  allow_calibration: false
+  remove_exact_matches: true
+  remove_accession_and_isoforms: true
+  homology_exclusion:
+    identity_greater_than: 0.30
+    bidirectional_coverage_at_least: 0.80
+
+historical_training:
+  candidate_datasets: [caid1]
+  require_holdout_leakage_audit: true
+  label_scheme: classic_idr_1_0_unknown_minus_1
+
+selection:
+  primary_metric: residue_micro_roc_auc
+  validation_only: true
+  threshold_free: true
+
+reproducibility:
+  folds: 5
+  seeds: [17, 29, 43]
+  hash_algorithm: sha256
+  save_residue_predictions: true
+
+paths:
+  manifests: data/manifests
+  raw: data/raw
+  interim: data/interim
+  processed: data/processed
+  caid_holdout: data/caid_holdout
+  features: data/features
+  outputs: outputs

@@ -1,0 +1,42 @@
+experiment_stage: smoke
+
+data:
+  dataset_jsonl: data/processed/classic_idr_2018/trainable_caid23_filtered.jsonl
+  fold_assignments_jsonl: data/processed/classic_idr_2018/homology_5fold_assignments.jsonl
+  readiness_manifest: data/manifests/training/classic_idr_2018_homology_5fold.json
+  split_strategy: homology_clustered_5fold
+  folds: 5
+  prohibit_cluster_splitting: true
+  unknown_label: -1
+  mask_unknown: true
+  length_bucketing: true
+  external_test_forbidden_during_selection: [caid2, caid3]
+
+optimization:
+  optimizer: adamw
+  lora_learning_rate: 0.0001
+  new_layers_learning_rate: 0.0003
+  weight_decay: 0.01
+  epochs: 30
+  gradient_accumulation_steps: 8
+  max_grad_norm: 1.0
+  scheduler: cosine_with_warmup
+  warmup_ratio: 0.05
+
+loss:
+  source: single_idr_output
+  weighted_bce: 1.0
+  pairwise_auc_ranking: 0.20
+  boundary_consistency: 0.05
+  local_smoothness: 0.01
+
+checkpointing:
+  monitor: residue_micro_roc_auc
+  mode: max
+  early_stopping_patience: 5
+  save_top_k: 1
+
+reproducibility:
+  deterministic_validation: true
+  fold_assignment_seed: 17
+  seeds: [17, 29, 43]

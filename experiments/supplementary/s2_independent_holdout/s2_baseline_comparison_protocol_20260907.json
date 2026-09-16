@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "experiment": "s2_locked_baseline_comparison",
+  "protocol_status": "frozen_before_s2_baseline_prediction",
+  "freeze_date": "2026-09-07",
+  "timing_disclosure": "This protocol was written after the locked A10 S2 result was evaluated but before either comparator was run on S2. Comparator identities were inherited from the pre-existing B4 baseline program.",
+  "purpose": "Evaluate two fixed external baselines on exactly the same S2 proteins, residues, labels and metric implementation as locked MUSE-IDR A10.",
+  "dataset": {
+    "name": "S2 database-curated temporal holdout",
+    "sequence_fasta": "data/external/s2_database_curated_20260906/sequences_only/s2_sequences.fasta",
+    "sequence_fasta_sha256": "d777bfeb9cd8cf82af003c10bcef8b5b3e09dbee276e7e16164f408e336d67df",
+    "proteins": 87,
+    "residues": 56394,
+    "known_labels": 30728,
+    "positive_labels": 2999,
+    "negative_labels": 27729,
+    "unknown_labels": 25666,
+    "two_class_proteins": 22,
+    "unknown_label_policy": "exclude label -1 before every metric",
+    "coverage_requirement": "one finite probability for every residue of all 87 sequences"
+  },
+  "frozen_target": {
+    "name": "MUSE-IDR A10 locked",
+    "members": 30,
+    "prediction_sha256": "70555772455afb707200036cf93266236013d18accdce1c0289a3a8236ab541b",
+    "modified_or_reselected": false
+  },
+  "formal_comparators": [
+    {
+      "name": "PUNCH2-Light Released-13",
+      "role": "primary_baseline",
+      "source_repository": "https://github.com/deemeng/punch2_light",
+      "source_revision": "6c7935b3597c056d2e6b3845bb54fc101c5bc574",
+      "members": 13,
+      "ensemble": "uniform probability mean",
+      "representations": [
+        "onehot",
+        "ProtT5"
+      ],
+      "prot_t5_model_id": "Rostlab/prot_t5_xl_uniref50",
+      "prot_t5_revision": "973be27c52ee6474de9c945952a8008aeb2a1a73",
+      "feature_inference_precision": "float32",
+      "official_threshold": 0.35
+    },
+    {
+      "name": "LoRA-DR-Suite ESM2-650M DisProt7",
+      "role": "primary_baseline",
+      "model_id": "CQSB/esm2_650M-LoRA-ID-DisProt7",
+      "model_revision": "4ee4e4d404a224d76cf1c59fb99aebd7b52f7915",
+      "base_model_id": "facebook/esm2_t33_650M_UR50D",
+      "base_model_revision": "08e4846e537177426273712802403f7ba8261b6c",
+      "adapter_config_sha256": "c04ea976b27dca7c75a524695ade8d3f1410572c2ebe743626854ee84694b40d",
+      "adapter_weights_sha256": "02f1e288f36f369786db68df5270affa693d2359a5badb0275ce81977448fe",
+      "training_regime": "DisProt 7.0 only; CAID2 and CAID3 excluded",
+      "inference_precision": "bfloat16",
+      "max_residues": 1022,
+      "window_stride": 511,
+      "window_batch_size": 1,
+      "window_fusion": "uniform mean of overlapping disorder-vs-order logit margins",
+      "common_descriptive_threshold": 0.5
+    }
+  ],
+  "not_run_unless_requested_by_reviewers": [
+    "PUNCH2-Light Paper-8",
+    "full PUNCH2",
+    "additional literature methods"
+  ],
+  "statistics": {
+    "primary_metric": "full-precision residue-level ROC-AUC",
+    "primary_contrasts": [
+      "MUSE-IDR A10 minus PUNCH2-Light Released-13",
+      "MUSE-IDR A10 minus LoRA-DR-Suite ESM2-650M DisProt7"
+    ],
+    "primary_uncertainty": "paired whole-protein cluster bootstrap",
+    "bootstrap_replicates": 2000,
+    "bootstrap_seed": 20260907,
+    "multiple_testing": "Holm correction across the two primary ROC-AUC contrasts",
+    "key_secondary_metric": "full-precision AUPRC",
+    "descriptive_metrics": [
+      "APS",
+      "F1 at a common 0.5 threshold",
+      "MCC at a common 0.5 threshold",
+      "Brier score",
+      "Fmax",
+      "macro ROC-AUC over two-class proteins"
+    ],
+    "threshold_policy": "Threshold-dependent metrics are descriptive and cannot establish superiority. Official PUNCH2-Light threshold 0.35 may be reported separately but cannot be mixed with common-threshold comparisons.",
+    "missingness_policy": "Formal paired comparisons require complete predictions from both models on all 87 sequences; literature-only values are contextual and excluded."
+  },
+  "guardrails": {
+    "s2_labels_sent_to_inference_host": false,
+    "baseline_training_or_fine_tuning_on_s2": false,
+    "post_hoc_calibration": false,
+    "threshold_tuning_on_s2": false,
+    "model_or_ensemble_reweighting_on_s2": false,
+    "a10_reselection_or_modification": false,
+    "literature_values_used_as_same_reference_formal_results": false
+  }
+}

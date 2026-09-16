@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "dataset_name": "historical_disprot_2018_classic_idr",
+  "release": "2018_11",
+  "sources": {
+    "release_json": {
+      "local_path": "data/caid_holdout/references/caid1/rebuild_sources/disprot-2018-11.json",
+      "url": "https://disprot.org/api/search?release=2018_11&show_ambiguous=false&show_obsolete=false&format=json",
+      "bytes": 6690809,
+      "sha256": "2062da33ae925e64daa2a0bb899ad6e911020d8caa55121fcf1cbed9e18db0e0"
+    },
+    "current_structural_state_fasta": {
+      "local_path": "data/caid_holdout/references/caid1/rebuild_sources/disprot-2018-11-disorder.fasta",
+      "url": "https://disprot.org/api/search?release=2018_11&show_ambiguous=false&show_obsolete=false&format=fasta&namespace=structural_state&get_consensus=true",
+      "bytes": 832505,
+      "sha256": "e330b011ddb6f1574ae79c779b3ade8bb6d91d1524c6fdee00d28d6d0beb6a21"
+    },
+    "previous_structural_state_fasta": {
+      "local_path": "data/caid_holdout/references/caid1/rebuild_sources/disprot-2016-10-disorder.fasta",
+      "url": "https://disprot.org/api/search?release=2016_10&show_ambiguous=false&show_obsolete=false&format=fasta&namespace=structural_state&get_consensus=true",
+      "bytes": 432601,
+      "sha256": "b07ecc18dcb26d6ecd1bd5b14c22ea4132d201b8fa4d64a6f5983208116009d3"
+    }
+  },
+  "expected": {
+    "release_json_records": 1391,
+    "current_structural_state_ids": 1391,
+    "previous_structural_state_ids": 756,
+    "caid1_delta_after_name_filter": 652,
+    "polyprotein_records_excluded": 25,
+    "records_after_filter": 1366,
+    "unique_sequences_after_merge": 1353,
+    "sequences_with_positive_labels": 906,
+    "sequences_without_positive_labels": 447,
+    "positive_residues_after_merge": 110002,
+    "unknown_residues_after_merge": 576245,
+    "negative_residues": 0
+  },
+  "expected_after_direct_filter": {
+    "direct_leakage_findings": 7,
+    "sequences_after_direct_filter": 1346,
+    "sequences_with_positive_labels_after_direct_filter": 901,
+    "positive_residues_after_direct_filter": 109364,
+    "unknown_residues_after_direct_filter": 573074,
+    "negative_residues_after_direct_filter": 0
+  },
+  "name_exclusion_substrings": [
+    "polyprotein"
+  ],
+  "external_test_sentinel": "data/manifests/holdouts/caid23_test_sentinel.json",
+  "evidence_policy": {
+    "unknown_evidence": "error",
+    "allowed_positive_evidence": [
+      "Analytical ultracentrifugation",
+      "Atomic force microscopy",
+      "Circular dichroism spectroscopy far-UV",
+      "Circular dichroism spectroscopy near-UV",
+      "Differential scanning calorimetry",
+      "Differential scanning fluorimetry thermal shift assay",
+      "Dynamic light scattering",
+      "Electron cryomicroscopy",
+      "Electrospray ionization fourier transform ion cyclotron resonance mass spectrometry",
+      "Fluorescence intrinsic",
+      "Fluorescence polarization/anisotropy",
+      "Fluorescence resonance energy transfer",
+      "Fluorescent dynamic quenching",
+      "Fluorescent probes extrinsic fluorescence",
+      "Fourier transform infrared spectroscopy",
+      "Immunochemistry",
+      "Mass spectrometry-based high resolution hydrogen-deuterium exchange",
+      "NMR-based hydrogen-deuterium exchange",
+      "Nuclear magnetic resonance",
+      "Proton-based nuclear magnetic resonance",
+      "Raman optical activity",
+      "Raman spectroscopy",
+      "Rotary shadowing electron microscopy",
+      "Sensitivity to proteolysis",
+      "Site-directed spin-labelling electron paramagnetic resonance spectroscopy",
+      "Size exclusion/gel filtration chromatography",
+      "Small-angle X-ray scattering",
+      "Small-angle neutron scattering",
+      "Sodium dodecyl sulfate polyacrylamide gel electrophoresis",
+      "Stability at pH extremes",
+      "Stability at thermal extremes",
+      "Static light scattering",
+      "Synchrotron radiation circular dichroism",
+      "Vibrational spectroscopy of cyanylated cysteines",
+      "Viscometry"
+    ],
+    "excluded_nonpositive_evidence": [
+      "High relative B-factor",
+      "Missing electron density"
+    ]
+  },
+  "outputs": {
+    "records_jsonl": "data/interim/historical_disprot_2018/classic_idr_candidates.jsonl",
+    "candidate_fasta": "data/interim/historical_disprot_2018/candidates.fasta",
+    "manifest": "data/manifests/training/historical_disprot_2018_positive.json"
+  }
+}

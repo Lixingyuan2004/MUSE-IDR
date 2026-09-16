@@ -1,0 +1,282 @@
+[
+  {
+    "query": "DP04717",
+    "target": "train__DP01867",
+    "identity": 0.542,
+    "qcov": 0.948,
+    "tcov": 1.0
+  },
+  {
+    "query": "DP03807",
+    "target": "caid23__DP02649",
+    "identity": 0.406,
+    "qcov": 0.997,
+    "tcov": 0.987
+  },
+  {
+    "query": "DP04353",
+    "target": "caid23__DP04352",
+    "identity": 0.409,
+    "qcov": 0.999,
+    "tcov": 0.999
+  },
+  {
+    "query": "DP03917",
+    "target": "train__DP01553",
+    "identity": 0.459,
+    "qcov": 0.913,
+    "tcov": 0.974
+  },
+  {
+    "query": "DP03917",
+    "target": "train__DP01550",
+    "identity": 0.446,
+    "qcov": 0.919,
+    "tcov": 0.938
+  },
+  {
+    "query": "DP04358",
+    "target": "caid23__DP03898",
+    "identity": 0.891,
+    "qcov": 0.996,
+    "tcov": 0.984
+  },
+  {
+    "query": "DP04451",
+    "target": "train__DP01309",
+    "identity": 0.318,
+    "qcov": 0.802,
+    "tcov": 0.812
+  },
+  {
+    "query": "DP04445",
+    "target": "train__DP01938",
+    "identity": 0.661,
+    "qcov": 0.955,
+    "tcov": 0.943
+  },
+  {
+    "query": "DP03750",
+    "target": "caid23__DP03812",
+    "identity": 0.303,
+    "qcov": 0.947,
+    "tcov": 0.984
+  },
+  {
+    "query": "DP04570",
+    "target": "train__DP01431",
+    "identity": 0.536,
+    "qcov": 0.959,
+    "tcov": 0.968
+  },
+  {
+    "query": "DP04607",
+    "target": "caid23__DP03914",
+    "identity": 0.33,
+    "qcov": 0.964,
+    "tcov": 0.982
+  },
+  {
+    "query": "DP04415",
+    "target": "train__DP01158",
+    "identity": 0.717,
+    "qcov": 0.924,
+    "tcov": 0.976
+  },
+  {
+    "query": "DP04415",
+    "target": "train__DP01649",
+    "identity": 0.731,
+    "qcov": 0.924,
+    "tcov": 0.976
+  },
+  {
+    "query": "DP03051",
+    "target": "train__DP00238",
+    "identity": 0.561,
+    "qcov": 0.992,
+    "tcov": 0.997
+  },
+  {
+    "query": "DP04483",
+    "target": "caid23__DP04283",
+    "identity": 0.321,
+    "qcov": 0.931,
+    "tcov": 0.917
+  },
+  {
+    "query": "DP04538",
+    "target": "train__DP01161",
+    "identity": 0.312,
+    "qcov": 0.926,
+    "tcov": 0.919
+  },
+  {
+    "query": "DP04446",
+    "target": "train__DP01938",
+    "identity": 0.661,
+    "qcov": 0.949,
+    "tcov": 0.943
+  },
+  {
+    "query": "DP03919",
+    "target": "train__DP00334",
+    "identity": 0.328,
+    "qcov": 0.943,
+    "tcov": 0.941
+  },
+  {
+    "query": "DP03919",
+    "target": "train__DP01133",
+    "identity": 0.328,
+    "qcov": 0.943,
+    "tcov": 0.93
+  },
+  {
+    "query": "DP04436",
+    "target": "train__DP01139",
+    "identity": 0.999,
+    "qcov": 1.0,
+    "tcov": 1.0
+  },
+  {
+    "query": "DP04436",
+    "target": "train__DP01999",
+    "identity": 0.971,
+    "qcov": 0.915,
+    "tcov": 0.987
+  },
+  {
+    "query": "DP04330",
+    "target": "train__DP00630",
+    "identity": 0.305,
+    "qcov": 0.95,
+    "tcov": 0.874
+  },
+  {
+    "query": "DP04311",
+    "target": "caid23__DP03916",
+    "identity": 0.457,
+    "qcov": 1.0,
+    "tcov": 0.838
+  },
+  {
+    "query": "DP04414",
+    "target": "caid23__DP04302",
+    "identity": 0.748,
+    "qcov": 0.947,
+    "tcov": 0.977
+  },
+  {
+    "query": "DP04407",
+    "target": "train__DP01309",
+    "identity": 0.322,
+    "qcov": 0.809,
+    "tcov": 0.812
+  },
+  {
+    "query": "DP04303",
+    "target": "train__DP01158",
+    "identity": 0.952,
+    "qcov": 1.0,
+    "tcov": 1.0
+  },
+  {
+    "query": "DP04303",
+    "target": "train__DP01649",
+    "identity": 0.952,
+    "qcov": 1.0,
+    "tcov": 1.0
+  },
+  {
+    "query": "DP04413",
+    "target": "caid23__DP04281",
+    "identity": 0.889,
+    "qcov": 1.0,
+    "tcov": 1.0
+  },
+  {
+    "query": "DP04810",
+    "target": "caid23__DP03395",
+    "identity": 0.979,
+    "qcov": 1.0,
+    "tcov": 1.0
+  },
+  {
+    "query": "DP04429",
+    "target": "caid23__DP03618",
+    "identity": 0.999,
+    "qcov": 1.0,
+    "tcov": 1.0
+  },
+  {
+    "query": "DP04360",
+    "target": "train__DP00337",
+    "identity": 0.303,
+    "qcov": 0.821,
+    "tcov": 0.801
+  },
+  {
+    "query": "DP04511",
+    "target": "train__DP00965",
+    "identity": 0.907,
+    "qcov": 0.911,
+    "tcov": 1.0
+  },
+  {
+    "query": "DP04571",
+    "target": "train__DP01431",
+    "identity": 0.408,
+    "qcov": 0.913,
+    "tcov": 0.957
+  },
+  {
+    "query": "DP04135",
+    "target": "train__DP01817",
+    "identity": 0.646,
+    "qcov": 0.98,
+    "tcov": 0.98
+  },
+  {
+    "query": "DP04569",
+    "target": "train__DP01431",
+    "identity": 0.467,
+    "qcov": 0.956,
+    "tcov": 0.968
+  },
+  {
+    "query": "DP04420",
+    "target": "caid23__DP04276",
+    "identity": 0.354,
+    "qcov": 0.829,
+    "tcov": 0.811
+  },
+  {
+    "query": "DP04813",
+    "target": "train__DP00965",
+    "identity": 0.912,
+    "qcov": 1.0,
+    "tcov": 1.0
+  },
+  {
+    "query": "DP04326",
+    "target": "caid23__DP04232",
+    "identity": 0.588,
+    "qcov": 0.999,
+    "tcov": 0.999
+  },
+  {
+    "query": "DP04452",
+    "target": "train__DP01309",
+    "identity": 0.323,
+    "qcov": 0.811,
+    "tcov": 0.812
+  },
+  {
+    "query": "DP04507",
+    "target": "caid23__DP03737",
+    "identity": 0.927,
+    "qcov": 1.0,
+    "tcov": 1.0
+  }
+]

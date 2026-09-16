@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "purpose": "a1_frozen_esm2_internal_ablation",
+  "source_dataset": "data/processed/classic_idr_2018/trainable_caid23_filtered.jsonl",
+  "source_dataset_sha256": "124d05084015d659b4e0a0ff4d5a7d32ab1a8394ab4b51bf79d954c770f58be2",
+  "source_fold_assignments": "data/processed/classic_idr_2018/homology_5fold_assignments.jsonl",
+  "source_fold_assignments_sha256": "bdbe2233be0a8ddc51ccc2b8eb791ec57aa5837d25e66f1cb8b6eb32388d8a45",
+  "output_manifest": "data/processed/classic_idr_2018/a1_frozen_esm2_manifest.jsonl",
+  "output_manifest_sha256": "df6a4deee4a65d009f4faf41c6b8930f9db8600fa28b6711da7ff48ad2c70bf4",
+  "proteins": 1133,
+  "fold_proteins": {
+    "0": 227,
+    "1": 226,
+    "2": 227,
+    "3": 226,
+    "4": 227
+  },
+  "positive_residues": 105036,
+  "negative_residues": 97626,
+  "unknown_residues": 370759,
+  "caid2_caid3_labels_accessed": false
+}

@@ -1,0 +1,48 @@
+dataset:
+  name: classic_idr
+  task: experimentally_supported_classic_intrinsic_disorder
+  caid1_historical_training_candidate: true
+  external_test_only: [caid2, caid3]
+
+labels:
+  positive: 1
+  negative: 0
+  unknown: -1
+  unknown_is_masked: true
+
+positive_evidence:
+  primary_source: disprot
+  require_direct_experimental_support: true
+  include_soft_disorder: false
+  exclude_if_only_supported_by:
+    - xray_missing_residue
+    - high_b_factor
+    - alphafold_low_plddt
+    - computational_prediction
+
+negative_evidence:
+  primary_source: pdb_observed_residue
+  require_experimental_coordinate_coverage: true
+  require_unambiguous_sequence_mapping: true
+  conflict_policy: mark_unknown
+
+baseline_exception:
+  description: >-
+    Original PUNCH2 reproduction may use its historical PDB-missing labels, but
+    those data remain isolated from the proposed-model dataset and cannot be
+    silently mixed into a final candidate.
+
+holdout_filter:
+  sentinel_manifest: data/manifests/holdouts/caid23_test_sentinel.json
+  exact_sequence_hash: sha256
+  remove_identifier_match: true
+  remove_isoform_match: true
+  homology:
+    identity_strictly_greater_than: 0.30
+    query_coverage_at_least: 0.80
+    target_coverage_at_least: 0.80
+
+cross_validation:
+  unit: homology_cluster
+  folds: 5
+  prohibit_cluster_splitting: true

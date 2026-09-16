@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "model_id": "facebook/esm2_t33_650M_UR50D",
+  "resolved_revision": "08e4846e537177426273712802403f7ba8261b6c",
+  "verified_by": "smoke_test_model.py",
+  "verified_device": "NVIDIA GeForce RTX 3060 Laptop GPU",
+  "output_heads": 1,
+  "caid2_caid3_labels_accessed": false
+}

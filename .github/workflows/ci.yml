@@ -1,0 +1,25 @@
+name: repository-verification
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Audit repository layout
+        run: python scripts/audit_repository_layout.py
+      - name: Verify manifest and locked checkpoints
+        run: python scripts/verify_release.py
+      - name: Compile Python source
+        run: >-
+          python -m compileall -q
+          predict_muse_idr.py src scripts experiments tests

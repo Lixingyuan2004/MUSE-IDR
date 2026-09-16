@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: External data requirements
+    url: https://github.com/Lixingyuan2004/MUSE-IDR/blob/main/docs/EXTERNAL_DATA.md
+    about: Check required upstream files and hashes before reporting missing analysis data.

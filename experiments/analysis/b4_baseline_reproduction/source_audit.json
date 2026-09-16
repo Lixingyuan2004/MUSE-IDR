@@ -1,0 +1,117 @@
+{
+  "schema_version": 1,
+  "experiment": "b4_official_baseline_reproduction_audit",
+  "audit_date": "2026-08-25",
+  "objective": "Reproduce original PUNCH2/PUNCH2-Light and LoRA-DR-Suite intrinsic-disorder predictors before same-reference comparison with locked A10.",
+  "guardrails": {
+    "a10_remains_locked": true,
+    "caid_labels_must_not_be_used_for_training_or_tuning": true,
+    "baseline_reproduction_and_fair_comparison_are_separate_claims": true,
+    "single_classic_idr_score_per_residue": true,
+    "soft_disorder_models_excluded": true
+  },
+  "papers": {
+    "punch2": {
+      "path": "C:/Users/lxychr/Downloads/journal.pone.0319208.pdf",
+      "sha256": "6a338abba9806cf4333e6710d12ded84ec808f7d8e0d5dd51dc2223650671868",
+      "doi": "10.1371/journal.pone.0319208"
+    },
+    "lora_dr_suite": {
+      "path": "E:/lunwen/Lora dr suite.pdf",
+      "sha256": "51b9b2e2a41bfdf3b9f790941678385fa5406ec983f2c07add85ef595754c9de",
+      "doi": "10.1093/bioinformatics/btaf185"
+    }
+  },
+  "punch2": {
+    "repository": "https://github.com/deemeng/punch2",
+    "commit": "815a1040e38bf8c6930c11f51067506932db6d94",
+    "local_path": "third_party/baselines/punch2",
+    "paper_protocol": {
+      "representations": ["onehot", "ProtTrans", "MSA-Transformer"],
+      "architecture": "CNN_L12_narrow",
+      "ensemble_members": 13,
+      "ensemble_breakdown": {"onehot": 3, "ProtTrans": 5, "MSA-Transformer": 5},
+      "reported_threshold": 0.378,
+      "training_data": "PDB_missing clstr100 plus three repeats of DisProt_FD"
+    },
+    "released_main": {
+      "ensemble_members": 18,
+      "ensemble_breakdown": {"onehot_CNN_L12": 3, "ProtTrans_CNN_L3": 5, "ProtTrans_CNN_L12": 5, "MSA_Transformer_CNN_L11": 5},
+      "configured_threshold": 0.39,
+      "required_precomputed_representations": ["onehot", "ProtTrans", "MSA-Transformer"]
+    },
+    "released_weights_present": true,
+    "docker_image": "dimeng851/punch2:v1",
+    "license_file_present": false,
+    "audit_decision": "Do not call the released main.py run an exact paper reproduction. Run both a paper-faithful 13-member wrapper and the released 18-member entry point, then report them separately."
+  },
+  "punch2_light": {
+    "repository": "https://github.com/deemeng/punch2_light",
+    "commit": "6c7935b3597c056d2e6b3845bb54fc101c5bc574",
+    "local_path": "third_party/baselines/punch2_light",
+    "paper_protocol": {
+      "representations": ["onehot", "ProtTrans"],
+      "architecture": "CNN_L12_narrow",
+      "ensemble_members": 8,
+      "ensemble_breakdown": {"onehot": 3, "ProtTrans": 5},
+      "reported_threshold": 0.35,
+      "training_data": "PDB_missing clstr100 plus three repeats of DisProt_FD"
+    },
+    "released_main": {
+      "ensemble_members": 13,
+      "ensemble_breakdown": {"onehot_CNN_L12": 3, "ProtTrans_CNN_L3": 5, "ProtTrans_CNN_L12": 5},
+      "configured_threshold": 0.35,
+      "required_precomputed_representations": ["onehot", "ProtTrans"]
+    },
+    "released_weights_present": true,
+    "docker_image": "dimeng851/punch2_light:v1",
+    "license_file_present": false,
+    "audit_decision": "Use PUNCH2-Light as the first PUNCH smoke target, but keep paper-faithful 8-member and released 13-member results distinct."
+  },
+  "lora_dr_suite": {
+    "repository": "https://gitlab.lcqb.upmc.fr/lombardi/LoRA-DR-suite",
+    "commit": "d8893fc4121d979c0389a8944ff0531f22563e90",
+    "huggingface_collection": "https://huggingface.co/collections/CQSB/lora-dr-suite",
+    "paper_protocol": {
+      "task": "binary residue token classification",
+      "head": "dropout plus linear two-class classifier",
+      "loss": "class-weighted cross entropy",
+      "maximum_training_length": 1024,
+      "model_selection_metric": "validation ROC-AUC",
+      "search_trials": 40,
+      "maximum_epochs": 10,
+      "early_stopping_patience": 2
+    },
+    "checkpoints": {
+      "caid_free_comparison": {
+        "model_id": "CQSB/esm2_650M-LoRA-ID-DisProt7",
+        "training_data": "DisProt 7.0 only",
+        "allowed_on_caid2": true,
+        "allowed_on_caid3": true
+      },
+      "paper_caid3_protocol": {
+        "model_id": "CQSB/esm2_650M-LoRA-ID",
+        "training_data": "DisProt 7.0 plus CAID1 plus CAID2",
+        "allowed_on_caid2": false,
+        "allowed_on_caid3": true,
+        "claim_scope": "original-paper protocol only; not training-data-matched to locked A10"
+      },
+      "soft_disorder": {
+        "model_id": "CQSB/esm2_650M-LoRA-SD",
+        "included_in_b4": false
+      }
+    },
+    "direct_transformers_loading_documented": true,
+    "adapter_and_token_classifier_weights_published": true,
+    "adapter_license_declared_in_reviewed_model_metadata": false,
+    "base_model_license": "MIT",
+    "audit_decision": "Start B4 execution with the DisProt7 checkpoint. Evaluate the ID checkpoint only as an explicitly separate paper-protocol CAID3 result."
+  },
+  "first_execution_target": {
+    "baseline": "LoRA-DR-Suite",
+    "model_id": "CQSB/esm2_650M-LoRA-ID-DisProt7",
+    "reason": "Official adapter weights load directly from Hugging Face and do not require MSA or precomputed ProtTrans features.",
+    "formal_tracks": ["CAID2 disorder_nox", "CAID3 disorder_nox"],
+    "selection_uses_caid_labels": false
+  }
+}

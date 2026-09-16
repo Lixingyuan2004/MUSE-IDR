@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "experiment": "a1_frozen_esm2_smoke",
+  "status": "pass",
+  "model_id": "facebook/esm2_t33_650M_UR50D",
+  "model_revision": "08e4846e537177426273712802403f7ba8261b6c",
+  "device": "cuda",
+  "device_name": "NVIDIA GeForce RTX 3060 Laptop GPU",
+  "torch": "2.12.1+cu132",
+  "peak_cuda_memory_bytes": 1314179072,
+  "sequences": [
+    {
+      "protein_id": "short_20",
+      "residues": 20,
+      "output_scores": 20,
+      "probability_min": 0.4561024010181427,
+      "probability_max": 0.5144817233085632
+    },
+    {
+      "protein_id": "short_31",
+      "residues": 31,
+      "output_scores": 31,
+      "probability_min": 0.46857866644859314,
+      "probability_max": 0.5287716388702393
+    }
+  ],
+  "tokenizer_boundary_residues": 1022,
+  "output_heads": 1,
+  "output_definition": "classic_idr_probability_per_residue",
+  "caid2_caid3_labels_accessed": false
+}

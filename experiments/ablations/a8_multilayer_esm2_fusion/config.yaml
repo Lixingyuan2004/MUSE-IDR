@@ -1,0 +1,30 @@
+experiment:
+  name: a8_multilayer_esm2_fusion
+  seed: 17
+  formal_seeds: [17, 29, 43]
+  output_dir: outputs/ablations/a8_multilayer_esm2_fusion
+
+model:
+  pretrained_model: facebook/esm2_t33_650M_UR50D
+  revision: 08e4846e537177426273712802403f7ba8261b6c
+  layer_indices: [30, 31, 32, 33]
+  input_size: 1280
+  hidden_size: 256
+  kernels: [3, 7, 15, 31]
+  dropout: 0.2
+  initial_last_layer_weight: 0.7
+
+training:
+  epochs: 20
+  patience: 4
+  protein_batch_size: 4
+  learning_rate: 0.0003
+  layer_mix_learning_rate: 0.003
+  weight_decay: 0.01
+  gradient_clip_norm: 1.0
+  num_workers: 0
+  class_balance: true
+
+evaluation:
+  primary_metric: micro_roc_auc
+  unknown_label: -1

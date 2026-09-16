@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "platform": "Windows x86_64",
+  "python": "3.12.13",
+  "pytorch": "2.12.1+cu132",
+  "pytorch_cuda": "13.2",
+  "numpy": "2.3.5",
+  "pyyaml": "6.0.3",
+  "nvidia_driver": "595.79",
+  "gpu": "NVIDIA GeForce RTX 3060 Laptop GPU",
+  "compute_capability": "8.6",
+  "vram_gib": 6.0,
+  "environment_path": ".venv",
+  "gpu_smoke_test": "passed",
+  "installed_on": "2026-08-21"
+}

@@ -1,0 +1,65 @@
+experiment:
+  name: s1_post_lock_mechanistic_ablation
+  formal_seeds: [17, 29, 43]
+  output_dir: outputs/supplementary/s1_mechanistic_ablation
+  purpose: explanation_only_no_a10_reselection
+
+model:
+  pretrained_model: facebook/esm2_t33_650M_UR50D
+  revision: 08e4846e537177426273712802403f7ba8261b6c
+  layer_indices: [30, 31, 32, 33]
+  input_size: 1280
+  hidden_size: 256
+  multiscale_kernels: [3, 7, 15, 31]
+  dropout: 0.2
+
+variants:
+  a2_reference:
+    cache_kind: final_layer
+    architecture: gated_context
+    kernels: [3, 7, 15, 31]
+  ungated_add:
+    cache_kind: final_layer
+    architecture: ungated_add
+    kernels: [3, 7, 15, 31]
+  additive_projection:
+    cache_kind: final_layer
+    architecture: additive_projection
+    kernels: [3, 7, 15, 31]
+  single_k3:
+    cache_kind: final_layer
+    architecture: gated_context
+    kernels: [3]
+  single_k7:
+    cache_kind: final_layer
+    architecture: gated_context
+    kernels: [7]
+  single_k15:
+    cache_kind: final_layer
+    architecture: gated_context
+    kernels: [15]
+  single_k31:
+    cache_kind: final_layer
+    architecture: gated_context
+    kernels: [31]
+  uniform_layer_mix:
+    cache_kind: multilayer
+    architecture: uniform_layer_mix
+    kernels: [3, 7, 15, 31]
+
+training:
+  epochs: 20
+  patience: 4
+  protein_batch_size: 4
+  learning_rate: 0.0003
+  weight_decay: 0.01
+  gradient_clip_norm: 1.0
+  num_workers: 0
+  class_balance: true
+
+evaluation:
+  primary_metric: micro_roc_auc
+  unknown_label: -1
+  statistical_unit: whole_protein
+  multiplicity_correction: holm
+  caid_labels_permitted: false

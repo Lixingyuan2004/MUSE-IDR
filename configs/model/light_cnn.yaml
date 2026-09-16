@@ -1,0 +1,13 @@
+model:
+  name: light_idr_cnn
+  output_heads: 1
+  output_semantics: classic_idr_logit_per_residue
+  hidden_size: 64
+  kernel_size: 9
+  dilations: [1, 2, 4]
+  dropout: 0.10
+
+constraints:
+  soft_disorder_output: false
+  dataset_specific_heads: false
+  sequence_truncation: false

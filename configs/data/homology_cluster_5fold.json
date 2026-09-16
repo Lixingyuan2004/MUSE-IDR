@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "sources": {
+    "training_jsonl": {
+      "path": "data/processed/classic_idr_2018/trainable_caid23_filtered.jsonl",
+      "bytes": 3715239,
+      "sha256": "124d05084015d659b4e0a0ff4d5a7d32ab1a8394ab4b51bf79d954c770f58be2"
+    },
+    "training_fasta": {
+      "path": "data/processed/classic_idr_2018/trainable_caid23_filtered.fasta",
+      "bytes": 599506,
+      "sha256": "482bf49a731f4c179f817c316b16c26c3d64e1c0ac7a515c5303a5292085c263"
+    },
+    "all_vs_all_tsv": {
+      "path": "data/interim/homology/train_internal_mmseqs18/train_filtered_all_vs_all.tsv",
+      "bytes": 69767,
+      "sha256": "23679c5d981fb77e0735780d0c71cc395137167303b9a7a377a0ab32290d0e8d"
+    },
+    "external_test_audit": {
+      "path": "data/manifests/training/classic_idr_2018_caid23_homology_after_filter.json",
+      "bytes": 132,
+      "sha256": "3d0905b79aa2981c640a75a6337f1d5a247082a40880a20dd106cd6dff55dcf1"
+    }
+  },
+  "homology_rule": {
+    "identity_strictly_greater_than": 0.3,
+    "query_coverage_at_least": 0.8,
+    "target_coverage_at_least": 0.8,
+    "graph": "undirected",
+    "cluster_definition": "connected_component"
+  },
+  "mmseqs_search": {
+    "tool_environment": "configs/environment/mmseqs2_windows.json",
+    "workflow": "easy-search",
+    "prefilter_mode": 2,
+    "max_seqs": 2000,
+    "alignment_mode": 3,
+    "min_seq_id": 0.3,
+    "coverage": 0.8,
+    "coverage_mode": 0,
+    "evalue": 1000000.0,
+    "mask": 0,
+    "comp_bias_corr": 0,
+    "add_self_matches": 1,
+    "threads": 20,
+    "format_output": "query,target,fident,alnlen,qlen,tlen,qcov,tcov"
+  },
+  "split": {
+    "folds": 5,
+    "assignment_seed": 17,
+    "model_training_seeds": [17, 29, 43],
+    "balance_targets": [
+      "positive_residues",
+      "negative_residues",
+      "sequence_count",
+      "total_residues"
+    ],
+    "prohibit_cluster_splitting": true
+  },
+  "expected": {
+    "input_sequences": 1133,
+    "mmseqs_rows": 1517,
+    "strict_rule_rows": 1513,
+    "self_rows": 1133,
+    "unique_undirected_nonself_edges": 190,
+    "clusters": 984,
+    "non_singleton_clusters": 105,
+    "largest_cluster_sequences": 6,
+    "cross_fold_homology_edges": 0
+  },
+  "outputs": {
+    "clusters_jsonl": "data/processed/classic_idr_2018/homology_clusters.jsonl",
+    "assignments_jsonl": "data/processed/classic_idr_2018/homology_5fold_assignments.jsonl",
+    "manifest": "data/manifests/training/classic_idr_2018_homology_5fold.json"
+  }
+}

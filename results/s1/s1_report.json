@@ -1,0 +1,482 @@
+{
+  "schema_version": 1,
+  "status": "pass",
+  "experiment": "s1_post_lock_mechanistic_ablation_analysis",
+  "purpose": "explanation_only_no_a10_reselection",
+  "input_verification": [
+    {
+      "label": "s1_result_lock",
+      "path": "outputs\\supplementary\\s1_mechanistic_ablation\\s1_result_lock.sha256",
+      "sha256": "e140754684f42abbb13e4b5ee25ef699d7b839f221d31993a354f430eedc60d0",
+      "verified_files": 358
+    },
+    {
+      "label": "manifest",
+      "path": "data\\processed\\classic_idr_2018\\a1_frozen_esm2_manifest.jsonl",
+      "sha256": "df6a4deee4a65d009f4faf41c6b8930f9db8600fa28b6711da7ff48ad2c70bf4"
+    },
+    {
+      "label": "s1_config",
+      "path": "experiments\\supplementary\\s1_mechanistic_ablation\\config.yaml",
+      "sha256": "8e7c5b5a1641f53644f21f34e45572447652ed50d12359ceff16e201ba214671"
+    },
+    {
+      "label": "s1_model",
+      "path": "experiments\\supplementary\\s1_mechanistic_ablation\\model.py",
+      "sha256": "ad6b7dd2f92da7d224062e6da3d049179d6c2b319e9d3598a53a3a3c6de9879e"
+    },
+    {
+      "label": "s1_train",
+      "path": "experiments\\supplementary\\s1_mechanistic_ablation\\train_s1.py",
+      "sha256": "94f87a6c7e5c5eb857ff2d667294fe39e339355b6301e189974938c683182e48"
+    },
+    {
+      "label": "a5_predictions",
+      "path": "outputs\\ablations\\a5_seed_ensemble\\a5_oof_predictions.csv.gz",
+      "sha256": "220ce95fb398690df4348cfe7199fcbeb797862bf062441e48a66362ba1b1622"
+    },
+    {
+      "label": "a5_report",
+      "path": "outputs\\ablations\\a5_seed_ensemble\\a5_ensemble_report.json",
+      "sha256": "acf246daa0add31ef1aec233e5ef56012d417fe041da7596d970435039f41825"
+    },
+    {
+      "label": "a9_predictions",
+      "path": "artifacts\\a10_locked_20260824\\a8_a9_a10\\outputs\\ablations\\a9_a8_seed_ensemble\\a9_oof_predictions.csv.gz",
+      "sha256": "57432c063e47b7e66fc3cfcef000e248afbc7e166bb76eff0faed7b9b4b1be1c"
+    },
+    {
+      "label": "a9_report",
+      "path": "artifacts\\a10_locked_20260824\\a8_a9_a10\\outputs\\ablations\\a9_a8_seed_ensemble\\a9_ensemble_report.json",
+      "sha256": "d7fbac75a3281d00ea14c5396bca54f3fbd168c381d28dddd06a2893d3552fee"
+    },
+    {
+      "label": "a1_a10_summary",
+      "path": "outputs\\analysis\\a1_a10_20260824\\a1_a10_summary.json",
+      "sha256": "0a89a15fe14f6833095a04a97e5e209976a525a053db435fb08cc179b88383e8"
+    }
+  ],
+  "reference_logit_reconstruction_max_abs_difference": {
+    "A5": 4.999993752363707e-10,
+    "A9": 4.999994585030976e-10
+  },
+  "proteins": 1133,
+  "known_residues": 202662,
+  "seeds": [
+    17,
+    29,
+    43
+  ],
+  "models": [
+    "a2_reference",
+    "a8_learned_mix",
+    "ungated_add",
+    "additive_projection",
+    "single_k3",
+    "single_k7",
+    "single_k15",
+    "single_k31",
+    "uniform_layer_mix"
+  ],
+  "comparisons": 7,
+  "primary_metric": "micro_roc_auc",
+  "bootstrap": {
+    "paired": true,
+    "sampling_unit": "whole_protein",
+    "stratified_by_oof_fold": true,
+    "replicates": 2000,
+    "random_seed": 20260904,
+    "workers": 8
+  },
+  "multiple_testing": {
+    "method": "Holm",
+    "family": "seven_predeclared_primary_roc_auc_comparisons",
+    "hypotheses": 7
+  },
+  "seed_summary": [
+    {
+      "model": "a2_reference",
+      "display_name": "A2 gated four-scale",
+      "seeds": "17/29/43",
+      "micro_roc_auc_mean": 0.9567642165534302,
+      "micro_roc_auc_sample_sd": 0.0029443296976116406,
+      "micro_pr_auc_mean": 0.9643131739776317,
+      "micro_pr_auc_sample_sd": 0.0034243496836393232,
+      "macro_roc_auc_mean": 0.8726448438841384,
+      "macro_roc_auc_sample_sd": 0.009816410358762908
+    },
+    {
+      "model": "a8_learned_mix",
+      "display_name": "A8 learned layer mix",
+      "seeds": "17/29/43",
+      "micro_roc_auc_mean": 0.9600488234998599,
+      "micro_roc_auc_sample_sd": 0.0009575794847886328,
+      "micro_pr_auc_mean": 0.9670328659060818,
+      "micro_pr_auc_sample_sd": 0.0006915746149898729,
+      "macro_roc_auc_mean": 0.8578630222574817,
+      "macro_roc_auc_sample_sd": 0.004292054560320959
+    },
+    {
+      "model": "ungated_add",
+      "display_name": "Direct ungated addition",
+      "seeds": "17/29/43",
+      "micro_roc_auc_mean": 0.9567356606223744,
+      "micro_roc_auc_sample_sd": 0.0036868032654857885,
+      "micro_pr_auc_mean": 0.9640428343027733,
+      "micro_pr_auc_sample_sd": 0.003818966615988536,
+      "macro_roc_auc_mean": 0.8737484232438674,
+      "macro_roc_auc_sample_sd": 0.0076306335475194555
+    },
+    {
+      "model": "additive_projection",
+      "display_name": "Parameter-matched additive projection",
+      "seeds": "17/29/43",
+      "micro_roc_auc_mean": 0.9543755357737453,
+      "micro_roc_auc_sample_sd": 0.006633019083256657,
+      "micro_pr_auc_mean": 0.9613612573992975,
+      "micro_pr_auc_sample_sd": 0.007882997504686151,
+      "macro_roc_auc_mean": 0.8718803278985477,
+      "macro_roc_auc_sample_sd": 0.007938862394116224
+    },
+    {
+      "model": "single_k3",
+      "display_name": "Single scale k=3",
+      "seeds": "17/29/43",
+      "micro_roc_auc_mean": 0.9556175861710501,
+      "micro_roc_auc_sample_sd": 0.0011251639638390984,
+      "micro_pr_auc_mean": 0.963455264587551,
+      "micro_pr_auc_sample_sd": 0.002080792117535588,
+      "macro_roc_auc_mean": 0.8676417948282255,
+      "macro_roc_auc_sample_sd": 0.0013415722183564066
+    },
+    {
+      "model": "single_k7",
+      "display_name": "Single scale k=7",
+      "seeds": "17/29/43",
+      "micro_roc_auc_mean": 0.9557436651648555,
+      "micro_roc_auc_sample_sd": 0.0009045802573488726,
+      "micro_pr_auc_mean": 0.9635395607834302,
+      "micro_pr_auc_sample_sd": 0.0017652149295742901,
+      "macro_roc_auc_mean": 0.8680782120734898,
+      "macro_roc_auc_sample_sd": 0.003502269192094047
+    },
+    {
+      "model": "single_k15",
+      "display_name": "Single scale k=15",
+      "seeds": "17/29/43",
+      "micro_roc_auc_mean": 0.9555696257875939,
+      "micro_roc_auc_sample_sd": 0.0015238246616540074,
+      "micro_pr_auc_mean": 0.9636736574327109,
+      "micro_pr_auc_sample_sd": 0.002221847562416758,
+      "macro_roc_auc_mean": 0.8737632895923467,
+      "macro_roc_auc_sample_sd": 0.004571280096087653
+    },
+    {
+      "model": "single_k31",
+      "display_name": "Single scale k=31",
+      "seeds": "17/29/43",
+      "micro_roc_auc_mean": 0.956238687508905,
+      "micro_roc_auc_sample_sd": 0.0022364750842227203,
+      "micro_pr_auc_mean": 0.9639923101197757,
+      "micro_pr_auc_sample_sd": 0.0029832571901314345,
+      "macro_roc_auc_mean": 0.8699425185663432,
+      "macro_roc_auc_sample_sd": 0.0058183351127769085
+    },
+    {
+      "model": "uniform_layer_mix",
+      "display_name": "Fixed uniform layer mix",
+      "seeds": "17/29/43",
+      "micro_roc_auc_mean": 0.9598686255834251,
+      "micro_roc_auc_sample_sd": 0.000725134761025512,
+      "micro_pr_auc_mean": 0.966799055491855,
+      "micro_pr_auc_sample_sd": 0.0006619710975670637,
+      "macro_roc_auc_mean": 0.859555898390548,
+      "macro_roc_auc_sample_sd": 0.0032812830898641533
+    }
+  ],
+  "ensemble_metrics": [
+    {
+      "model": "a2_reference",
+      "display_name": "A2 gated four-scale",
+      "ensemble_method": "three_seed_uniform_logit_mean",
+      "micro_roc_auc": 0.9634967958696632,
+      "micro_pr_auc": 0.9701208785727335,
+      "macro_roc_auc": 0.8799797187310403,
+      "known_residues": 202662,
+      "positive_residues": 105036,
+      "negative_residues": 97626,
+      "proteins": 1133,
+      "macro_auc_proteins": 218
+    },
+    {
+      "model": "a8_learned_mix",
+      "display_name": "A8 learned layer mix",
+      "ensemble_method": "three_seed_uniform_logit_mean",
+      "micro_roc_auc": 0.9633419260014418,
+      "micro_pr_auc": 0.9697528492433467,
+      "macro_roc_auc": 0.8614017649556409,
+      "known_residues": 202662,
+      "positive_residues": 105036,
+      "negative_residues": 97626,
+      "proteins": 1133,
+      "macro_auc_proteins": 218
+    },
+    {
+      "model": "ungated_add",
+      "display_name": "Direct ungated addition",
+      "ensemble_method": "three_seed_uniform_logit_mean",
+      "micro_roc_auc": 0.9636866930866804,
+      "micro_pr_auc": 0.970259811934615,
+      "macro_roc_auc": 0.8815592597123183,
+      "known_residues": 202662,
+      "positive_residues": 105036,
+      "negative_residues": 97626,
+      "proteins": 1133,
+      "macro_auc_proteins": 218
+    },
+    {
+      "model": "additive_projection",
+      "display_name": "Parameter-matched additive projection",
+      "ensemble_method": "three_seed_uniform_logit_mean",
+      "micro_roc_auc": 0.9619136438936198,
+      "micro_pr_auc": 0.9688899761930225,
+      "macro_roc_auc": 0.880016633801508,
+      "known_residues": 202662,
+      "positive_residues": 105036,
+      "negative_residues": 97626,
+      "proteins": 1133,
+      "macro_auc_proteins": 218
+    },
+    {
+      "model": "single_k3",
+      "display_name": "Single scale k=3",
+      "ensemble_method": "three_seed_uniform_logit_mean",
+      "micro_roc_auc": 0.960438989866508,
+      "micro_pr_auc": 0.9674238327336915,
+      "macro_roc_auc": 0.8736178590133901,
+      "known_residues": 202662,
+      "positive_residues": 105036,
+      "negative_residues": 97626,
+      "proteins": 1133,
+      "macro_auc_proteins": 218
+    },
+    {
+      "model": "single_k7",
+      "display_name": "Single scale k=7",
+      "ensemble_method": "three_seed_uniform_logit_mean",
+      "micro_roc_auc": 0.961202176269224,
+      "micro_pr_auc": 0.9682962779918259,
+      "macro_roc_auc": 0.874288156259187,
+      "known_residues": 202662,
+      "positive_residues": 105036,
+      "negative_residues": 97626,
+      "proteins": 1133,
+      "macro_auc_proteins": 218
+    },
+    {
+      "model": "single_k15",
+      "display_name": "Single scale k=15",
+      "ensemble_method": "three_seed_uniform_logit_mean",
+      "micro_roc_auc": 0.9613174020175327,
+      "micro_pr_auc": 0.9686542990531916,
+      "macro_roc_auc": 0.8804725352223761,
+      "known_residues": 202662,
+      "positive_residues": 105036,
+      "negative_residues": 97626,
+      "proteins": 1133,
+      "macro_auc_proteins": 218
+    },
+    {
+      "model": "single_k31",
+      "display_name": "Single scale k=31",
+      "ensemble_method": "three_seed_uniform_logit_mean",
+      "micro_roc_auc": 0.9636909838952176,
+      "micro_pr_auc": 0.9700787069624317,
+      "macro_roc_auc": 0.8765313333048091,
+      "known_residues": 202662,
+      "positive_residues": 105036,
+      "negative_residues": 97626,
+      "proteins": 1133,
+      "macro_auc_proteins": 218
+    },
+    {
+      "model": "uniform_layer_mix",
+      "display_name": "Fixed uniform layer mix",
+      "ensemble_method": "three_seed_uniform_logit_mean",
+      "micro_roc_auc": 0.9635733258858183,
+      "micro_pr_auc": 0.9698094581360844,
+      "macro_roc_auc": 0.8624237206493225,
+      "known_residues": 202662,
+      "positive_residues": 105036,
+      "negative_residues": 97626,
+      "proteins": 1133,
+      "macro_auc_proteins": 218
+    }
+  ],
+  "pairwise_bootstrap": [
+    {
+      "comparison_id": "gate_vs_direct_add",
+      "mechanism": "sigmoid gate versus direct residual addition",
+      "reference_model": "a2_reference",
+      "reference_display_name": "A2 gated four-scale",
+      "control_model": "ungated_add",
+      "control_display_name": "Direct ungated addition",
+      "point_delta": -0.00018989721701723195,
+      "mean_delta": -0.0001870671588290544,
+      "standard_deviation": 0.00021374864543014085,
+      "percentile_95_ci": [
+        -0.0006120647062301615,
+        0.00023423247361532544
+      ],
+      "probability_delta_positive": 0.189,
+      "one_sided_p_delta_le_zero_plus_one_correction": 0.8110944527736131,
+      "one_sided_p_delta_ge_zero_plus_one_correction": 0.18940529735132433,
+      "two_sided_empirical_p_plus_one_correction": 0.37881059470264866,
+      "nonpositive_replicates": 1622,
+      "nonnegative_replicates": 378,
+      "holm_adjusted_p": 1.0,
+      "interpretation": "no_holm_significant_difference"
+    },
+    {
+      "comparison_id": "gate_vs_parameter_matched_additive",
+      "mechanism": "sigmoid gate versus a parameter-matched additive projection",
+      "reference_model": "a2_reference",
+      "reference_display_name": "A2 gated four-scale",
+      "control_model": "additive_projection",
+      "control_display_name": "Parameter-matched additive projection",
+      "point_delta": 0.0015831519760434176,
+      "mean_delta": 0.0015989896011405387,
+      "standard_deviation": 0.0005380131673745201,
+      "percentile_95_ci": [
+        0.0006022926393086491,
+        0.0026850542760113393
+      ],
+      "probability_delta_positive": 0.9995,
+      "one_sided_p_delta_le_zero_plus_one_correction": 0.0009995002498750624,
+      "one_sided_p_delta_ge_zero_plus_one_correction": 0.9995002498750625,
+      "two_sided_empirical_p_plus_one_correction": 0.001999000499750125,
+      "nonpositive_replicates": 1,
+      "nonnegative_replicates": 1999,
+      "holm_adjusted_p": 0.013993003498250875,
+      "interpretation": "supports_reference_module"
+    },
+    {
+      "comparison_id": "multiscale_vs_k3",
+      "mechanism": "four-scale context versus kernel 3 only",
+      "reference_model": "a2_reference",
+      "reference_display_name": "A2 gated four-scale",
+      "control_model": "single_k3",
+      "control_display_name": "Single scale k=3",
+      "point_delta": 0.0030578060031551946,
+      "mean_delta": 0.0030543785921787556,
+      "standard_deviation": 0.0009383210615310042,
+      "percentile_95_ci": [
+        0.001349349374418582,
+        0.00493092141143142
+      ],
+      "probability_delta_positive": 0.999,
+      "one_sided_p_delta_le_zero_plus_one_correction": 0.0014992503748125937,
+      "one_sided_p_delta_ge_zero_plus_one_correction": 0.999000499750125,
+      "two_sided_empirical_p_plus_one_correction": 0.0029985007496251873,
+      "nonpositive_replicates": 2,
+      "nonnegative_replicates": 1998,
+      "holm_adjusted_p": 0.017991004497751123,
+      "interpretation": "supports_reference_module"
+    },
+    {
+      "comparison_id": "multiscale_vs_k7",
+      "mechanism": "four-scale context versus kernel 7 only",
+      "reference_model": "a2_reference",
+      "reference_display_name": "A2 gated four-scale",
+      "control_model": "single_k7",
+      "control_display_name": "Single scale k=7",
+      "point_delta": 0.002294619600439196,
+      "mean_delta": 0.0022890954498028925,
+      "standard_deviation": 0.0011876886693993527,
+      "percentile_95_ci": [
+        2.3102845209929714e-05,
+        0.004640093127975961
+      ],
+      "probability_delta_positive": 0.975,
+      "one_sided_p_delta_le_zero_plus_one_correction": 0.025487256371814093,
+      "one_sided_p_delta_ge_zero_plus_one_correction": 0.9750124937531235,
+      "two_sided_empirical_p_plus_one_correction": 0.050974512743628186,
+      "nonpositive_replicates": 50,
+      "nonnegative_replicates": 1950,
+      "holm_adjusted_p": 0.25487256371814093,
+      "interpretation": "no_holm_significant_difference"
+    },
+    {
+      "comparison_id": "multiscale_vs_k15",
+      "mechanism": "four-scale context versus kernel 15 only",
+      "reference_model": "a2_reference",
+      "reference_display_name": "A2 gated four-scale",
+      "control_model": "single_k15",
+      "control_display_name": "Single scale k=15",
+      "point_delta": 0.0021793938521305067,
+      "mean_delta": 0.0021736065318017127,
+      "standard_deviation": 0.0012410065568593791,
+      "percentile_95_ci": [
+        -0.00013769254380446294,
+        0.0046564340330767975
+      ],
+      "probability_delta_positive": 0.965,
+      "one_sided_p_delta_le_zero_plus_one_correction": 0.03548225887056472,
+      "one_sided_p_delta_ge_zero_plus_one_correction": 0.9650174912543729,
+      "two_sided_empirical_p_plus_one_correction": 0.07096451774112944,
+      "nonpositive_replicates": 70,
+      "nonnegative_replicates": 1930,
+      "holm_adjusted_p": 0.28385807096451776,
+      "interpretation": "no_holm_significant_difference"
+    },
+    {
+      "comparison_id": "multiscale_vs_k31",
+      "mechanism": "four-scale context versus kernel 31 only",
+      "reference_model": "a2_reference",
+      "reference_display_name": "A2 gated four-scale",
+      "control_model": "single_k31",
+      "control_display_name": "Single scale k=31",
+      "point_delta": -0.00019418802555437598,
+      "mean_delta": -0.00020019537407638073,
+      "standard_deviation": 0.0008993347462594268,
+      "percentile_95_ci": [
+        -0.0019389968748254021,
+        0.001503146942579237
+      ],
+      "probability_delta_positive": 0.4145,
+      "one_sided_p_delta_le_zero_plus_one_correction": 0.5857071464267866,
+      "one_sided_p_delta_ge_zero_plus_one_correction": 0.4147926036981509,
+      "two_sided_empirical_p_plus_one_correction": 0.8295852073963018,
+      "nonpositive_replicates": 1171,
+      "nonnegative_replicates": 829,
+      "holm_adjusted_p": 1.0,
+      "interpretation": "no_holm_significant_difference"
+    },
+    {
+      "comparison_id": "learned_vs_uniform_layer_mix",
+      "mechanism": "learned last-four-layer mix versus a fixed uniform mean",
+      "reference_model": "a8_learned_mix",
+      "reference_display_name": "A8 learned layer mix",
+      "control_model": "uniform_layer_mix",
+      "control_display_name": "Fixed uniform layer mix",
+      "point_delta": -0.00023139988437659298,
+      "mean_delta": -0.00021552147558202573,
+      "standard_deviation": 0.0006235257451674475,
+      "percentile_95_ci": [
+        -0.0014538939456966466,
+        0.0009915212321671015
+      ],
+      "probability_delta_positive": 0.3715,
+      "one_sided_p_delta_le_zero_plus_one_correction": 0.6286856571714143,
+      "one_sided_p_delta_ge_zero_plus_one_correction": 0.37181409295352325,
+      "two_sided_empirical_p_plus_one_correction": 0.7436281859070465,
+      "nonpositive_replicates": 1257,
+      "nonnegative_replicates": 743,
+      "holm_adjusted_p": 1.0,
+      "interpretation": "no_holm_significant_difference"
+    }
+  ],
+  "elapsed_seconds": 196.02772600000026,
+  "caid1_caid2_caid3_used_for_training_tuning_weighting_or_reselection": false,
+  "locked_a10_modified": false
+}

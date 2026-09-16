@@ -1,0 +1,30 @@
+{
+  "roc_auc_caid_compatible": 0.978,
+  "roc_auc_full_precision": 0.9778267957639984,
+  "aucpr_trapezoid": 0.848,
+  "aps": 0.841,
+  "f1_at_0_5": 0.747,
+  "mcc_at_0_5": 0.733,
+  "fmax": 0.818,
+  "mcc_at_fmax": 0.798,
+  "fmax_threshold": 0.878,
+  "aucpr_trapezoid_full_precision": 0.8479503964779987,
+  "aps_full_precision": 0.8479859005511463,
+  "f1_at_0_5_full_precision": 0.747267395361237,
+  "mcc_at_0_5_full_precision": 0.7328727719870782,
+  "fmax_full_precision": 0.8176656151419558,
+  "mcc_at_fmax_full_precision": 0.798203917707776,
+  "fmax_threshold_full_precision": 0.877703488,
+  "brier_score": 0.05036215516713715,
+  "log_loss": 0.1998687359322179,
+  "precision_at_0_5_full_precision": 0.6224739062846991,
+  "recall_at_0_5_full_precision": 0.934644881627209,
+  "specificity_at_0_5_full_precision": 0.9386923437556349,
+  "accuracy_at_0_5_full_precision": 0.938297318406665,
+  "confusion_at_0_5": {
+    "tp": 2803,
+    "tn": 26029,
+    "fp": 1700,
+    "fn": 196
+  }
+}

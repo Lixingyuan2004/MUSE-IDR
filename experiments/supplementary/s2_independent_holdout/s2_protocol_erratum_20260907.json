@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "record_type": "nonanalytical_protocol_transcription_erratum",
+  "status": "documented_before_s2_label_side_three_model_evaluation",
+  "date": "2026-09-07",
+  "protocol": "experiments/supplementary/s2_independent_holdout/s2_baseline_comparison_protocol_20260907.json",
+  "protocol_sha256": "a231176522a0bd1bd5a0566c74d9006ab9ea6a65100d58b371b617d3533413e2",
+  "field": "formal_comparators[1].adapter_weights_sha256",
+  "recorded_value": "02f1e288f36f369786db68df5270affa693d2359a5badb0275ce81977448fe",
+  "recorded_value_length": 62,
+  "corrected_value": "02f1e288f36f369786db68df5270affa693d2359a5badb0275c28e81977448fe",
+  "corrected_value_length": 64,
+  "evidence": {
+    "lora_result_lock": "outputs/supplementary/s2_independent_holdout/lora_dr_suite_650m_disprot7_offline_prediction_20260907/s2_baseline_prediction_lock.sha256",
+    "lora_result_lock_sha256": "cebca1195196f431635635b6d10b5d7a4ff9bea6eb8e9cd8b3970baff040675c",
+    "locked_offline_inference_script_sha256": "57653fdd66be807849ebdbe4a4e552118fa5585e1f24d6226798c0fd40951817",
+    "locked_s2_driver_sha256": "ae8545161e7237b128bd9061b27cb11af53c82ab4fc83e979f54926af9aeb502",
+    "inference_report_sha256": "8a8695ce83e1273d671b7c5e535ad107fe2ae70444a1867cb40e1beb47c207db",
+    "prediction_report_sha256": "4a04603d5ffc9b46f71e5c6b935ae45521c2afb90a96c7c00d6c8ca6d10710bb"
+  },
+  "scope": "The correction restores the missing two hexadecimal characters in a provenance hash only.",
+  "analysis_impact": "none",
+  "comparator_identity_changed": false,
+  "model_weights_changed": false,
+  "predictions_changed": false,
+  "statistical_protocol_changed": false,
+  "locked_a10_modified_or_reselected": false
+}

@@ -1,0 +1,10 @@
+model,display_name,ensemble_method,micro_roc_auc,micro_pr_auc,macro_roc_auc,known_residues,positive_residues,negative_residues,proteins,macro_auc_proteins
+a2_reference,A2 gated four-scale,three_seed_uniform_logit_mean,0.9634967958696632,0.9701208785727335,0.8799797187310403,202662,105036,97626,1133,218
+a8_learned_mix,A8 learned layer mix,three_seed_uniform_logit_mean,0.9633419260014418,0.9697528492433467,0.8614017649556409,202662,105036,97626,1133,218
+ungated_add,Direct ungated addition,three_seed_uniform_logit_mean,0.9636866930866804,0.970259811934615,0.8815592597123183,202662,105036,97626,1133,218
+additive_projection,Parameter-matched additive projection,three_seed_uniform_logit_mean,0.9619136438936198,0.9688899761930225,0.880016633801508,202662,105036,97626,1133,218
+single_k3,Single scale k=3,three_seed_uniform_logit_mean,0.960438989866508,0.9674238327336915,0.8736178590133901,202662,105036,97626,1133,218
+single_k7,Single scale k=7,three_seed_uniform_logit_mean,0.961202176269224,0.9682962779918259,0.874288156259187,202662,105036,97626,1133,218
+single_k15,Single scale k=15,three_seed_uniform_logit_mean,0.9613174020175327,0.9686542990531916,0.8804725352223761,202662,105036,97626,1133,218
+single_k31,Single scale k=31,three_seed_uniform_logit_mean,0.9636909838952176,0.9700787069624317,0.8765313333048091,202662,105036,97626,1133,218
+uniform_layer_mix,Fixed uniform layer mix,three_seed_uniform_logit_mean,0.9635733258858183,0.9698094581360844,0.8624237206493225,202662,105036,97626,1133,218

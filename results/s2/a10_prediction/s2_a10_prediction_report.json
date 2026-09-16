@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "experiment": "s2_locked_a10_prediction_blind",
+  "status": "pass",
+  "input_fasta": "data/external/s2_database_curated_20260906/sequences_only/s2_sequences.fasta",
+  "input_fasta_sha256": "d777bfeb9cd8cf82af003c10bcef8b5b3e09dbee276e7e16164f408e336d67df",
+  "input_contains_labels": false,
+  "proteins": 87,
+  "residues": 56394,
+  "pinned_source_hashes": {
+    "data/external/s2_database_curated_20260906/sequences_only/s2_sequences.fasta": "d777bfeb9cd8cf82af003c10bcef8b5b3e09dbee276e7e16164f408e336d67df",
+    "experiments/final_models/a10_locked_inference/predict_a10.py": "ddadcf6999289a8dda158903698ac1a82242e67f869266ed5cf5048066a37c5d",
+    "experiments/final_models/a10_locked_inference/a10_lock_manifest.json": "5547980f456104d756b2e8ca080991b8b82a08b8be08359d084c76ff085dda98",
+    "experiments/ablations/a2_multiscale_context/model.py": "cc3566e8c87614355bb7be702630fdf1afd40717325aacd86392b90e4615c453",
+    "experiments/ablations/a8_multilayer_esm2_fusion/model.py": "8268bdcda2188699eca7d4403a8df27a2a64828dac3f526368858e6e11bdd54a",
+    "experiments/ablations/a8_multilayer_esm2_fusion/cache_multilayer.py": "64400b083038b18af7f19581ca52ca83dd32c0fa7868d966a5eb317266c8e9c6",
+    "experiments/ablations/a1_frozen_esm2/data.py": "c8c34b11ceea6d415bf78bc4c4ce9db526a026a990752a40da1a4298e0e1ab57"
+  },
+  "locked_members": 30,
+  "ensemble_method": "thirty_model_uniform_logit_mean",
+  "precision": "bf16",
+  "prediction_validation": {
+    "prediction_rows": 56394,
+    "minimum_probability": 0.00243397569,
+    "maximum_probability": 0.998825133
+  },
+  "prediction": "outputs/supplementary/s2_independent_holdout/a10_prediction_20260907/muse_idr_a10_s2_predictions.tsv.gz",
+  "prediction_sha256": "70555772455afb707200036cf93266236013d18accdce1c0289a3a8236ab541b",
+  "inference_report": "outputs/supplementary/s2_independent_holdout/a10_prediction_20260907/a10_inference_report.json",
+  "inference_report_sha256": "abf5935826b99e03681cc285017c70fc2816e58a2f622ad76a6898c6d260291a",
+  "s2_reference_or_labels_accessed": false,
+  "scores_used_for_training_tuning_or_selection": false,
+  "locked_a10_modified": false,
+  "ready_for_label_side_evaluation": true
+}

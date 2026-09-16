@@ -1,0 +1,31 @@
+name: Feature request
+description: Propose a scoped improvement to MUSE-IDR or its reproducibility tools
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: >-
+        Please do not attach restricted CAID labels, third-party weights, or
+        private biological data.
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What limitation or reproducibility need does this address?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed change
+      description: Describe the smallest useful change and its expected behavior.
+    validations:
+      required: true
+  - type: textarea
+    id: validation
+    attributes:
+      label: Validation plan
+      description: Explain how the change can be tested without tuning on CAID labels.
+    validations:
+      required: true

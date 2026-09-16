@@ -1,0 +1,39 @@
+schema_version: 1
+experiment: a4_esm2_lora_multiscale
+variant: frozen_raw_control
+
+model:
+  name: facebook/esm2_t33_650M_UR50D
+  revision: 08e4846e537177426273712802403f7ba8261b6c
+  hidden_size: 1280
+
+data:
+  max_residues: 1022
+  stride: 511
+
+context:
+  channels: 256
+  kernels: [3, 7, 15, 31]
+  dropout: 0.20
+
+lora:
+  enabled: false
+  rank: 8
+  alpha: 16
+  dropout: 0.10
+  target_modules: [query, value]
+
+training:
+  precision: bf16
+  gradient_checkpointing: false
+  batch_size: 1
+  gradient_accumulation_steps: 4
+  num_workers: 0
+  epochs: 6
+  patience: 2
+  lora_learning_rate: 0.0001
+  head_learning_rate: 0.0003
+  weight_decay: 0.01
+  warmup_ratio: 0.10
+  max_grad_norm: 1.0
+  selection_metric: micro_roc_auc

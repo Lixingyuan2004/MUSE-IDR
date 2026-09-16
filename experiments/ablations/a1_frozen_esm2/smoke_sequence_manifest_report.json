@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "source": "data/processed/classic_idr_2018/a1_frozen_esm2_smoke_manifest.jsonl",
+  "source_sha256": "44c10d105fef314627cb627bc9e9d5c4a26caa761672a3d5f8870631b4981849",
+  "output": "data/processed/classic_idr_2018/a1_smoke_sequences.jsonl",
+  "output_sha256": "425dae2a855e5a8b624715237a006ae9f36039e89b2fa42e785b31dfc1e451c4",
+  "proteins": 6,
+  "fields": [
+    "id",
+    "sequence",
+    "fold"
+  ],
+  "contains_residue_labels": false,
+  "caid2_caid3_labels_accessed": false
+}

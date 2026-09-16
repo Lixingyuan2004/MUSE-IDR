@@ -1,0 +1,35 @@
+prediction:
+  output_name: idr_probability
+  output_heads: 1
+
+labels:
+  positive: 1
+  negative: 0
+  unknown: -1
+  ignore_unknown: true
+
+primary_metric:
+  name: residue_micro_roc_auc
+  pool_labeled_residues_across_proteins: true
+  threshold_required: false
+
+secondary_metrics:
+  - residue_pr_auc
+  - protein_macro_roc_auc
+  - mcc
+  - f1
+  - balanced_accuracy
+  - region_overlap
+  - boundary_error
+
+uncertainty:
+  method: paired_protein_bootstrap
+  replicates: 1000
+  confidence_level: 0.95
+  seed: 1729
+
+caid:
+  datasets: [caid2, caid3]
+  test_only: true
+  permit_model_selection: false
+  reuse_same_universal_score_for_all_masks: true

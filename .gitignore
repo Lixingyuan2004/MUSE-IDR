@@ -1,0 +1,86 @@
+# Python and test caches
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+.venv/
+venv/
+
+# Editors and operating systems
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Local secrets and machine-specific settings
+.env
+.env.*
+!.env.example
+
+# Local datasets and generated representations
+#
+# The complete training/evaluation material may exist in a local checkout, but
+# it is not automatically redistributed. Machine-readable split and provenance
+# manifests under data/manifests are public and remain tracked.
+data/raw/**
+data/interim/**
+data/processed/**
+data/caid_holdout/**
+data/external/**
+data/features/**
+data/cache/**
+!data/**/README.md
+!data/manifests/**
+
+# Generated experiment products. The two locked MUSE-IDR external predictions
+# included in the paper release are explicit exceptions.
+outputs/**
+!outputs/final/
+!outputs/final/a10/
+!outputs/final/a10/caid2_union_predictions.tsv.gz
+!outputs/final/a10/caid3_union_predictions.tsv.gz
+logs/
+reproduced/
+wandb/
+mlruns/
+tmp/
+cache/
+
+# Local third-party software and downloads
+third_party/
+tools/
+*.incomplete
+*.tar
+*.tar.gz
+*.tgz
+*.zip
+
+# Large generated model/features. The 30 locked paper checkpoints and archived
+# statistical samples are intentionally versioned exceptions.
+*.pt
+*.pth
+*.ckpt
+*.npy
+*.npz
+*.parquet
+!models/weights/a10_locked/**/*.pt
+!results/**/*.npz
+
+# Large biological data formats are local unless already released explicitly.
+*.fasta
+*.fa
+*.faa
+*.a3m
+*.hhr
+*.pdb
+*.cif
+*.mmcif
+!examples/*.fasta
+
+# Prediction outputs from ad-hoc inference
+prediction_report.json
+predictions.tsv.gz

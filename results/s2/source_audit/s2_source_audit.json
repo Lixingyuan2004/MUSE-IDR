@@ -1,0 +1,206 @@
+{
+  "schema_version": 1,
+  "status": "audit_complete_test_set_not_ready",
+  "generated_utc": "2026-09-06T07:07:16.330537+00:00",
+  "purpose": "s2_metadata_and_sequence_feasibility_audit",
+  "script_sha256": "d21be51d4ceba69e1a30e13a4878bac42af87b226414f704778136032ca47c3b",
+  "input_sources": [
+    {
+      "path": "data/caid_holdout/references/caid1/rebuild_sources/disprot-2018-11.json",
+      "sha256": "2062da33ae925e64daa2a0bb899ad6e911020d8caa55121fcf1cbed9e18db0e0",
+      "bytes": 6690809
+    },
+    {
+      "path": "data/raw/disprot/2023_06/disprot.json",
+      "sha256": "cbe1f6ff22545e0a7a14abf7d184218fbe830358aa03da2b4ca0e96df51cfe74",
+      "bytes": 24303603
+    },
+    {
+      "path": "data/raw/disprot/2025_06/disprot.json",
+      "sha256": "c2a259fb1fd211ba357ccff7775d362fd49557a8dd6b50a52a89416196cc7ef0",
+      "bytes": 32675199
+    },
+    {
+      "path": "data/raw/disprot/2026_06/disprot.json",
+      "sha256": "afed1664507df330c22ad5ddd59796af49851e1f9df3f88a7ec0fb87f37d0d9b",
+      "bytes": 33385719
+    },
+    {
+      "path": "data/processed/classic_idr_2018/a1_frozen_esm2_manifest.jsonl",
+      "sha256": "df6a4deee4a65d009f4faf41c6b8930f9db8600fa28b6711da7ff48ad2c70bf4",
+      "bytes": 2151071
+    },
+    {
+      "path": "data/processed/classic_idr_2018/trainable_caid23_filtered.jsonl",
+      "sha256": "124d05084015d659b4e0a0ff4d5a7d32ab1a8394ab4b51bf79d954c770f58be2",
+      "bytes": 3715239
+    },
+    {
+      "path": "data/manifests/holdouts/caid23_test_sentinel.json",
+      "sha256": "e149d1dea349953480d6d4944dd68c34075ccf9a8fc58abb9d8db52a1e3b066c",
+      "bytes": 209719
+    },
+    {
+      "path": "data/caid_holdout/derived/caid23/targets.fasta",
+      "sha256": "bd8c40e75d1ce4ffd0c9d3950f351dad888d8418e648550355cb13bf06e75744",
+      "bytes": 457644
+    }
+  ],
+  "training": {
+    "proteins": 1133,
+    "known_residues": 202662,
+    "positive": 105036,
+    "negative": 97626,
+    "unknown": 370759,
+    "positive_label_release": "2018_11",
+    "pdb_release_cutoff": "2018-11-30",
+    "later_mapping_resources": [
+      "DisProt 2026_06 sequences/accessions",
+      "SIFTS 2026-08-17 mapping"
+    ]
+  },
+  "snapshot_inventory": [
+    {
+      "release": "2023_06",
+      "records": 2901,
+      "entry_release_distribution": {
+        "2016_10": 803,
+        "2018_11": 906,
+        "2019_09": 4,
+        "2020_06": 59,
+        "2020_12": 137,
+        "2021_06": 300,
+        "2021_12": 356,
+        "2022_06": 55,
+        "2022_12": 71,
+        "2023_06": 210
+      },
+      "metadata_issue_records": 216,
+      "previous_local_release": null,
+      "ids_absent_from_previous_local_snapshot": null,
+      "previous_ids_absent_from_this_snapshot": null
+    },
+    {
+      "release": "2025_06",
+      "records": 3504,
+      "entry_release_distribution": {
+        "2016_10": 801,
+        "2018_11": 900,
+        "2019_09": 4,
+        "2020_06": 59,
+        "2020_12": 136,
+        "2021_06": 300,
+        "2021_12": 356,
+        "2022_06": 55,
+        "2022_12": 71,
+        "2023_06": 209,
+        "2023_12": 266,
+        "2024_06": 184,
+        "2024_12": 53,
+        "2025_06": 110
+      },
+      "metadata_issue_records": 262,
+      "previous_local_release": "2023_06",
+      "ids_absent_from_previous_local_snapshot": 605,
+      "previous_ids_absent_from_this_snapshot": 2
+    },
+    {
+      "release": "2026_06",
+      "records": 3388,
+      "entry_release_distribution": {
+        "2016_10": 729,
+        "2018_11": 748,
+        "2019_09": 4,
+        "2020_06": 57,
+        "2020_12": 135,
+        "2021_06": 297,
+        "2021_12": 342,
+        "2022_06": 55,
+        "2022_12": 59,
+        "2023_06": 197,
+        "2023_12": 265,
+        "2024_06": 184,
+        "2024_12": 53,
+        "2025_06": 110,
+        "2026_06": 153
+      },
+      "metadata_issue_records": 50,
+      "previous_local_release": "2025_06",
+      "ids_absent_from_previous_local_snapshot": 153,
+      "previous_ids_absent_from_this_snapshot": 269
+    }
+  ],
+  "candidate_cohorts": {
+    "2023_06": {
+      "entry_release_in_interval": 765,
+      "direct_screen_pass_records": 163,
+      "unique_sequence_candidates": 163,
+      "excluded_records": 602,
+      "after_homology_sequences": 128,
+      "candidate_residues": 84334,
+      "longest_candidate": 5037,
+      "exclusion_reason_counts": {
+        "older_snapshot:identifier": 8,
+        "older_snapshot:accession_or_isoform_parent": 15,
+        "older_snapshot:exact_sequence": 21,
+        "training:identifier": 6,
+        "training:accession_or_isoform_parent": 8,
+        "training:exact_sequence": 12,
+        "caid23:identifier": 569,
+        "caid23:accession_or_isoform_parent": 569,
+        "caid23:exact_sequence": 571,
+        "obsolete": 14,
+        "homology_to_training_or_caid23": 35,
+        "polyprotein": 3
+      }
+    },
+    "2025_06": {
+      "entry_release_in_interval": 153,
+      "direct_screen_pass_records": 143,
+      "unique_sequence_candidates": 143,
+      "excluded_records": 10,
+      "after_homology_sequences": 114,
+      "candidate_residues": 67973,
+      "longest_candidate": 5037,
+      "exclusion_reason_counts": {
+        "homology_to_training_or_caid23": 29,
+        "obsolete": 2,
+        "older_snapshot:accession_or_isoform_parent": 1,
+        "training:accession_or_isoform_parent": 1,
+        "older_snapshot:exact_sequence": 7,
+        "training:exact_sequence": 4,
+        "caid23:exact_sequence": 1
+      }
+    }
+  },
+  "homology": {
+    "status": "pass",
+    "version": "8cc5ce367b5638c4306c2d7cfc652dd099a4643f",
+    "queries": 163,
+    "targets": 1799,
+    "forbidden_pairs": 40,
+    "queries_with_forbidden_hits": 35,
+    "identity_strictly_greater_than": 0.3,
+    "bidirectional_coverage_at_least": 0.8,
+    "tsv_sha256": "56e183be2b53964e50b09e83744e45353ff4feaa41f5a35ffac6d329419cae78",
+    "short_local_homology_not_excluded_by_this_rule": true
+  },
+  "temporal_interpretation": "Retrospective release-defined candidate audit, not prospective post-model-lock evaluation. Entry released/date are metadata, not proof of first experimental publication.",
+  "caid_reference_labels_read": false,
+  "disprot_region_fields_used": false,
+  "training_labels_read_for_integrity_checks": true,
+  "model_predictions_read_or_generated": false,
+  "locked_model_modified": false,
+  "unresolved": [
+    "Check entry history and migration/obsolete/ambiguous evidence before final eligibility",
+    "Map direct positive evidence without treating unannotated residues as negatives",
+    "Obtain reliable observed-structure negative labels with sequence-coordinate checks",
+    "Define evaluation metrics, baseline cohort and test lock before predictions",
+    "Audit baseline training overlap; frozen ESM2 pretraining novelty is not established",
+    "Long-fragment/domain homology and test-set internal clustering need a separate sensitivity audit"
+  ],
+  "official_documentation": [
+    "https://disprot.org/release-notes",
+    "https://www.disprot.org/history/DP00609"
+  ]
+}

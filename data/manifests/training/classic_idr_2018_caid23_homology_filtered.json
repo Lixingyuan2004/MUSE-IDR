@@ -1,0 +1,142 @@
+{
+  "schema_version": 1,
+  "generated_utc": "2026-08-21T02:35:24.690743+00:00",
+  "task": "single_output_classic_idr",
+  "training_readiness": "blocked_pending_homology_cluster_split",
+  "filter_policy": {
+    "identity_strictly_greater_than": 0.3,
+    "query_coverage_at_least": 0.8,
+    "target_coverage_at_least": 0.8,
+    "remove_entire_candidate_protein_on_any_forbidden_hit": true,
+    "holdout_labels_read": false
+  },
+  "sources": {
+    "candidate_jsonl": {
+      "path": "data/processed/classic_idr_2018/trainable_pre_homology.jsonl",
+      "bytes": 3863802,
+      "sha256": "2649ec923051d2c756cb052f96d6f9817480d9d780006e89fa07a608b46895dc"
+    },
+    "candidate_fasta": {
+      "path": "data/processed/classic_idr_2018/trainable_pre_homology.fasta",
+      "bytes": 625889,
+      "sha256": "71c013f5bef9036448440cd19827cfb0ce604e90d6cabff2b5cfc4ca75cdd1bb"
+    },
+    "homology_tsv": {
+      "path": "data/interim/homology/caid23_exclusion_mmseqs18/train_vs_caid23.tsv",
+      "bytes": 2997,
+      "sha256": "638d4500181ce5b723a633c41dbc0efd34672e82e40f4296ba64aa47bc6968a6"
+    },
+    "holdout_sentinel": {
+      "path": "data/manifests/holdouts/caid23_test_sentinel.json",
+      "bytes": 209719,
+      "sha256": "e149d1dea349953480d6d4944dd68c34075ccf9a8fc58abb9d8db52a1e3b066c"
+    },
+    "post_filter_homology_tsv": {
+      "path": "data/interim/homology/caid23_exclusion_filtered_mmseqs18/train_filtered_vs_caid23.tsv",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "post_filter_formal_audit": {
+      "path": "data/manifests/training/classic_idr_2018_caid23_homology_after_filter.json",
+      "bytes": 132,
+      "sha256": "3d0905b79aa2981c640a75a6337f1d5a247082a40880a20dd106cd6dff55dcf1"
+    }
+  },
+  "summary": {
+    "input_sequences": 1183,
+    "forbidden_hit_rows": 65,
+    "removed_sequences": 50,
+    "kept_sequences": 1133,
+    "post_filter_forbidden_hit_rows": 0,
+    "kept_labels": {
+      "sequences": 1133,
+      "sequences_with_positive_labels": 856,
+      "sequences_with_negative_labels": 495,
+      "sequences_with_both_labels": 218,
+      "positive_residues": 105036,
+      "negative_residues": 97626,
+      "unknown_residues": 370759
+    },
+    "removed_labels": {
+      "sequences": 50,
+      "sequences_with_positive_labels": 45,
+      "sequences_with_negative_labels": 14,
+      "sequences_with_both_labels": 9,
+      "positive_residues": 4328,
+      "negative_residues": 2488,
+      "unknown_residues": 18413
+    },
+    "post_filter_direct_findings": 0
+  },
+  "removed_protein_ids": [
+    "DP00039",
+    "DP00142",
+    "DP00151",
+    "DP00153",
+    "DP00195",
+    "DP00278",
+    "DP00390",
+    "DP00436",
+    "DP00445",
+    "DP00524",
+    "DP00553",
+    "DP00605",
+    "DP00606",
+    "DP00636",
+    "DP00646",
+    "DP00657",
+    "DP00667",
+    "DP00724",
+    "DP00897",
+    "DP00910",
+    "DP00951",
+    "DP00955",
+    "DP00997",
+    "DP01036",
+    "DP01049",
+    "DP01064",
+    "DP01100",
+    "DP01131",
+    "DP01152",
+    "DP01157",
+    "DP01175",
+    "DP01193",
+    "DP01389",
+    "DP01464",
+    "DP01491",
+    "DP01507",
+    "DP01582",
+    "DP01622",
+    "DP01860",
+    "DP01945",
+    "DP02003",
+    "DP02055",
+    "DP02069",
+    "DP02208",
+    "DP02264",
+    "DP02294",
+    "DP02329",
+    "DP02330",
+    "DP02331",
+    "DP02334"
+  ],
+  "post_filter_external_test_audit": {
+    "status": "pass",
+    "homology_tsv": "data/interim/homology/caid23_exclusion_filtered_mmseqs18/train_filtered_vs_caid23.tsv",
+    "homology_tsv_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "formal_report": "data/manifests/training/classic_idr_2018_caid23_homology_after_filter.json",
+    "findings": 0
+  },
+  "outputs": {
+    "jsonl": {
+      "path": "data/processed/classic_idr_2018/trainable_caid23_filtered.jsonl",
+      "bytes": 3715239,
+      "sha256": "124d05084015d659b4e0a0ff4d5a7d32ab1a8394ab4b51bf79d954c770f58be2"
+    },
+    "fasta": {
+      "path": "data/processed/classic_idr_2018/trainable_caid23_filtered.fasta",
+      "bytes": 599506,
+      "sha256": "482bf49a731f4c179f817c316b16c26c3d64e1c0ac7a515c5303a5292085c263"
+    }
+  }
+}

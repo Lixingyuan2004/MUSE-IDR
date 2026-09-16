@@ -1,0 +1,53 @@
+name: muse_idr
+
+backbone:
+  family: esm2
+  checkpoint: facebook/esm2_t33_650M_UR50D
+  train_mode: lora
+  max_residues: 1022
+  gradient_checkpointing: true
+  precision: bf16
+
+lora:
+  enabled: true
+  rank: 16
+  alpha: 32
+  dropout: 0.10
+  target_attention_projections: [query, key, value, output]
+  train_bias: false
+
+representation:
+  scalar_mix:
+    enabled: true
+    last_n_layers: 6
+    normalize_weights: softmax
+
+local_context:
+  type: multiscale_depthwise_cnn
+  kernels: [3, 7, 15, 31]
+  hidden_dim: 256
+  dropout: 0.20
+
+feature_branches:
+  physicochemical:
+    enabled: true
+  prot_t5:
+    enabled: false
+    mode: precomputed_frozen
+  msa_transformer:
+    enabled: false
+    mode: precomputed_frozen
+
+fusion:
+  type: gated_feature_fusion
+  hidden_dim: 256
+
+head:
+  count: 1
+  output: idr_probability
+  activation_at_inference: sigmoid
+
+long_sequence_inference:
+  window_residues: 1022
+  stride_residues: 768
+  overlap_merge: weighted_logit_average
